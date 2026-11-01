@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://做题区.org/sitemap-index.xml

@@ -1,0 +1,47 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="隐私说明" description="做题区.org 不收集个人信息。成绩与志愿只在浏览器本地计算。">
+  <header class="page-head">
+    <h1>隐私说明</h1>
+    <p class="lead">简单地说：我们不收集你的个人信息，成绩和志愿也不会上传。</p>
+  </header>
+
+  <section class="panel">
+    <h2>我们不做的事</h2>
+    <ul>
+      <li>不要求注册、登录，不收集姓名、学校、手机号、邮箱等个人信息。</li>
+      <li>不使用第三方统计或广告脚本，不设置追踪 Cookie。</li>
+      <li>不会把你输入的分数、位次、选科或志愿上传到任何服务器。</li>
+    </ul>
+  </section>
+
+  <section class="panel">
+    <h2>本地保存的内容</h2>
+    <p>以下内容只保存在你自己的浏览器里（localStorage），你可以随时清除：</p>
+    <ul>
+      <li><code>zuotiqu-run-best</code>：做题区快跑的最高分。</li>
+      <li><code>zuotiqu-run-sound</code>：快跑的音效开关。</li>
+    </ul>
+  </section>
+
+  <section class="panel">
+    <h2>分享图与文本</h2>
+    <p>分享图在浏览器里生成，由你自己决定是否分享。如果你的设备不支持系统分享，图片会直接保存到本机。</p>
+  </section>
+
+  <section class="panel">
+    <h2>第三方链接</h2>
+    <p>
+      页面可能包含指向外部网站的链接，例如词条出处、GitHub 投稿页面和源代码仓库。这些网站有各自的隐私政策，访问前请阅读。
+    </p>
+  </section>
+
+  <section class="panel">
+    <h2>托管平台</h2>
+    <p>
+      网站为静态页面。托管平台会按其自身的政策处理普通的网络访问日志（例如 IP 地址），本站不会读取或保存这些日志。
+    </p>
+  </section>
+</BaseLayout>

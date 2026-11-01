@@ -1,0 +1,65 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { site } from '../config/site';
+---
+
+<BaseLayout title="关于与致谢" description="做题区.org 的项目说明、致谢与许可证。">
+  <header class="page-head">
+    <h1>关于与致谢</h1>
+    <p class="lead">
+      做题区.org 是一个讽刺"唯分数论"和内卷文化的整活网站。我们讽刺的是评价体系，不是做题的人。
+    </p>
+  </header>
+
+  <section class="panel">
+    <h2>站内内容</h2>
+    <ul>
+      <li><a href="/wiki">黑话 Wiki</a>：做题区与学生黑话词典，词条可以投稿。</li>
+      <li><a href="/chaogang">超纲解法生成器</a>：给简单题配一套用不着的高阶解法。</li>
+      <li><a href="/restart">做题区版人生重开</a>：玩法灵感来自 lifeRestart，内容与引擎为本站原创。</li>
+      <li><a href="/run">做题区快跑</a>：无尽跑酷。</li>
+      <li><a href="/gaokao">模拟志愿</a> 与 <a href="/gaokao/schools">院校查询</a>：当前为演示数据。</li>
+      <li>ZTQI 做题区指数量表：未经验证的自评量表，入口在首页。</li>
+    </ul>
+  </section>
+
+  <section class="panel">
+    <h2>致谢</h2>
+    <ul>
+      <li>
+        <strong>lifeRestart</strong>（MIT 许可，版权归神戸小鳥 与 神户小德 所有）。"做题区版人生重开"的玩法灵感来自这一开源项目。本站的引擎与内容为独立编写，并未复制其代码或数据。原项目：
+        <a href="https://github.com/VickScarlet/remake" rel="noopener noreferrer" target="_blank">github.com/VickScarlet/remake</a>，网站：
+        <a href="http://liferestart.syaro.io/" rel="noopener noreferrer" target="_blank">liferestart.syaro.io</a>。
+      </li>
+      <li>
+        黑话词条的出处见各词条页面的"出处"部分，所有链接均为投稿或检索时找到的来源。查不到出处的写"待考证"。
+      </li>
+      <li>
+        "985废物引进计划"豆瓣小组、"小镇做题家"等词汇的讨论，来自公开的网络讨论与媒体报道。
+      </li>
+    </ul>
+  </section>
+
+  <section class="panel">
+    <h2>许可证</h2>
+    <p>代码以 {site.license.code} 许可发布。词条、文案与图像以 {site.license.content} 放弃版权。</p>
+    <p>
+      源代码：<a href={site.repoUrl} rel="noopener noreferrer" target="_blank">{site.repoUrl}</a>
+    </p>
+  </section>
+
+  <section class="panel">
+    <h2>关于头像与数据</h2>
+    <p>
+      "做题区" 的头像为本站原创绘制，不使用网络上未经授权的梗图或他人作品。
+    </p>
+    <p>
+      录取页面的数据目前为虚构的演示数据。收录真实省份的数据需要核对各省教育考试院的官方发布，尚未完成。页面上会有明显的提示。
+    </p>
+  </section>
+
+  <section class="panel">
+    <h2>免责声明</h2>
+    <p>本站为整活作品，与任何学校、考试机构、教育主管部门无关。ZTQI 等量表未经验证，不用于诊断、标签或排名。</p>
+  </section>
+</BaseLayout>
