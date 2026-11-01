@@ -1,0 +1,19 @@
+---
+interface Props {
+  size?: number;
+  alt?: string;
+}
+
+const { size = 120, alt = '做题区 avatar' } = Astro.props;
+---
+
+<img class="avatar" src="/avatar/zuotiqu-head.svg" width={size} height={size} alt={alt} />
+
+<style>
+  .avatar {
+    border-radius: 50%;
+    background: var(--card);
+    border: 1.5px solid var(--ink);
+    box-shadow: var(--shadow);
+  }
+</style>

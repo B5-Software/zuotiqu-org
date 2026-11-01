@@ -1,0 +1,17 @@
+---
+interface Props {
+  text: string;
+}
+
+const { text } = Astro.props;
+---
+
+<aside class="warn disclaimer" role="note">
+  <strong>免责声明：</strong>{text}
+</aside>
+
+<style>
+  .disclaimer {
+    margin-bottom: var(--space-6);
+  }
+</style>

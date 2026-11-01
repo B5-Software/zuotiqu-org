@@ -1,0 +1,76 @@
+---
+import { site } from '../config/site';
+import { modules } from '../config/modules';
+---
+
+<header class="site-header">
+  <div class="inner">
+    <a class="brand" href="/">
+      <img src="/avatar/zuotiqu-head.svg" width="36" height="36" alt="" />
+      <span>{site.name}</span>
+    </a>
+    <nav aria-label="主导航">
+      <ul>
+        {modules.map((m) => (
+          <li><a href={m.href}>{m.title}</a></li>
+        ))}
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<style>
+  .site-header {
+    border-bottom: 1.5px solid var(--ink);
+    background: var(--card);
+  }
+
+  .inner {
+    max-width: var(--max);
+    margin: 0 auto;
+    padding: var(--space-3) var(--space-4);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-3);
+  }
+
+  .brand {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+    color: var(--ink);
+    font-family: var(--font-hand);
+    font-size: 1.3rem;
+    font-weight: 700;
+    text-decoration: none;
+  }
+
+  .brand img {
+    border-radius: 50%;
+    background: var(--paper-2);
+  }
+
+  nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2) var(--space-4);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  nav a {
+    color: var(--ink);
+    text-decoration: none;
+    font-size: 0.95rem;
+    padding: var(--space-1) 0;
+    border-bottom: 2px solid transparent;
+  }
+
+  nav a:hover {
+    color: var(--red);
+    border-bottom-color: var(--red);
+  }
+</style>

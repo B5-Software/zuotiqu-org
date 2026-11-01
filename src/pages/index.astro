@@ -1,0 +1,83 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Avatar from '../components/Avatar.astro';
+import ModuleCard from '../components/ModuleCard.astro';
+import { modules } from '../config/modules';
+import { site } from '../config/site';
+---
+
+<BaseLayout title={site.name}>
+  <section class="hero panel">
+    <div class="hero-text">
+      <p class="stamp">本站只讽刺评价体系</p>
+      <h1>{site.name}</h1>
+      <p class="lead">
+        做题区是「做题蛆」的谐音黑话，是「小镇做题家」梗的极端化变体。这里是一个整活网站，拿唯分数论和内卷文化开开玩笑。
+      </p>
+      <p class="muted">我们不嘲笑没考上好学校的人，也不评价任何人的长相、出身和性别。</p>
+    </div>
+    <Avatar size={140} />
+  </section>
+
+  <section aria-labelledby="ztqi-title">
+    <h2 id="ztqi-title">先做一份量表</h2>
+    <div class="panel ztqi">
+      <div>
+        <h3>ZTQI 做题区指数量表</h3>
+        <p class="muted">
+          一份未经验证的自评量表，只用来照一照自己的做题区程度。结果不是诊断，也不能用来给别人贴标签。
+        </p>
+      </div>
+      {
+        site.ztqiUrl ? (
+          <a class="btn btn-primary" href={site.ztqiUrl}>进入 ZTQI</a>
+        ) : (
+          <span class="tag">入口预留 · 地址待配置</span>
+        )
+      }
+    </div>
+  </section>
+
+  <section aria-labelledby="modules-title">
+    <h2 id="modules-title">所有功能</h2>
+    <div class="grid-cards">
+      {modules.map((m) => <ModuleCard module={m} />)}
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .hero {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-6);
+    margin-bottom: var(--space-8);
+  }
+
+  .hero-text {
+    flex: 1 1 380px;
+  }
+
+  .hero .stamp {
+    margin-bottom: var(--space-4);
+  }
+
+  .ztqi {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-4);
+  }
+
+  .ztqi h3 {
+    margin-bottom: var(--space-1);
+  }
+
+  .ztqi p {
+    margin: 0;
+    max-width: 52ch;
+  }
+</style>

@@ -1,0 +1,15 @@
+node_modules/
+dist/
+.astro/
+coverage/
+.DS_Store
+Thumbs.db
+
+# 私有项目与原始素材：不进入公开仓库
+ZTQI-dev/
+avatars/
+*.original.*
+
+.env
+.env.*
+!.env.example
