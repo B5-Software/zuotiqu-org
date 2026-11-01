@@ -9,18 +9,35 @@ import { modules } from '../config/modules';
       <img src="/avatar/zuotiqu-head.svg" width="36" height="36" alt="" />
       <span>{site.name}</span>
     </a>
-    <nav aria-label="主导航">
+
+    <nav class="desktop-nav" aria-label="主导航">
       <ul>
         {modules.map((m) => (
-          <li><a href={m.href}>{m.title}</a></li>
+          <li><a href={m.href} target={m.external ? '_blank' : undefined} rel={m.external ? 'noopener noreferrer' : undefined}>{m.title}</a></li>
         ))}
       </ul>
     </nav>
+
+    <details class="mobile-menu">
+      <summary>
+        <span class="menu-icon" aria-hidden="true"></span>
+        <span>菜单</span>
+      </summary>
+      <nav aria-label="移动端主导航">
+        <ul>
+          {modules.map((m) => (
+            <li><a href={m.href} target={m.external ? '_blank' : undefined} rel={m.external ? 'noopener noreferrer' : undefined}>{m.title}</a></li>
+          ))}
+        </ul>
+      </nav>
+    </details>
   </div>
 </header>
 
 <style>
   .site-header {
+    position: relative;
+    z-index: 10;
     border-bottom: 1.5px solid var(--ink);
     background: var(--card);
   }
@@ -45,9 +62,11 @@ import { modules } from '../config/modules';
     font-size: 1.3rem;
     font-weight: 700;
     text-decoration: none;
+    white-space: nowrap;
   }
 
   .brand img {
+    flex-shrink: 0;
     border-radius: 50%;
     background: var(--paper-2);
   }
@@ -72,5 +91,118 @@ import { modules } from '../config/modules';
   nav a:hover {
     color: var(--red);
     border-bottom-color: var(--red);
+  }
+
+  .mobile-menu {
+    display: none;
+  }
+
+  @media (max-width: 900px) {
+    .inner {
+      flex-wrap: nowrap;
+      gap: var(--space-2);
+    }
+
+    .desktop-nav {
+      display: none;
+    }
+
+    .mobile-menu {
+      display: block;
+      margin-left: auto;
+    }
+
+    .mobile-menu summary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: var(--space-2);
+      min-height: 44px;
+      padding: var(--space-1) var(--space-3);
+      border: 1.5px solid var(--ink);
+      border-radius: var(--radius-sm);
+      color: var(--ink);
+      background: var(--paper);
+      font-size: 0.9rem;
+      font-weight: 600;
+      cursor: pointer;
+      list-style: none;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .mobile-menu summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .mobile-menu[open] summary {
+      background: var(--blue-soft);
+    }
+
+    .menu-icon {
+      position: relative;
+      display: inline-block;
+      width: 18px;
+      height: 14px;
+      border-top: 2px solid currentColor;
+      border-bottom: 2px solid currentColor;
+    }
+
+    .menu-icon::after {
+      content: '';
+      position: absolute;
+      top: 5px;
+      left: 0;
+      width: 18px;
+      border-top: 2px solid currentColor;
+    }
+
+    .mobile-menu nav {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      padding: var(--space-2) var(--space-4) var(--space-4);
+      border-bottom: 1.5px solid var(--ink);
+      background: var(--card);
+      box-shadow: var(--shadow);
+    }
+
+    .mobile-menu nav ul {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 0;
+      max-width: var(--max);
+      margin: 0 auto;
+    }
+
+    .mobile-menu nav a {
+      display: flex;
+      align-items: center;
+      min-height: 44px;
+      padding: var(--space-2) var(--space-3);
+      border-bottom: 1px solid var(--line-strong);
+      border-radius: var(--radius-sm);
+      overflow-wrap: anywhere;
+    }
+
+    .mobile-menu nav li:last-child a {
+      border-bottom: 0;
+    }
+
+    .mobile-menu nav a:hover,
+    .mobile-menu nav a:focus-visible {
+      background: var(--blue-soft);
+    }
+  }
+
+  @media (max-width: 360px) {
+    .brand {
+      font-size: 1.12rem;
+    }
+
+    .brand img {
+      width: 32px;
+      height: 32px;
+    }
   }
 </style>
