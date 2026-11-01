@@ -1,0 +1,184 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="做题区版人生重开" description="在分数、卷度和天赋之间，重开一局人生。">
+  <header class="page-head">
+    <h1>做题区版人生重开</h1>
+    <p class="lead">
+      你会随机拿到 3 个天赋，然后一年一年地过。分数、体力、快乐、人脉和卷度会被你的选择改变。
+    </p>
+  </header>
+
+  <section class="panel restart" id="restart-app" aria-live="polite"></section>
+
+  <p class="muted note">
+    本游戏为虚构。事件和结局只为整活，不代表任何真实人生的评价。玩法灵感来自开源项目 lifeRestart（MIT 许可），致谢见<a href="/about">关于页</a>。
+  </p>
+</BaseLayout>
+
+<script>
+  import { mountRestart } from '../lib/restart/ui';
+  const root = document.getElementById('restart-app');
+  if (root) mountRestart(root);
+</script>
+
+<style is:global>
+  .page-head {
+    margin-bottom: var(--space-6);
+  }
+
+  .restart h2 {
+    margin-top: 0;
+  }
+
+  .restart h3 {
+    margin-top: var(--space-6);
+  }
+
+  .restart .talents {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    gap: var(--space-3);
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  }
+
+  .restart .talent {
+    border: 1.5px solid var(--ink);
+    border-radius: var(--radius-sm);
+    padding: var(--space-3);
+    background: var(--paper);
+  }
+
+  .restart .talent h3 {
+    margin: var(--space-1) 0;
+    font-size: 1.1rem;
+  }
+
+  .restart .talent p {
+    margin: 0;
+    font-size: 0.9rem;
+  }
+
+  .restart .talent.rarity-rare {
+    border-color: var(--blue);
+    box-shadow: inset 0 0 0 1px var(--blue);
+  }
+
+  .restart .talent.rarity-legendary {
+    border-color: var(--red);
+    box-shadow: inset 0 0 0 1px var(--red);
+  }
+
+  .restart .stats {
+    list-style: none;
+    padding: 0;
+    margin: var(--space-4) 0;
+    display: grid;
+    gap: var(--space-2);
+  }
+
+  .restart .stats li {
+    display: grid;
+    grid-template-columns: 3.5em 1fr 2.5em;
+    align-items: center;
+    gap: var(--space-2);
+  }
+
+  .restart .stat-name {
+    font-size: 0.9rem;
+    color: var(--ink-soft);
+  }
+
+  .restart .stat-value {
+    text-align: right;
+    font-variant-numeric: tabular-nums;
+    font-size: 0.9rem;
+  }
+
+  .restart .bar {
+    height: 10px;
+    border: 1.5px solid var(--ink);
+    border-radius: 999px;
+    overflow: hidden;
+    background: var(--card);
+  }
+
+  .restart .bar > span {
+    display: block;
+    height: 100%;
+    background: var(--blue);
+  }
+
+  .restart .stats.compact {
+    margin-top: var(--space-3);
+  }
+
+  .restart .options {
+    display: grid;
+    gap: var(--space-2);
+    margin: var(--space-4) 0;
+  }
+
+  .restart .option {
+    justify-content: flex-start;
+    text-align: left;
+  }
+
+  .restart .event-text {
+    font-size: 1.05rem;
+    margin: var(--space-3) 0;
+  }
+
+  .restart .choice {
+    margin: var(--space-2) 0;
+  }
+
+  .restart .delta {
+    margin: 0 0 var(--space-3);
+  }
+
+  .restart .age-line {
+    margin-bottom: var(--space-2);
+  }
+
+  .restart .curve {
+    width: 100%;
+    height: auto;
+    font-size: 12px;
+    fill: var(--ink-soft);
+  }
+
+  .restart .achievements {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    gap: var(--space-2);
+  }
+
+  .restart .achievements li {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .restart .actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-3);
+    margin-top: var(--space-4);
+  }
+
+  .restart .status {
+    margin-top: var(--space-2);
+  }
+
+  .restart .stamp {
+    font-size: 0.9rem;
+    vertical-align: middle;
+  }
+
+  .restart .note {
+    margin-top: var(--space-6);
+  }
+</style>

@@ -1,0 +1,71 @@
+import type { Ending } from '../../src/lib/restart/types';
+
+export const endings: Ending[] = [
+  {
+    id: 'the_world_outside_the_question',
+    title: '题外有世界',
+    text: '卷子发下来的时候，你已经在读另一本书了。那本书没有标准答案，也没有排名，窗外的世界比题目宽得多。',
+    priority: 100,
+    when: { all: [{ flag: 'off_ladder' }, { prop: 'joy', op: '>=', value: 60 }] },
+    escape: true,
+  },
+  {
+    id: 'time_returned',
+    title: '把时间还给了自己',
+    text: '日程表上的格子越来越空，空出来的时间没有人来收回。你把它们留给了散步、发呆，和一顿慢慢吃完的晚饭。',
+    priority: 95,
+    when: { all: [{ flag: 'off_ladder' }, { prop: 'health', op: '>=', value: 50 }, { prop: 'juan', op: '<=', value: 40 }] },
+    escape: true,
+  },
+  {
+    id: 'soy_milk_for_thirty_years',
+    title: '在菜市场卖了三十年的豆浆',
+    text: '巷口的早餐摊开了三十年。来买豆浆的人，大多不知道你的成绩单，只知道今天的豆浆是热的，刚好够甜。',
+    priority: 90,
+    when: { all: [{ flag: 'off_ladder' }, { flag: 'soy_milk_stall' }] },
+    escape: true,
+  },
+  {
+    id: 'trees_in_the_mountain',
+    title: '在山里种树',
+    text: '那棵树长得很慢，你也是。每年回去看一次，它的年轮不排名，只是一圈一圈地往外长。',
+    priority: 88,
+    when: { all: [{ flag: 'off_ladder' }, { flag: 'planted_trees' }] },
+    escape: true,
+  },
+  {
+    id: 'body_called_the_alarm',
+    title: '身体先报了警',
+    text: '身体先发出了提醒，把你按在床上休息了一段很长的时间。那段时间里，你第一次认真看了一眼窗外。',
+    priority: 80,
+    when: { prop: 'health', op: '<=', value: 25 },
+  },
+  {
+    id: 'rise_to_a_sky',
+    title: '卷出了一片天',
+    text: '成绩单很好看，人脉也慢慢有了。只是书架上多了一些没读完的书，夜里偶尔想起它们，觉得有点可惜。',
+    priority: 70,
+    when: { all: [{ prop: 'grade', op: '>=', value: 75 }, { prop: 'juan', op: '>=', value: 65 }, { prop: 'network', op: '>=', value: 50 }] },
+  },
+  {
+    id: 'still_doing_problems',
+    title: '最终还是做题',
+    text: '题目一道接一道，从来没有停下来过。直到最后，你还在解一道没有标准答案的题，草稿纸写满了正反两面。',
+    priority: 60,
+    when: { all: [{ prop: 'grade', op: '>=', value: 60 }, { prop: 'juan', op: '>=', value: 60 }] },
+  },
+  {
+    id: 'no_restart_button',
+    title: '人生没有重开键',
+    text: '这一生没有重开键，只能往前走。卷子发完了，人也累了，偶尔会想，如果有一次慢一点，会不会不一样。',
+    priority: 50,
+    when: { all: [{ prop: 'joy', op: '<=', value: 30 }, { prop: 'juan', op: '>=', value: 50 }] },
+  },
+  {
+    id: 'an_ordinary_life',
+    title: '一个普通的一生',
+    text: '没有开挂，也没有摔得很重。有考试，有工作，有几次想停下来的时候，最后也都走了过去。',
+    priority: 0,
+    when: { all: [] },
+  },
+];
