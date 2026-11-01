@@ -1,0 +1,163 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { listTemplates } from '../lib/overkill/engine';
+import 'katex/dist/katex.min.css';
+
+const templates = listTemplates();
+---
+
+<BaseLayout title="超纲解法生成器" description="给简单题配一套用不着的高阶解法，最后仍然给出正确答案。">
+  <header class="page-head">
+    <h1>超纲解法生成器</h1>
+    <p class="lead">
+      给简单题配一套用不着的高阶解法。笑点来自工具和题目严重不匹配，但最后的答案一定是对的。
+    </p>
+  </header>
+
+  <section class="panel controls" aria-label="选择题型">
+    <label for="template">题型</label>
+    <select id="template">
+      <option value="">随机</option>
+      {templates.map((t) => <option value={t.id}>{t.grade} · {t.title}</option>)}
+    </select>
+    <button id="generate" class="btn btn-primary" type="button">出一道题</button>
+  </section>
+
+  <article id="problem" class="panel problem" aria-live="polite"></article>
+
+  <p class="muted note">
+    题目与解法都由模板生成，不依赖 AI，也不会上传任何数据。
+  </p>
+</BaseLayout>
+
+<script>
+  import { mountOverkill } from '../lib/overkill/ui';
+  mountOverkill();
+</script>
+
+<style>
+  .page-head {
+    margin-bottom: var(--space-6);
+  }
+
+  .controls {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--space-3);
+    margin-bottom: var(--space-6);
+  }
+
+  .controls label {
+    font-weight: 600;
+  }
+
+  select {
+    min-height: 44px;
+    padding: var(--space-2) var(--space-3);
+    border: 1.5px solid var(--ink);
+    border-radius: var(--radius-sm);
+    background: var(--card);
+    color: var(--ink);
+    font: inherit;
+    max-width: 100%;
+  }
+
+  .problem {
+    min-height: 240px;
+  }
+
+  .problem-head {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    margin-bottom: var(--space-3);
+  }
+
+  .problem-head h2 {
+    margin: 0;
+    font-size: 1.5rem;
+  }
+
+  .statement {
+    font-size: 1.15rem;
+    margin: var(--space-4) 0;
+  }
+
+  .solutions {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: var(--space-4);
+  }
+
+  .solution {
+    border-left: 4px solid var(--blue);
+    padding-left: var(--space-4);
+  }
+
+  .solution h3 {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--space-2);
+    font-size: 1.05rem;
+  }
+
+  .steps {
+    margin: var(--space-2) 0 0;
+    padding-left: 1.4rem;
+  }
+
+  .steps li {
+    margin-bottom: var(--space-1);
+    overflow-x: auto;
+  }
+
+  .answer {
+    margin-top: var(--space-6);
+    padding: var(--space-3) var(--space-4);
+    background: var(--blue-soft);
+    border-radius: var(--radius-sm);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: var(--space-3);
+  }
+
+  .answer .label {
+    color: var(--blue);
+    font-weight: 700;
+  }
+
+  .answer .value {
+    font-size: 1.15rem;
+    overflow-x: auto;
+  }
+
+  .verdict {
+    margin: var(--space-6) 0 var(--space-4);
+  }
+
+  .actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-3);
+  }
+
+  .status {
+    margin-top: var(--space-2);
+  }
+
+  .note {
+    margin-top: var(--space-6);
+  }
+
+  @media (max-width: 600px) {
+    .controls select,
+    .controls button {
+      width: 100%;
+    }
+  }
+</style>
