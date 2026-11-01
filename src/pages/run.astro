@@ -1,0 +1,136 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="做题区快跑" description="无尽跑酷。躲开作业堆、早八闹钟、家长群通知和月考排名榜，收集满分卷。">
+  <header class="page-head">
+    <h1>做题区快跑</h1>
+    <p class="lead">
+      无尽跑酷。空格或点击跳跃，↓ 或下半屏长按蹲下。收集满分卷、咖啡、草稿纸和洛必达，躲开作业堆。
+    </p>
+  </header>
+
+  <section class="run panel" aria-label="游戏区域">
+    <div class="hud" aria-live="off">
+      <span>卷度 <strong id="hud-score">0</strong></span>
+      <span>最高 <strong id="hud-best">0</strong></span>
+      <span class="badge" id="hud-shield" hidden>草稿纸护盾</span>
+      <span class="badge" id="hud-boost" hidden>洛必达无敌</span>
+    </div>
+    <div class="stage">
+      <canvas id="run-canvas" aria-label="跑酷画面，按空格跳跃"></canvas>
+      <div id="run-overlay" class="overlay" hidden></div>
+    </div>
+    <div class="toolbar">
+      <button id="run-pause" class="btn" type="button">暂停</button>
+      <button id="run-mute" class="btn" type="button">开启音效</button>
+    </div>
+  </section>
+
+  <p class="muted note">
+    音效默认关闭。最高分只保存在你的浏览器里，不上传任何数据。
+  </p>
+</BaseLayout>
+
+<script>
+  import { mountRun } from '../lib/run/ui';
+  mountRun();
+</script>
+
+<style is:global>
+  .run .hud {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-3) var(--space-6);
+    align-items: center;
+    margin-bottom: var(--space-3);
+    font-size: 1rem;
+  }
+
+  .run .hud strong {
+    font-size: 1.4rem;
+    font-variant-numeric: tabular-nums;
+    font-family: var(--font-hand);
+    color: var(--red);
+  }
+
+  .run .badge {
+    padding: 0 var(--space-2);
+    border: 1.5px solid var(--green);
+    border-radius: 999px;
+    color: var(--green);
+    font-size: 0.85rem;
+  }
+
+  .run .badge[hidden] {
+    display: none;
+  }
+
+  .run .stage {
+    position: relative;
+    border: 1.5px solid var(--ink);
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+    background: var(--paper);
+  }
+
+  .run canvas {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 960 / 400;
+    touch-action: none;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+
+  .run .overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--space-4);
+    background: rgba(251, 248, 239, 0.9);
+  }
+
+  .run .overlay[hidden] {
+    display: none;
+  }
+
+  .run .overlay-card {
+    max-width: 480px;
+    text-align: center;
+  }
+
+  .run .overlay-card h2 {
+    margin-top: 0;
+  }
+
+  .run .overlay-card p {
+    margin-bottom: var(--space-3);
+  }
+
+  .run .overlay-card .stamp {
+    font-size: 1.4rem;
+  }
+
+  .run .overlay-actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--space-2);
+    margin-top: var(--space-4);
+  }
+
+  .run .toolbar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-3);
+    margin-top: var(--space-4);
+  }
+
+  .run .note {
+    margin-top: var(--space-6);
+  }
+</style>
