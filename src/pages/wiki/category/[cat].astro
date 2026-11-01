@@ -1,0 +1,68 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { WIKI_CATEGORIES, type WikiCategory } from '../../../lib/wiki/categories';
+
+export function getStaticPaths() {
+  return WIKI_CATEGORIES.map((cat) => ({ params: { cat } }));
+}
+
+const { cat } = Astro.params as { cat: WikiCategory };
+const entries = (await getCollection('wiki', (e) => e.data.category === cat)).sort((a, b) =>
+  a.data.term.localeCompare(b.data.term, 'zh-Hans-CN'),
+);
+---
+
+<BaseLayout title={`${cat}类词条`} description={`黑话 Wiki 的${cat}类词条。`}>
+  <nav class="crumbs" aria-label="面包屑">
+    <a href="/wiki">黑话 Wiki</a>
+    <span aria-hidden="true">/</span>
+    <span>{cat}</span>
+  </nav>
+  <h1>{cat}类词条</h1>
+  <p class="muted">共 {entries.length} 条</p>
+  <ul class="entries">
+    {
+      entries.map((e) => (
+        <li>
+          <a class="term" href={`/wiki/${e.id}`}>{e.data.term}</a>
+          <p class="muted">{e.data.definition}</p>
+        </li>
+      ))
+    }
+  </ul>
+</BaseLayout>
+
+<style>
+  .crumbs {
+    font-size: 0.9rem;
+    color: var(--ink-soft);
+  }
+
+  .entries {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    gap: var(--space-3);
+  }
+
+  .entries li {
+    background: var(--card);
+    border: 1.5px solid var(--ink);
+    border-radius: var(--radius);
+    padding: var(--space-3) var(--space-4);
+    box-shadow: var(--shadow);
+  }
+
+  .entries p {
+    margin: var(--space-1) 0 0;
+  }
+
+  .term {
+    font-family: var(--font-hand);
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--ink);
+    text-decoration: none;
+  }
+</style>

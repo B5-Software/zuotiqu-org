@@ -1,0 +1,145 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { WIKI_CATEGORIES } from '../../lib/wiki/categories';
+import { site } from '../../config/site';
+
+const entries = (await getCollection('wiki')).sort((a, b) =>
+  a.data.term.localeCompare(b.data.term, 'zh-Hans-CN'),
+);
+---
+
+<BaseLayout title="黑话 Wiki" description="做题区与学生黑话词典。每条都尽量给出出处，查不到的写待考证。">
+  <header class="page-head">
+    <h1>黑话 Wiki</h1>
+    <p class="lead">
+      做题区与学生黑话词典。每条都尽量给出出处，查不到的老老实实写"待考证"。
+    </p>
+  </header>
+
+  <section class="panel search" aria-label="搜索词条">
+    <label for="wiki-q">搜索词条、别名或释义</label>
+    <input id="wiki-q" type="search" placeholder="例如：做题蛆、内卷、早八" autocomplete="off" />
+    <div class="actions">
+      <button id="wiki-random" class="btn" type="button">随机一个词条</button>
+      <a class="btn" id="wiki-contribute" href={site.wikiNewIssueUrl} data-base-href={site.wikiNewIssueUrl}>我要补充</a>
+    </div>
+    <p class="muted" id="wiki-count" aria-live="polite">共 {entries.length} 条</p>
+    <p class="empty" id="wiki-empty" hidden>
+      没有找到这个词。你可以点上面的"我要补充"投稿。
+    </p>
+  </section>
+
+  <nav class="chips" aria-label="分类">
+    {WIKI_CATEGORIES.map((c) => <a class="tag" href={`/wiki/category/${c}`}>{c}</a>)}
+  </nav>
+
+  <ul class="entries" id="wiki-list">
+    {
+      entries.map((e) => (
+        <li data-id={e.id}>
+          <a class="term" href={`/wiki/${e.id}`}>{e.data.term}</a>
+          <span class="tag">{e.data.category}</span>
+          <p class="muted">{e.data.definition}</p>
+        </li>
+      ))
+    }
+  </ul>
+</BaseLayout>
+
+<script>
+  import { initWikiIndex } from '../../lib/wiki/ui';
+  initWikiIndex();
+</script>
+
+<style>
+  .page-head {
+    margin-bottom: var(--space-6);
+  }
+
+  .search {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+    margin-bottom: var(--space-4);
+  }
+
+  .search label {
+    font-weight: 600;
+  }
+
+  .search input {
+    min-height: 48px;
+    padding: var(--space-2) var(--space-3);
+    border: 1.5px solid var(--ink);
+    border-radius: var(--radius-sm);
+    background: var(--paper);
+    color: var(--ink);
+    font: inherit;
+    font-size: 1.05rem;
+  }
+
+  .actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-3);
+  }
+
+  .search p {
+    margin: 0;
+  }
+
+  .empty {
+    color: var(--red);
+  }
+
+  .chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2);
+    margin-bottom: var(--space-6);
+  }
+
+  .chips a {
+    text-decoration: none;
+  }
+
+  .entries {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: var(--space-3);
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  }
+
+  .entries li {
+    background: var(--card);
+    border: 1.5px solid var(--ink);
+    border-radius: var(--radius);
+    padding: var(--space-3) var(--space-4);
+    box-shadow: var(--shadow);
+  }
+
+  .entries li[hidden] {
+    display: none;
+  }
+
+  .entries p {
+    margin: var(--space-1) 0 0;
+    font-size: 0.92rem;
+  }
+
+  .term {
+    font-family: var(--font-hand);
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--ink);
+    text-decoration: none;
+    margin-right: var(--space-2);
+  }
+
+  .term:hover {
+    color: var(--red);
+  }
+</style>

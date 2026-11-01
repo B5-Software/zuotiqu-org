@@ -1,0 +1,162 @@
+---
+import { getCollection, render } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { site } from '../../config/site';
+
+export async function getStaticPaths() {
+  const entries = await getCollection('wiki');
+  return entries.map((entry) => ({ params: { slug: entry.id }, props: { entry } }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+const everyone = await getCollection('wiki');
+const idByTerm = new Map(everyone.map((e) => [e.data.term, e.id]));
+const { term, aliases, category, definition, origin, example, related, sources, note } = entry.data;
+const contributeHref = `${site.wikiNewIssueUrl}&title=${encodeURIComponent(`[词条修订] ${term}`)}`;
+---
+
+<BaseLayout title={term} description={definition}>
+  <nav class="crumbs" aria-label="面包屑">
+    <a href="/wiki">黑话 Wiki</a>
+    <span aria-hidden="true">/</span>
+    <a href={`/wiki/category/${category}`}>{category}</a>
+  </nav>
+
+  <article class="panel entry">
+    <header>
+      <h1>{term}</h1>
+      {
+        aliases.length > 0 && (
+          <p class="aliases">
+            <span class="muted">别名</span>
+            {aliases.map((a) => <span class="tag">{a}</span>)}
+          </p>
+        )
+      }
+    </header>
+
+    <p class="lead">{definition}</p>
+
+    {note && (
+      <aside class="warn" role="note">
+        <strong>语义与争议：</strong>{note}
+      </aside>
+    )}
+
+    <section>
+      <h2>出处</h2>
+      <p>{origin}</p>
+      {
+        sources.length > 0 && (
+          <ul class="sources">
+            {sources.map((s) => (
+              <li>
+                <a href={s} rel="nofollow noopener noreferrer" target="_blank">{s}</a>
+              </li>
+            ))}
+          </ul>
+        )
+      }
+    </section>
+
+    <section>
+      <h2>例句</h2>
+      <blockquote>{example}</blockquote>
+    </section>
+
+    <section class="body">
+      <Content />
+    </section>
+
+    {
+      related.length > 0 && (
+        <section>
+          <h2>相关词条</h2>
+          <ul class="related">
+            {related.map((r) => {
+              const id = idByTerm.get(r);
+              return <li>{id ? <a href={`/wiki/${id}`}>{r}</a> : r}</li>;
+            })}
+          </ul>
+        </section>
+      )
+    }
+
+    <footer class="entry-foot">
+      <a class="btn" href={contributeHref}>我要补充</a>
+      <p class="muted">发现出处有误？用上面的按钮提交修订，会打开 GitHub 的投稿页面。</p>
+    </footer>
+  </article>
+</BaseLayout>
+
+<style>
+  .crumbs {
+    font-size: 0.9rem;
+    margin-bottom: var(--space-3);
+    color: var(--ink-soft);
+  }
+
+  .entry h1 {
+    font-size: clamp(2rem, 6vw, 2.8rem);
+    margin-bottom: var(--space-2);
+  }
+
+  .aliases {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2);
+    align-items: center;
+    margin: 0;
+  }
+
+  .entry section {
+    margin-top: var(--space-6);
+  }
+
+  .entry h2 {
+    margin-top: 0;
+    font-size: 1.15rem;
+    border-bottom: 2px dashed var(--line-strong);
+    padding-bottom: var(--space-1);
+  }
+
+  blockquote {
+    margin: 0;
+    padding: var(--space-3) var(--space-4);
+    border-left: 4px solid var(--yellow);
+    background: var(--paper-2);
+  }
+
+  .sources,
+  .related {
+    padding-left: 1.2rem;
+    overflow-wrap: anywhere;
+  }
+
+  .related {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2) var(--space-4);
+    list-style: none;
+    padding: 0;
+  }
+
+  .body :global(p) {
+    margin-bottom: var(--space-3);
+  }
+
+  .entry-foot {
+    margin-top: var(--space-8);
+    padding-top: var(--space-4);
+    border-top: 1.5px solid var(--ink);
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-3);
+    align-items: center;
+  }
+
+  .entry-foot p {
+    margin: 0;
+  }
+</style>

@@ -1,0 +1,61 @@
+name: 黑话 Wiki 词条投稿
+description: 补充或修订一个黑话词条。请先阅读 content/wiki/CONTRIBUTING.md。
+title: "[词条补充] "
+labels: ["wiki", "content"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        感谢投稿。请客观描述，不引战，不放真实个人信息，不涉及真实老师、同学或学校的黑料。
+        带贬义的词请在"语义与争议"里写明。出处查不到就填"待考证"，不要编造。
+  - type: input
+    id: term
+    attributes:
+      label: 词条名
+      placeholder: 例如：做题区
+    validations:
+      required: true
+  - type: input
+    id: aliases
+    attributes:
+      label: 别名（可选，用中文逗号分隔）
+  - type: dropdown
+    id: category
+    attributes:
+      label: 分类
+      options:
+        - 梗
+        - 学习
+        - 考试
+        - 校园
+        - 网络
+    validations:
+      required: true
+  - type: textarea
+    id: definition
+    attributes:
+      label: 一句话释义
+    validations:
+      required: true
+  - type: textarea
+    id: origin
+    attributes:
+      label: 出处与时间线
+      description: 写明首次出现的时间、平台或来源。没有可靠来源请写"待考证"。
+    validations:
+      required: true
+  - type: textarea
+    id: sources
+    attributes:
+      label: 参考链接
+      description: 每行一个 URL。
+  - type: textarea
+    id: example
+    attributes:
+      label: 例句（原创，不要抄真实评论）
+    validations:
+      required: true
+  - type: textarea
+    id: note
+    attributes:
+      label: 语义流变或争议说明（可选）
