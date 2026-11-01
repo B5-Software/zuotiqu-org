@@ -1,0 +1,21 @@
+[
+  {
+    "province": "demo-a",
+    "provinceName": "示例省甲",
+    "years": [
+      2024,
+      2025
+    ],
+    "examType": "new-3+1+2",
+    "demo": true
+  },
+  {
+    "province": "demo-b",
+    "provinceName": "示例省乙",
+    "years": [
+      2025
+    ],
+    "examType": "old",
+    "demo": true
+  }
+]

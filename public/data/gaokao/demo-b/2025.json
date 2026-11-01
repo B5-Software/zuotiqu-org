@@ -1,0 +1,9323 @@
+{
+  "meta": {
+    "province": "demo-b",
+    "provinceName": "示例省乙",
+    "year": 2025,
+    "examType": "old",
+    "demo": true,
+    "source": "synthetic://demo-generator",
+    "fetchedAt": "2026-10-31",
+    "note": "DEMO：学校、专业组与分数线均为虚构，仅用于演示功能，不代表任何真实院校的数据。"
+  },
+  "scoreRanks": [
+    {
+      "track": "理科",
+      "score": 750,
+      "count": 0,
+      "cumulative": 0
+    },
+    {
+      "track": "理科",
+      "score": 749,
+      "count": 0,
+      "cumulative": 0
+    },
+    {
+      "track": "理科",
+      "score": 748,
+      "count": 0,
+      "cumulative": 0
+    },
+    {
+      "track": "理科",
+      "score": 747,
+      "count": 0,
+      "cumulative": 0
+    },
+    {
+      "track": "理科",
+      "score": 746,
+      "count": 0,
+      "cumulative": 0
+    },
+    {
+      "track": "理科",
+      "score": 745,
+      "count": 0,
+      "cumulative": 0
+    },
+    {
+      "track": "理科",
+      "score": 744,
+      "count": 0,
+      "cumulative": 0
+    },
+    {
+      "track": "理科",
+      "score": 743,
+      "count": 0,
+      "cumulative": 0
+    },
+    {
+      "track": "理科",
+      "score": 742,
+      "count": 0,
+      "cumulative": 0
+    },
+    {
+      "track": "理科",
+      "score": 741,
+      "count": 0,
+      "cumulative": 0
+    },
+    {
+      "track": "理科",
+      "score": 740,
+      "count": 1,
+      "cumulative": 1
+    },
+    {
+      "track": "理科",
+      "score": 739,
+      "count": 1,
+      "cumulative": 2
+    },
+    {
+      "track": "理科",
+      "score": 738,
+      "count": 1,
+      "cumulative": 3
+    },
+    {
+      "track": "理科",
+      "score": 737,
+      "count": 1,
+      "cumulative": 4
+    },
+    {
+      "track": "理科",
+      "score": 736,
+      "count": 1,
+      "cumulative": 5
+    },
+    {
+      "track": "理科",
+      "score": 735,
+      "count": 1,
+      "cumulative": 6
+    },
+    {
+      "track": "理科",
+      "score": 734,
+      "count": 1,
+      "cumulative": 7
+    },
+    {
+      "track": "理科",
+      "score": 733,
+      "count": 1,
+      "cumulative": 8
+    },
+    {
+      "track": "理科",
+      "score": 732,
+      "count": 1,
+      "cumulative": 9
+    },
+    {
+      "track": "理科",
+      "score": 731,
+      "count": 1,
+      "cumulative": 10
+    },
+    {
+      "track": "理科",
+      "score": 730,
+      "count": 1,
+      "cumulative": 11
+    },
+    {
+      "track": "理科",
+      "score": 729,
+      "count": 1,
+      "cumulative": 12
+    },
+    {
+      "track": "理科",
+      "score": 728,
+      "count": 1,
+      "cumulative": 13
+    },
+    {
+      "track": "理科",
+      "score": 727,
+      "count": 1,
+      "cumulative": 14
+    },
+    {
+      "track": "理科",
+      "score": 726,
+      "count": 1,
+      "cumulative": 15
+    },
+    {
+      "track": "理科",
+      "score": 725,
+      "count": 1,
+      "cumulative": 16
+    },
+    {
+      "track": "理科",
+      "score": 724,
+      "count": 1,
+      "cumulative": 17
+    },
+    {
+      "track": "理科",
+      "score": 723,
+      "count": 1,
+      "cumulative": 18
+    },
+    {
+      "track": "理科",
+      "score": 722,
+      "count": 1,
+      "cumulative": 19
+    },
+    {
+      "track": "理科",
+      "score": 721,
+      "count": 1,
+      "cumulative": 20
+    },
+    {
+      "track": "理科",
+      "score": 720,
+      "count": 1,
+      "cumulative": 21
+    },
+    {
+      "track": "理科",
+      "score": 719,
+      "count": 1,
+      "cumulative": 22
+    },
+    {
+      "track": "理科",
+      "score": 718,
+      "count": 1,
+      "cumulative": 23
+    },
+    {
+      "track": "理科",
+      "score": 717,
+      "count": 1,
+      "cumulative": 24
+    },
+    {
+      "track": "理科",
+      "score": 716,
+      "count": 1,
+      "cumulative": 25
+    },
+    {
+      "track": "理科",
+      "score": 715,
+      "count": 1,
+      "cumulative": 26
+    },
+    {
+      "track": "理科",
+      "score": 714,
+      "count": 1,
+      "cumulative": 27
+    },
+    {
+      "track": "理科",
+      "score": 713,
+      "count": 1,
+      "cumulative": 28
+    },
+    {
+      "track": "理科",
+      "score": 712,
+      "count": 1,
+      "cumulative": 29
+    },
+    {
+      "track": "理科",
+      "score": 711,
+      "count": 1,
+      "cumulative": 30
+    },
+    {
+      "track": "理科",
+      "score": 710,
+      "count": 1,
+      "cumulative": 31
+    },
+    {
+      "track": "理科",
+      "score": 709,
+      "count": 2,
+      "cumulative": 33
+    },
+    {
+      "track": "理科",
+      "score": 708,
+      "count": 2,
+      "cumulative": 35
+    },
+    {
+      "track": "理科",
+      "score": 707,
+      "count": 2,
+      "cumulative": 37
+    },
+    {
+      "track": "理科",
+      "score": 706,
+      "count": 2,
+      "cumulative": 39
+    },
+    {
+      "track": "理科",
+      "score": 705,
+      "count": 2,
+      "cumulative": 41
+    },
+    {
+      "track": "理科",
+      "score": 704,
+      "count": 2,
+      "cumulative": 43
+    },
+    {
+      "track": "理科",
+      "score": 703,
+      "count": 2,
+      "cumulative": 45
+    },
+    {
+      "track": "理科",
+      "score": 702,
+      "count": 2,
+      "cumulative": 47
+    },
+    {
+      "track": "理科",
+      "score": 701,
+      "count": 2,
+      "cumulative": 49
+    },
+    {
+      "track": "理科",
+      "score": 700,
+      "count": 2,
+      "cumulative": 51
+    },
+    {
+      "track": "理科",
+      "score": 699,
+      "count": 2,
+      "cumulative": 53
+    },
+    {
+      "track": "理科",
+      "score": 698,
+      "count": 2,
+      "cumulative": 55
+    },
+    {
+      "track": "理科",
+      "score": 697,
+      "count": 2,
+      "cumulative": 57
+    },
+    {
+      "track": "理科",
+      "score": 696,
+      "count": 2,
+      "cumulative": 59
+    },
+    {
+      "track": "理科",
+      "score": 695,
+      "count": 2,
+      "cumulative": 61
+    },
+    {
+      "track": "理科",
+      "score": 694,
+      "count": 2,
+      "cumulative": 63
+    },
+    {
+      "track": "理科",
+      "score": 693,
+      "count": 3,
+      "cumulative": 66
+    },
+    {
+      "track": "理科",
+      "score": 692,
+      "count": 3,
+      "cumulative": 69
+    },
+    {
+      "track": "理科",
+      "score": 691,
+      "count": 3,
+      "cumulative": 72
+    },
+    {
+      "track": "理科",
+      "score": 690,
+      "count": 3,
+      "cumulative": 75
+    },
+    {
+      "track": "理科",
+      "score": 689,
+      "count": 3,
+      "cumulative": 78
+    },
+    {
+      "track": "理科",
+      "score": 688,
+      "count": 3,
+      "cumulative": 81
+    },
+    {
+      "track": "理科",
+      "score": 687,
+      "count": 3,
+      "cumulative": 84
+    },
+    {
+      "track": "理科",
+      "score": 686,
+      "count": 3,
+      "cumulative": 87
+    },
+    {
+      "track": "理科",
+      "score": 685,
+      "count": 3,
+      "cumulative": 90
+    },
+    {
+      "track": "理科",
+      "score": 684,
+      "count": 3,
+      "cumulative": 93
+    },
+    {
+      "track": "理科",
+      "score": 683,
+      "count": 3,
+      "cumulative": 96
+    },
+    {
+      "track": "理科",
+      "score": 682,
+      "count": 4,
+      "cumulative": 100
+    },
+    {
+      "track": "理科",
+      "score": 681,
+      "count": 4,
+      "cumulative": 104
+    },
+    {
+      "track": "理科",
+      "score": 680,
+      "count": 4,
+      "cumulative": 108
+    },
+    {
+      "track": "理科",
+      "score": 679,
+      "count": 4,
+      "cumulative": 112
+    },
+    {
+      "track": "理科",
+      "score": 678,
+      "count": 4,
+      "cumulative": 116
+    },
+    {
+      "track": "理科",
+      "score": 677,
+      "count": 4,
+      "cumulative": 120
+    },
+    {
+      "track": "理科",
+      "score": 676,
+      "count": 4,
+      "cumulative": 124
+    },
+    {
+      "track": "理科",
+      "score": 675,
+      "count": 4,
+      "cumulative": 128
+    },
+    {
+      "track": "理科",
+      "score": 674,
+      "count": 5,
+      "cumulative": 133
+    },
+    {
+      "track": "理科",
+      "score": 673,
+      "count": 5,
+      "cumulative": 138
+    },
+    {
+      "track": "理科",
+      "score": 672,
+      "count": 5,
+      "cumulative": 143
+    },
+    {
+      "track": "理科",
+      "score": 671,
+      "count": 5,
+      "cumulative": 148
+    },
+    {
+      "track": "理科",
+      "score": 670,
+      "count": 5,
+      "cumulative": 153
+    },
+    {
+      "track": "理科",
+      "score": 669,
+      "count": 5,
+      "cumulative": 158
+    },
+    {
+      "track": "理科",
+      "score": 668,
+      "count": 5,
+      "cumulative": 163
+    },
+    {
+      "track": "理科",
+      "score": 667,
+      "count": 6,
+      "cumulative": 169
+    },
+    {
+      "track": "理科",
+      "score": 666,
+      "count": 6,
+      "cumulative": 175
+    },
+    {
+      "track": "理科",
+      "score": 665,
+      "count": 6,
+      "cumulative": 181
+    },
+    {
+      "track": "理科",
+      "score": 664,
+      "count": 6,
+      "cumulative": 187
+    },
+    {
+      "track": "理科",
+      "score": 663,
+      "count": 6,
+      "cumulative": 193
+    },
+    {
+      "track": "理科",
+      "score": 662,
+      "count": 6,
+      "cumulative": 199
+    },
+    {
+      "track": "理科",
+      "score": 661,
+      "count": 7,
+      "cumulative": 206
+    },
+    {
+      "track": "理科",
+      "score": 660,
+      "count": 7,
+      "cumulative": 213
+    },
+    {
+      "track": "理科",
+      "score": 659,
+      "count": 7,
+      "cumulative": 220
+    },
+    {
+      "track": "理科",
+      "score": 658,
+      "count": 7,
+      "cumulative": 227
+    },
+    {
+      "track": "理科",
+      "score": 657,
+      "count": 7,
+      "cumulative": 234
+    },
+    {
+      "track": "理科",
+      "score": 656,
+      "count": 7,
+      "cumulative": 241
+    },
+    {
+      "track": "理科",
+      "score": 655,
+      "count": 8,
+      "cumulative": 249
+    },
+    {
+      "track": "理科",
+      "score": 654,
+      "count": 8,
+      "cumulative": 257
+    },
+    {
+      "track": "理科",
+      "score": 653,
+      "count": 8,
+      "cumulative": 265
+    },
+    {
+      "track": "理科",
+      "score": 652,
+      "count": 8,
+      "cumulative": 273
+    },
+    {
+      "track": "理科",
+      "score": 651,
+      "count": 9,
+      "cumulative": 282
+    },
+    {
+      "track": "理科",
+      "score": 650,
+      "count": 9,
+      "cumulative": 291
+    },
+    {
+      "track": "理科",
+      "score": 649,
+      "count": 9,
+      "cumulative": 300
+    },
+    {
+      "track": "理科",
+      "score": 648,
+      "count": 9,
+      "cumulative": 309
+    },
+    {
+      "track": "理科",
+      "score": 647,
+      "count": 9,
+      "cumulative": 318
+    },
+    {
+      "track": "理科",
+      "score": 646,
+      "count": 10,
+      "cumulative": 328
+    },
+    {
+      "track": "理科",
+      "score": 645,
+      "count": 10,
+      "cumulative": 338
+    },
+    {
+      "track": "理科",
+      "score": 644,
+      "count": 10,
+      "cumulative": 348
+    },
+    {
+      "track": "理科",
+      "score": 643,
+      "count": 10,
+      "cumulative": 358
+    },
+    {
+      "track": "理科",
+      "score": 642,
+      "count": 11,
+      "cumulative": 369
+    },
+    {
+      "track": "理科",
+      "score": 641,
+      "count": 11,
+      "cumulative": 380
+    },
+    {
+      "track": "理科",
+      "score": 640,
+      "count": 11,
+      "cumulative": 391
+    },
+    {
+      "track": "理科",
+      "score": 639,
+      "count": 12,
+      "cumulative": 403
+    },
+    {
+      "track": "理科",
+      "score": 638,
+      "count": 12,
+      "cumulative": 415
+    },
+    {
+      "track": "理科",
+      "score": 637,
+      "count": 12,
+      "cumulative": 427
+    },
+    {
+      "track": "理科",
+      "score": 636,
+      "count": 12,
+      "cumulative": 439
+    },
+    {
+      "track": "理科",
+      "score": 635,
+      "count": 13,
+      "cumulative": 452
+    },
+    {
+      "track": "理科",
+      "score": 634,
+      "count": 13,
+      "cumulative": 465
+    },
+    {
+      "track": "理科",
+      "score": 633,
+      "count": 13,
+      "cumulative": 478
+    },
+    {
+      "track": "理科",
+      "score": 632,
+      "count": 14,
+      "cumulative": 492
+    },
+    {
+      "track": "理科",
+      "score": 631,
+      "count": 14,
+      "cumulative": 506
+    },
+    {
+      "track": "理科",
+      "score": 630,
+      "count": 14,
+      "cumulative": 520
+    },
+    {
+      "track": "理科",
+      "score": 629,
+      "count": 15,
+      "cumulative": 535
+    },
+    {
+      "track": "理科",
+      "score": 628,
+      "count": 15,
+      "cumulative": 550
+    },
+    {
+      "track": "理科",
+      "score": 627,
+      "count": 15,
+      "cumulative": 565
+    },
+    {
+      "track": "理科",
+      "score": 626,
+      "count": 16,
+      "cumulative": 581
+    },
+    {
+      "track": "理科",
+      "score": 625,
+      "count": 16,
+      "cumulative": 597
+    },
+    {
+      "track": "理科",
+      "score": 624,
+      "count": 16,
+      "cumulative": 613
+    },
+    {
+      "track": "理科",
+      "score": 623,
+      "count": 17,
+      "cumulative": 630
+    },
+    {
+      "track": "理科",
+      "score": 622,
+      "count": 17,
+      "cumulative": 647
+    },
+    {
+      "track": "理科",
+      "score": 621,
+      "count": 18,
+      "cumulative": 665
+    },
+    {
+      "track": "理科",
+      "score": 620,
+      "count": 18,
+      "cumulative": 683
+    },
+    {
+      "track": "理科",
+      "score": 619,
+      "count": 18,
+      "cumulative": 701
+    },
+    {
+      "track": "理科",
+      "score": 618,
+      "count": 19,
+      "cumulative": 720
+    },
+    {
+      "track": "理科",
+      "score": 617,
+      "count": 19,
+      "cumulative": 739
+    },
+    {
+      "track": "理科",
+      "score": 616,
+      "count": 20,
+      "cumulative": 759
+    },
+    {
+      "track": "理科",
+      "score": 615,
+      "count": 20,
+      "cumulative": 779
+    },
+    {
+      "track": "理科",
+      "score": 614,
+      "count": 21,
+      "cumulative": 800
+    },
+    {
+      "track": "理科",
+      "score": 613,
+      "count": 21,
+      "cumulative": 821
+    },
+    {
+      "track": "理科",
+      "score": 612,
+      "count": 21,
+      "cumulative": 842
+    },
+    {
+      "track": "理科",
+      "score": 611,
+      "count": 22,
+      "cumulative": 864
+    },
+    {
+      "track": "理科",
+      "score": 610,
+      "count": 22,
+      "cumulative": 886
+    },
+    {
+      "track": "理科",
+      "score": 609,
+      "count": 23,
+      "cumulative": 909
+    },
+    {
+      "track": "理科",
+      "score": 608,
+      "count": 23,
+      "cumulative": 932
+    },
+    {
+      "track": "理科",
+      "score": 607,
+      "count": 24,
+      "cumulative": 956
+    },
+    {
+      "track": "理科",
+      "score": 606,
+      "count": 24,
+      "cumulative": 980
+    },
+    {
+      "track": "理科",
+      "score": 605,
+      "count": 25,
+      "cumulative": 1005
+    },
+    {
+      "track": "理科",
+      "score": 604,
+      "count": 25,
+      "cumulative": 1030
+    },
+    {
+      "track": "理科",
+      "score": 603,
+      "count": 26,
+      "cumulative": 1056
+    },
+    {
+      "track": "理科",
+      "score": 602,
+      "count": 26,
+      "cumulative": 1082
+    },
+    {
+      "track": "理科",
+      "score": 601,
+      "count": 27,
+      "cumulative": 1109
+    },
+    {
+      "track": "理科",
+      "score": 600,
+      "count": 27,
+      "cumulative": 1136
+    },
+    {
+      "track": "理科",
+      "score": 599,
+      "count": 28,
+      "cumulative": 1164
+    },
+    {
+      "track": "理科",
+      "score": 598,
+      "count": 28,
+      "cumulative": 1192
+    },
+    {
+      "track": "理科",
+      "score": 597,
+      "count": 29,
+      "cumulative": 1221
+    },
+    {
+      "track": "理科",
+      "score": 596,
+      "count": 30,
+      "cumulative": 1251
+    },
+    {
+      "track": "理科",
+      "score": 595,
+      "count": 30,
+      "cumulative": 1281
+    },
+    {
+      "track": "理科",
+      "score": 594,
+      "count": 31,
+      "cumulative": 1312
+    },
+    {
+      "track": "理科",
+      "score": 593,
+      "count": 31,
+      "cumulative": 1343
+    },
+    {
+      "track": "理科",
+      "score": 592,
+      "count": 32,
+      "cumulative": 1375
+    },
+    {
+      "track": "理科",
+      "score": 591,
+      "count": 33,
+      "cumulative": 1408
+    },
+    {
+      "track": "理科",
+      "score": 590,
+      "count": 33,
+      "cumulative": 1441
+    },
+    {
+      "track": "理科",
+      "score": 589,
+      "count": 34,
+      "cumulative": 1475
+    },
+    {
+      "track": "理科",
+      "score": 588,
+      "count": 34,
+      "cumulative": 1509
+    },
+    {
+      "track": "理科",
+      "score": 587,
+      "count": 35,
+      "cumulative": 1544
+    },
+    {
+      "track": "理科",
+      "score": 586,
+      "count": 36,
+      "cumulative": 1580
+    },
+    {
+      "track": "理科",
+      "score": 585,
+      "count": 36,
+      "cumulative": 1616
+    },
+    {
+      "track": "理科",
+      "score": 584,
+      "count": 37,
+      "cumulative": 1653
+    },
+    {
+      "track": "理科",
+      "score": 583,
+      "count": 38,
+      "cumulative": 1691
+    },
+    {
+      "track": "理科",
+      "score": 582,
+      "count": 38,
+      "cumulative": 1729
+    },
+    {
+      "track": "理科",
+      "score": 581,
+      "count": 39,
+      "cumulative": 1768
+    },
+    {
+      "track": "理科",
+      "score": 580,
+      "count": 40,
+      "cumulative": 1808
+    },
+    {
+      "track": "理科",
+      "score": 579,
+      "count": 40,
+      "cumulative": 1848
+    },
+    {
+      "track": "理科",
+      "score": 578,
+      "count": 41,
+      "cumulative": 1889
+    },
+    {
+      "track": "理科",
+      "score": 577,
+      "count": 42,
+      "cumulative": 1931
+    },
+    {
+      "track": "理科",
+      "score": 576,
+      "count": 42,
+      "cumulative": 1973
+    },
+    {
+      "track": "理科",
+      "score": 575,
+      "count": 43,
+      "cumulative": 2016
+    },
+    {
+      "track": "理科",
+      "score": 574,
+      "count": 44,
+      "cumulative": 2060
+    },
+    {
+      "track": "理科",
+      "score": 573,
+      "count": 45,
+      "cumulative": 2105
+    },
+    {
+      "track": "理科",
+      "score": 572,
+      "count": 45,
+      "cumulative": 2150
+    },
+    {
+      "track": "理科",
+      "score": 571,
+      "count": 46,
+      "cumulative": 2196
+    },
+    {
+      "track": "理科",
+      "score": 570,
+      "count": 47,
+      "cumulative": 2243
+    },
+    {
+      "track": "理科",
+      "score": 569,
+      "count": 48,
+      "cumulative": 2291
+    },
+    {
+      "track": "理科",
+      "score": 568,
+      "count": 48,
+      "cumulative": 2339
+    },
+    {
+      "track": "理科",
+      "score": 567,
+      "count": 49,
+      "cumulative": 2388
+    },
+    {
+      "track": "理科",
+      "score": 566,
+      "count": 50,
+      "cumulative": 2438
+    },
+    {
+      "track": "理科",
+      "score": 565,
+      "count": 51,
+      "cumulative": 2489
+    },
+    {
+      "track": "理科",
+      "score": 564,
+      "count": 51,
+      "cumulative": 2540
+    },
+    {
+      "track": "理科",
+      "score": 563,
+      "count": 52,
+      "cumulative": 2592
+    },
+    {
+      "track": "理科",
+      "score": 562,
+      "count": 53,
+      "cumulative": 2645
+    },
+    {
+      "track": "理科",
+      "score": 561,
+      "count": 54,
+      "cumulative": 2699
+    },
+    {
+      "track": "理科",
+      "score": 560,
+      "count": 55,
+      "cumulative": 2754
+    },
+    {
+      "track": "理科",
+      "score": 559,
+      "count": 55,
+      "cumulative": 2809
+    },
+    {
+      "track": "理科",
+      "score": 558,
+      "count": 56,
+      "cumulative": 2865
+    },
+    {
+      "track": "理科",
+      "score": 557,
+      "count": 57,
+      "cumulative": 2922
+    },
+    {
+      "track": "理科",
+      "score": 556,
+      "count": 58,
+      "cumulative": 2980
+    },
+    {
+      "track": "理科",
+      "score": 555,
+      "count": 59,
+      "cumulative": 3039
+    },
+    {
+      "track": "理科",
+      "score": 554,
+      "count": 60,
+      "cumulative": 3099
+    },
+    {
+      "track": "理科",
+      "score": 553,
+      "count": 60,
+      "cumulative": 3159
+    },
+    {
+      "track": "理科",
+      "score": 552,
+      "count": 61,
+      "cumulative": 3220
+    },
+    {
+      "track": "理科",
+      "score": 551,
+      "count": 62,
+      "cumulative": 3282
+    },
+    {
+      "track": "理科",
+      "score": 550,
+      "count": 63,
+      "cumulative": 3345
+    },
+    {
+      "track": "理科",
+      "score": 549,
+      "count": 64,
+      "cumulative": 3409
+    },
+    {
+      "track": "理科",
+      "score": 548,
+      "count": 65,
+      "cumulative": 3474
+    },
+    {
+      "track": "理科",
+      "score": 547,
+      "count": 66,
+      "cumulative": 3540
+    },
+    {
+      "track": "理科",
+      "score": 546,
+      "count": 66,
+      "cumulative": 3606
+    },
+    {
+      "track": "理科",
+      "score": 545,
+      "count": 67,
+      "cumulative": 3673
+    },
+    {
+      "track": "理科",
+      "score": 544,
+      "count": 68,
+      "cumulative": 3741
+    },
+    {
+      "track": "理科",
+      "score": 543,
+      "count": 69,
+      "cumulative": 3810
+    },
+    {
+      "track": "理科",
+      "score": 542,
+      "count": 70,
+      "cumulative": 3880
+    },
+    {
+      "track": "理科",
+      "score": 541,
+      "count": 71,
+      "cumulative": 3951
+    },
+    {
+      "track": "理科",
+      "score": 540,
+      "count": 72,
+      "cumulative": 4023
+    },
+    {
+      "track": "理科",
+      "score": 539,
+      "count": 73,
+      "cumulative": 4096
+    },
+    {
+      "track": "理科",
+      "score": 538,
+      "count": 74,
+      "cumulative": 4170
+    },
+    {
+      "track": "理科",
+      "score": 537,
+      "count": 74,
+      "cumulative": 4244
+    },
+    {
+      "track": "理科",
+      "score": 536,
+      "count": 75,
+      "cumulative": 4319
+    },
+    {
+      "track": "理科",
+      "score": 535,
+      "count": 76,
+      "cumulative": 4395
+    },
+    {
+      "track": "理科",
+      "score": 534,
+      "count": 77,
+      "cumulative": 4472
+    },
+    {
+      "track": "理科",
+      "score": 533,
+      "count": 78,
+      "cumulative": 4550
+    },
+    {
+      "track": "理科",
+      "score": 532,
+      "count": 79,
+      "cumulative": 4629
+    },
+    {
+      "track": "理科",
+      "score": 531,
+      "count": 80,
+      "cumulative": 4709
+    },
+    {
+      "track": "理科",
+      "score": 530,
+      "count": 81,
+      "cumulative": 4790
+    },
+    {
+      "track": "理科",
+      "score": 529,
+      "count": 82,
+      "cumulative": 4872
+    },
+    {
+      "track": "理科",
+      "score": 528,
+      "count": 82,
+      "cumulative": 4954
+    },
+    {
+      "track": "理科",
+      "score": 527,
+      "count": 83,
+      "cumulative": 5037
+    },
+    {
+      "track": "理科",
+      "score": 526,
+      "count": 84,
+      "cumulative": 5121
+    },
+    {
+      "track": "理科",
+      "score": 525,
+      "count": 85,
+      "cumulative": 5206
+    },
+    {
+      "track": "理科",
+      "score": 524,
+      "count": 86,
+      "cumulative": 5292
+    },
+    {
+      "track": "理科",
+      "score": 523,
+      "count": 87,
+      "cumulative": 5379
+    },
+    {
+      "track": "理科",
+      "score": 522,
+      "count": 88,
+      "cumulative": 5467
+    },
+    {
+      "track": "理科",
+      "score": 521,
+      "count": 89,
+      "cumulative": 5556
+    },
+    {
+      "track": "理科",
+      "score": 520,
+      "count": 90,
+      "cumulative": 5646
+    },
+    {
+      "track": "理科",
+      "score": 519,
+      "count": 90,
+      "cumulative": 5736
+    },
+    {
+      "track": "理科",
+      "score": 518,
+      "count": 91,
+      "cumulative": 5827
+    },
+    {
+      "track": "理科",
+      "score": 517,
+      "count": 92,
+      "cumulative": 5919
+    },
+    {
+      "track": "理科",
+      "score": 516,
+      "count": 93,
+      "cumulative": 6012
+    },
+    {
+      "track": "理科",
+      "score": 515,
+      "count": 94,
+      "cumulative": 6106
+    },
+    {
+      "track": "理科",
+      "score": 514,
+      "count": 95,
+      "cumulative": 6201
+    },
+    {
+      "track": "理科",
+      "score": 513,
+      "count": 96,
+      "cumulative": 6297
+    },
+    {
+      "track": "理科",
+      "score": 512,
+      "count": 97,
+      "cumulative": 6394
+    },
+    {
+      "track": "理科",
+      "score": 511,
+      "count": 97,
+      "cumulative": 6491
+    },
+    {
+      "track": "理科",
+      "score": 510,
+      "count": 98,
+      "cumulative": 6589
+    },
+    {
+      "track": "理科",
+      "score": 509,
+      "count": 99,
+      "cumulative": 6688
+    },
+    {
+      "track": "理科",
+      "score": 508,
+      "count": 100,
+      "cumulative": 6788
+    },
+    {
+      "track": "理科",
+      "score": 507,
+      "count": 101,
+      "cumulative": 6889
+    },
+    {
+      "track": "理科",
+      "score": 506,
+      "count": 102,
+      "cumulative": 6991
+    },
+    {
+      "track": "理科",
+      "score": 505,
+      "count": 102,
+      "cumulative": 7093
+    },
+    {
+      "track": "理科",
+      "score": 504,
+      "count": 103,
+      "cumulative": 7196
+    },
+    {
+      "track": "理科",
+      "score": 503,
+      "count": 104,
+      "cumulative": 7300
+    },
+    {
+      "track": "理科",
+      "score": 502,
+      "count": 105,
+      "cumulative": 7405
+    },
+    {
+      "track": "理科",
+      "score": 501,
+      "count": 106,
+      "cumulative": 7511
+    },
+    {
+      "track": "理科",
+      "score": 500,
+      "count": 106,
+      "cumulative": 7617
+    },
+    {
+      "track": "理科",
+      "score": 499,
+      "count": 107,
+      "cumulative": 7724
+    },
+    {
+      "track": "理科",
+      "score": 498,
+      "count": 108,
+      "cumulative": 7832
+    },
+    {
+      "track": "理科",
+      "score": 497,
+      "count": 109,
+      "cumulative": 7941
+    },
+    {
+      "track": "理科",
+      "score": 496,
+      "count": 110,
+      "cumulative": 8051
+    },
+    {
+      "track": "理科",
+      "score": 495,
+      "count": 110,
+      "cumulative": 8161
+    },
+    {
+      "track": "理科",
+      "score": 494,
+      "count": 111,
+      "cumulative": 8272
+    },
+    {
+      "track": "理科",
+      "score": 493,
+      "count": 112,
+      "cumulative": 8384
+    },
+    {
+      "track": "理科",
+      "score": 492,
+      "count": 113,
+      "cumulative": 8497
+    },
+    {
+      "track": "理科",
+      "score": 491,
+      "count": 113,
+      "cumulative": 8610
+    },
+    {
+      "track": "理科",
+      "score": 490,
+      "count": 114,
+      "cumulative": 8724
+    },
+    {
+      "track": "理科",
+      "score": 489,
+      "count": 115,
+      "cumulative": 8839
+    },
+    {
+      "track": "理科",
+      "score": 488,
+      "count": 115,
+      "cumulative": 8954
+    },
+    {
+      "track": "理科",
+      "score": 487,
+      "count": 116,
+      "cumulative": 9070
+    },
+    {
+      "track": "理科",
+      "score": 486,
+      "count": 117,
+      "cumulative": 9187
+    },
+    {
+      "track": "理科",
+      "score": 485,
+      "count": 117,
+      "cumulative": 9304
+    },
+    {
+      "track": "理科",
+      "score": 484,
+      "count": 118,
+      "cumulative": 9422
+    },
+    {
+      "track": "理科",
+      "score": 483,
+      "count": 119,
+      "cumulative": 9541
+    },
+    {
+      "track": "理科",
+      "score": 482,
+      "count": 119,
+      "cumulative": 9660
+    },
+    {
+      "track": "理科",
+      "score": 481,
+      "count": 120,
+      "cumulative": 9780
+    },
+    {
+      "track": "理科",
+      "score": 480,
+      "count": 120,
+      "cumulative": 9900
+    },
+    {
+      "track": "理科",
+      "score": 479,
+      "count": 121,
+      "cumulative": 10021
+    },
+    {
+      "track": "理科",
+      "score": 478,
+      "count": 122,
+      "cumulative": 10143
+    },
+    {
+      "track": "理科",
+      "score": 477,
+      "count": 122,
+      "cumulative": 10265
+    },
+    {
+      "track": "理科",
+      "score": 476,
+      "count": 123,
+      "cumulative": 10388
+    },
+    {
+      "track": "理科",
+      "score": 475,
+      "count": 123,
+      "cumulative": 10511
+    },
+    {
+      "track": "理科",
+      "score": 474,
+      "count": 124,
+      "cumulative": 10635
+    },
+    {
+      "track": "理科",
+      "score": 473,
+      "count": 124,
+      "cumulative": 10759
+    },
+    {
+      "track": "理科",
+      "score": 472,
+      "count": 125,
+      "cumulative": 10884
+    },
+    {
+      "track": "理科",
+      "score": 471,
+      "count": 125,
+      "cumulative": 11009
+    },
+    {
+      "track": "理科",
+      "score": 470,
+      "count": 126,
+      "cumulative": 11135
+    },
+    {
+      "track": "理科",
+      "score": 469,
+      "count": 126,
+      "cumulative": 11261
+    },
+    {
+      "track": "理科",
+      "score": 468,
+      "count": 127,
+      "cumulative": 11388
+    },
+    {
+      "track": "理科",
+      "score": 467,
+      "count": 127,
+      "cumulative": 11515
+    },
+    {
+      "track": "理科",
+      "score": 466,
+      "count": 128,
+      "cumulative": 11643
+    },
+    {
+      "track": "理科",
+      "score": 465,
+      "count": 128,
+      "cumulative": 11771
+    },
+    {
+      "track": "理科",
+      "score": 464,
+      "count": 128,
+      "cumulative": 11899
+    },
+    {
+      "track": "理科",
+      "score": 463,
+      "count": 129,
+      "cumulative": 12028
+    },
+    {
+      "track": "理科",
+      "score": 462,
+      "count": 129,
+      "cumulative": 12157
+    },
+    {
+      "track": "理科",
+      "score": 461,
+      "count": 129,
+      "cumulative": 12286
+    },
+    {
+      "track": "理科",
+      "score": 460,
+      "count": 130,
+      "cumulative": 12416
+    },
+    {
+      "track": "理科",
+      "score": 459,
+      "count": 130,
+      "cumulative": 12546
+    },
+    {
+      "track": "理科",
+      "score": 458,
+      "count": 130,
+      "cumulative": 12676
+    },
+    {
+      "track": "理科",
+      "score": 457,
+      "count": 131,
+      "cumulative": 12807
+    },
+    {
+      "track": "理科",
+      "score": 456,
+      "count": 131,
+      "cumulative": 12938
+    },
+    {
+      "track": "理科",
+      "score": 455,
+      "count": 131,
+      "cumulative": 13069
+    },
+    {
+      "track": "理科",
+      "score": 454,
+      "count": 131,
+      "cumulative": 13200
+    },
+    {
+      "track": "理科",
+      "score": 453,
+      "count": 132,
+      "cumulative": 13332
+    },
+    {
+      "track": "理科",
+      "score": 452,
+      "count": 132,
+      "cumulative": 13464
+    },
+    {
+      "track": "理科",
+      "score": 451,
+      "count": 132,
+      "cumulative": 13596
+    },
+    {
+      "track": "理科",
+      "score": 450,
+      "count": 132,
+      "cumulative": 13728
+    },
+    {
+      "track": "理科",
+      "score": 449,
+      "count": 132,
+      "cumulative": 13860
+    },
+    {
+      "track": "理科",
+      "score": 448,
+      "count": 132,
+      "cumulative": 13992
+    },
+    {
+      "track": "理科",
+      "score": 447,
+      "count": 133,
+      "cumulative": 14125
+    },
+    {
+      "track": "理科",
+      "score": 446,
+      "count": 133,
+      "cumulative": 14258
+    },
+    {
+      "track": "理科",
+      "score": 445,
+      "count": 133,
+      "cumulative": 14391
+    },
+    {
+      "track": "理科",
+      "score": 444,
+      "count": 133,
+      "cumulative": 14524
+    },
+    {
+      "track": "理科",
+      "score": 443,
+      "count": 133,
+      "cumulative": 14657
+    },
+    {
+      "track": "理科",
+      "score": 442,
+      "count": 133,
+      "cumulative": 14790
+    },
+    {
+      "track": "理科",
+      "score": 441,
+      "count": 133,
+      "cumulative": 14923
+    },
+    {
+      "track": "理科",
+      "score": 440,
+      "count": 133,
+      "cumulative": 15056
+    },
+    {
+      "track": "理科",
+      "score": 439,
+      "count": 133,
+      "cumulative": 15189
+    },
+    {
+      "track": "理科",
+      "score": 438,
+      "count": 133,
+      "cumulative": 15322
+    },
+    {
+      "track": "理科",
+      "score": 437,
+      "count": 133,
+      "cumulative": 15455
+    },
+    {
+      "track": "理科",
+      "score": 436,
+      "count": 133,
+      "cumulative": 15588
+    },
+    {
+      "track": "理科",
+      "score": 435,
+      "count": 133,
+      "cumulative": 15721
+    },
+    {
+      "track": "理科",
+      "score": 434,
+      "count": 133,
+      "cumulative": 15854
+    },
+    {
+      "track": "理科",
+      "score": 433,
+      "count": 133,
+      "cumulative": 15987
+    },
+    {
+      "track": "理科",
+      "score": 432,
+      "count": 132,
+      "cumulative": 16119
+    },
+    {
+      "track": "理科",
+      "score": 431,
+      "count": 132,
+      "cumulative": 16251
+    },
+    {
+      "track": "理科",
+      "score": 430,
+      "count": 132,
+      "cumulative": 16383
+    },
+    {
+      "track": "理科",
+      "score": 429,
+      "count": 132,
+      "cumulative": 16515
+    },
+    {
+      "track": "理科",
+      "score": 428,
+      "count": 132,
+      "cumulative": 16647
+    },
+    {
+      "track": "理科",
+      "score": 427,
+      "count": 132,
+      "cumulative": 16779
+    },
+    {
+      "track": "理科",
+      "score": 426,
+      "count": 131,
+      "cumulative": 16910
+    },
+    {
+      "track": "理科",
+      "score": 425,
+      "count": 131,
+      "cumulative": 17041
+    },
+    {
+      "track": "理科",
+      "score": 424,
+      "count": 131,
+      "cumulative": 17172
+    },
+    {
+      "track": "理科",
+      "score": 423,
+      "count": 131,
+      "cumulative": 17303
+    },
+    {
+      "track": "理科",
+      "score": 422,
+      "count": 130,
+      "cumulative": 17433
+    },
+    {
+      "track": "理科",
+      "score": 421,
+      "count": 130,
+      "cumulative": 17563
+    },
+    {
+      "track": "理科",
+      "score": 420,
+      "count": 130,
+      "cumulative": 17693
+    },
+    {
+      "track": "理科",
+      "score": 419,
+      "count": 129,
+      "cumulative": 17822
+    },
+    {
+      "track": "理科",
+      "score": 418,
+      "count": 129,
+      "cumulative": 17951
+    },
+    {
+      "track": "理科",
+      "score": 417,
+      "count": 129,
+      "cumulative": 18080
+    },
+    {
+      "track": "理科",
+      "score": 416,
+      "count": 128,
+      "cumulative": 18208
+    },
+    {
+      "track": "理科",
+      "score": 415,
+      "count": 128,
+      "cumulative": 18336
+    },
+    {
+      "track": "理科",
+      "score": 414,
+      "count": 128,
+      "cumulative": 18464
+    },
+    {
+      "track": "理科",
+      "score": 413,
+      "count": 127,
+      "cumulative": 18591
+    },
+    {
+      "track": "理科",
+      "score": 412,
+      "count": 127,
+      "cumulative": 18718
+    },
+    {
+      "track": "理科",
+      "score": 411,
+      "count": 126,
+      "cumulative": 18844
+    },
+    {
+      "track": "理科",
+      "score": 410,
+      "count": 126,
+      "cumulative": 18970
+    },
+    {
+      "track": "理科",
+      "score": 409,
+      "count": 125,
+      "cumulative": 19095
+    },
+    {
+      "track": "理科",
+      "score": 408,
+      "count": 125,
+      "cumulative": 19220
+    },
+    {
+      "track": "理科",
+      "score": 407,
+      "count": 124,
+      "cumulative": 19344
+    },
+    {
+      "track": "理科",
+      "score": 406,
+      "count": 124,
+      "cumulative": 19468
+    },
+    {
+      "track": "理科",
+      "score": 405,
+      "count": 123,
+      "cumulative": 19591
+    },
+    {
+      "track": "理科",
+      "score": 404,
+      "count": 123,
+      "cumulative": 19714
+    },
+    {
+      "track": "理科",
+      "score": 403,
+      "count": 122,
+      "cumulative": 19836
+    },
+    {
+      "track": "理科",
+      "score": 402,
+      "count": 122,
+      "cumulative": 19958
+    },
+    {
+      "track": "理科",
+      "score": 401,
+      "count": 121,
+      "cumulative": 20079
+    },
+    {
+      "track": "理科",
+      "score": 400,
+      "count": 120,
+      "cumulative": 20199
+    },
+    {
+      "track": "理科",
+      "score": 399,
+      "count": 120,
+      "cumulative": 20319
+    },
+    {
+      "track": "理科",
+      "score": 398,
+      "count": 119,
+      "cumulative": 20438
+    },
+    {
+      "track": "理科",
+      "score": 397,
+      "count": 119,
+      "cumulative": 20557
+    },
+    {
+      "track": "理科",
+      "score": 396,
+      "count": 118,
+      "cumulative": 20675
+    },
+    {
+      "track": "理科",
+      "score": 395,
+      "count": 117,
+      "cumulative": 20792
+    },
+    {
+      "track": "理科",
+      "score": 394,
+      "count": 117,
+      "cumulative": 20909
+    },
+    {
+      "track": "理科",
+      "score": 393,
+      "count": 116,
+      "cumulative": 21025
+    },
+    {
+      "track": "理科",
+      "score": 392,
+      "count": 115,
+      "cumulative": 21140
+    },
+    {
+      "track": "理科",
+      "score": 391,
+      "count": 115,
+      "cumulative": 21255
+    },
+    {
+      "track": "理科",
+      "score": 390,
+      "count": 114,
+      "cumulative": 21369
+    },
+    {
+      "track": "理科",
+      "score": 389,
+      "count": 113,
+      "cumulative": 21482
+    },
+    {
+      "track": "理科",
+      "score": 388,
+      "count": 113,
+      "cumulative": 21595
+    },
+    {
+      "track": "理科",
+      "score": 387,
+      "count": 112,
+      "cumulative": 21707
+    },
+    {
+      "track": "理科",
+      "score": 386,
+      "count": 111,
+      "cumulative": 21818
+    },
+    {
+      "track": "理科",
+      "score": 385,
+      "count": 110,
+      "cumulative": 21928
+    },
+    {
+      "track": "理科",
+      "score": 384,
+      "count": 110,
+      "cumulative": 22038
+    },
+    {
+      "track": "理科",
+      "score": 383,
+      "count": 109,
+      "cumulative": 22147
+    },
+    {
+      "track": "理科",
+      "score": 382,
+      "count": 108,
+      "cumulative": 22255
+    },
+    {
+      "track": "理科",
+      "score": 381,
+      "count": 107,
+      "cumulative": 22362
+    },
+    {
+      "track": "理科",
+      "score": 380,
+      "count": 106,
+      "cumulative": 22468
+    },
+    {
+      "track": "理科",
+      "score": 379,
+      "count": 106,
+      "cumulative": 22574
+    },
+    {
+      "track": "理科",
+      "score": 378,
+      "count": 105,
+      "cumulative": 22679
+    },
+    {
+      "track": "理科",
+      "score": 377,
+      "count": 104,
+      "cumulative": 22783
+    },
+    {
+      "track": "理科",
+      "score": 376,
+      "count": 103,
+      "cumulative": 22886
+    },
+    {
+      "track": "理科",
+      "score": 375,
+      "count": 102,
+      "cumulative": 22988
+    },
+    {
+      "track": "理科",
+      "score": 374,
+      "count": 102,
+      "cumulative": 23090
+    },
+    {
+      "track": "理科",
+      "score": 373,
+      "count": 101,
+      "cumulative": 23191
+    },
+    {
+      "track": "理科",
+      "score": 372,
+      "count": 100,
+      "cumulative": 23291
+    },
+    {
+      "track": "理科",
+      "score": 371,
+      "count": 99,
+      "cumulative": 23390
+    },
+    {
+      "track": "理科",
+      "score": 370,
+      "count": 98,
+      "cumulative": 23488
+    },
+    {
+      "track": "理科",
+      "score": 369,
+      "count": 97,
+      "cumulative": 23585
+    },
+    {
+      "track": "理科",
+      "score": 368,
+      "count": 97,
+      "cumulative": 23682
+    },
+    {
+      "track": "理科",
+      "score": 367,
+      "count": 96,
+      "cumulative": 23778
+    },
+    {
+      "track": "理科",
+      "score": 366,
+      "count": 95,
+      "cumulative": 23873
+    },
+    {
+      "track": "理科",
+      "score": 365,
+      "count": 94,
+      "cumulative": 23967
+    },
+    {
+      "track": "理科",
+      "score": 364,
+      "count": 93,
+      "cumulative": 24060
+    },
+    {
+      "track": "理科",
+      "score": 363,
+      "count": 92,
+      "cumulative": 24152
+    },
+    {
+      "track": "理科",
+      "score": 362,
+      "count": 91,
+      "cumulative": 24243
+    },
+    {
+      "track": "理科",
+      "score": 361,
+      "count": 90,
+      "cumulative": 24333
+    },
+    {
+      "track": "理科",
+      "score": 360,
+      "count": 90,
+      "cumulative": 24423
+    },
+    {
+      "track": "理科",
+      "score": 359,
+      "count": 89,
+      "cumulative": 24512
+    },
+    {
+      "track": "理科",
+      "score": 358,
+      "count": 88,
+      "cumulative": 24600
+    },
+    {
+      "track": "理科",
+      "score": 357,
+      "count": 87,
+      "cumulative": 24687
+    },
+    {
+      "track": "理科",
+      "score": 356,
+      "count": 86,
+      "cumulative": 24773
+    },
+    {
+      "track": "理科",
+      "score": 355,
+      "count": 85,
+      "cumulative": 24858
+    },
+    {
+      "track": "理科",
+      "score": 354,
+      "count": 84,
+      "cumulative": 24942
+    },
+    {
+      "track": "理科",
+      "score": 353,
+      "count": 83,
+      "cumulative": 25025
+    },
+    {
+      "track": "理科",
+      "score": 352,
+      "count": 82,
+      "cumulative": 25107
+    },
+    {
+      "track": "理科",
+      "score": 351,
+      "count": 82,
+      "cumulative": 25189
+    },
+    {
+      "track": "理科",
+      "score": 350,
+      "count": 81,
+      "cumulative": 25270
+    },
+    {
+      "track": "理科",
+      "score": 349,
+      "count": 80,
+      "cumulative": 25350
+    },
+    {
+      "track": "理科",
+      "score": 348,
+      "count": 79,
+      "cumulative": 25429
+    },
+    {
+      "track": "理科",
+      "score": 347,
+      "count": 78,
+      "cumulative": 25507
+    },
+    {
+      "track": "理科",
+      "score": 346,
+      "count": 77,
+      "cumulative": 25584
+    },
+    {
+      "track": "理科",
+      "score": 345,
+      "count": 76,
+      "cumulative": 25660
+    },
+    {
+      "track": "理科",
+      "score": 344,
+      "count": 75,
+      "cumulative": 25735
+    },
+    {
+      "track": "理科",
+      "score": 343,
+      "count": 74,
+      "cumulative": 25809
+    },
+    {
+      "track": "理科",
+      "score": 342,
+      "count": 74,
+      "cumulative": 25883
+    },
+    {
+      "track": "理科",
+      "score": 341,
+      "count": 73,
+      "cumulative": 25956
+    },
+    {
+      "track": "理科",
+      "score": 340,
+      "count": 72,
+      "cumulative": 26028
+    },
+    {
+      "track": "理科",
+      "score": 339,
+      "count": 71,
+      "cumulative": 26099
+    },
+    {
+      "track": "理科",
+      "score": 338,
+      "count": 70,
+      "cumulative": 26169
+    },
+    {
+      "track": "理科",
+      "score": 337,
+      "count": 69,
+      "cumulative": 26238
+    },
+    {
+      "track": "理科",
+      "score": 336,
+      "count": 68,
+      "cumulative": 26306
+    },
+    {
+      "track": "理科",
+      "score": 335,
+      "count": 67,
+      "cumulative": 26373
+    },
+    {
+      "track": "理科",
+      "score": 334,
+      "count": 66,
+      "cumulative": 26439
+    },
+    {
+      "track": "理科",
+      "score": 333,
+      "count": 66,
+      "cumulative": 26505
+    },
+    {
+      "track": "理科",
+      "score": 332,
+      "count": 65,
+      "cumulative": 26570
+    },
+    {
+      "track": "理科",
+      "score": 331,
+      "count": 64,
+      "cumulative": 26634
+    },
+    {
+      "track": "理科",
+      "score": 330,
+      "count": 63,
+      "cumulative": 26697
+    },
+    {
+      "track": "理科",
+      "score": 329,
+      "count": 62,
+      "cumulative": 26759
+    },
+    {
+      "track": "理科",
+      "score": 328,
+      "count": 61,
+      "cumulative": 26820
+    },
+    {
+      "track": "理科",
+      "score": 327,
+      "count": 60,
+      "cumulative": 26880
+    },
+    {
+      "track": "理科",
+      "score": 326,
+      "count": 60,
+      "cumulative": 26940
+    },
+    {
+      "track": "理科",
+      "score": 325,
+      "count": 59,
+      "cumulative": 26999
+    },
+    {
+      "track": "理科",
+      "score": 324,
+      "count": 58,
+      "cumulative": 27057
+    },
+    {
+      "track": "理科",
+      "score": 323,
+      "count": 57,
+      "cumulative": 27114
+    },
+    {
+      "track": "理科",
+      "score": 322,
+      "count": 56,
+      "cumulative": 27170
+    },
+    {
+      "track": "理科",
+      "score": 321,
+      "count": 55,
+      "cumulative": 27225
+    },
+    {
+      "track": "理科",
+      "score": 320,
+      "count": 55,
+      "cumulative": 27280
+    },
+    {
+      "track": "理科",
+      "score": 319,
+      "count": 54,
+      "cumulative": 27334
+    },
+    {
+      "track": "理科",
+      "score": 318,
+      "count": 53,
+      "cumulative": 27387
+    },
+    {
+      "track": "理科",
+      "score": 317,
+      "count": 52,
+      "cumulative": 27439
+    },
+    {
+      "track": "理科",
+      "score": 316,
+      "count": 51,
+      "cumulative": 27490
+    },
+    {
+      "track": "理科",
+      "score": 315,
+      "count": 51,
+      "cumulative": 27541
+    },
+    {
+      "track": "理科",
+      "score": 314,
+      "count": 50,
+      "cumulative": 27591
+    },
+    {
+      "track": "理科",
+      "score": 313,
+      "count": 49,
+      "cumulative": 27640
+    },
+    {
+      "track": "理科",
+      "score": 312,
+      "count": 48,
+      "cumulative": 27688
+    },
+    {
+      "track": "理科",
+      "score": 311,
+      "count": 48,
+      "cumulative": 27736
+    },
+    {
+      "track": "理科",
+      "score": 310,
+      "count": 47,
+      "cumulative": 27783
+    },
+    {
+      "track": "理科",
+      "score": 309,
+      "count": 46,
+      "cumulative": 27829
+    },
+    {
+      "track": "理科",
+      "score": 308,
+      "count": 45,
+      "cumulative": 27874
+    },
+    {
+      "track": "理科",
+      "score": 307,
+      "count": 45,
+      "cumulative": 27919
+    },
+    {
+      "track": "理科",
+      "score": 306,
+      "count": 44,
+      "cumulative": 27963
+    },
+    {
+      "track": "理科",
+      "score": 305,
+      "count": 43,
+      "cumulative": 28006
+    },
+    {
+      "track": "理科",
+      "score": 304,
+      "count": 42,
+      "cumulative": 28048
+    },
+    {
+      "track": "理科",
+      "score": 303,
+      "count": 42,
+      "cumulative": 28090
+    },
+    {
+      "track": "理科",
+      "score": 302,
+      "count": 41,
+      "cumulative": 28131
+    },
+    {
+      "track": "理科",
+      "score": 301,
+      "count": 40,
+      "cumulative": 28171
+    },
+    {
+      "track": "理科",
+      "score": 300,
+      "count": 40,
+      "cumulative": 28211
+    },
+    {
+      "track": "理科",
+      "score": 299,
+      "count": 39,
+      "cumulative": 28250
+    },
+    {
+      "track": "理科",
+      "score": 298,
+      "count": 38,
+      "cumulative": 28288
+    },
+    {
+      "track": "理科",
+      "score": 297,
+      "count": 38,
+      "cumulative": 28326
+    },
+    {
+      "track": "理科",
+      "score": 296,
+      "count": 37,
+      "cumulative": 28363
+    },
+    {
+      "track": "理科",
+      "score": 295,
+      "count": 36,
+      "cumulative": 28399
+    },
+    {
+      "track": "理科",
+      "score": 294,
+      "count": 36,
+      "cumulative": 28435
+    },
+    {
+      "track": "理科",
+      "score": 293,
+      "count": 35,
+      "cumulative": 28470
+    },
+    {
+      "track": "理科",
+      "score": 292,
+      "count": 34,
+      "cumulative": 28504
+    },
+    {
+      "track": "理科",
+      "score": 291,
+      "count": 34,
+      "cumulative": 28538
+    },
+    {
+      "track": "理科",
+      "score": 290,
+      "count": 33,
+      "cumulative": 28571
+    },
+    {
+      "track": "理科",
+      "score": 289,
+      "count": 33,
+      "cumulative": 28604
+    },
+    {
+      "track": "理科",
+      "score": 288,
+      "count": 32,
+      "cumulative": 28636
+    },
+    {
+      "track": "理科",
+      "score": 287,
+      "count": 31,
+      "cumulative": 28667
+    },
+    {
+      "track": "理科",
+      "score": 286,
+      "count": 31,
+      "cumulative": 28698
+    },
+    {
+      "track": "理科",
+      "score": 285,
+      "count": 30,
+      "cumulative": 28728
+    },
+    {
+      "track": "理科",
+      "score": 284,
+      "count": 30,
+      "cumulative": 28758
+    },
+    {
+      "track": "理科",
+      "score": 283,
+      "count": 29,
+      "cumulative": 28787
+    },
+    {
+      "track": "理科",
+      "score": 282,
+      "count": 28,
+      "cumulative": 28815
+    },
+    {
+      "track": "理科",
+      "score": 281,
+      "count": 28,
+      "cumulative": 28843
+    },
+    {
+      "track": "理科",
+      "score": 280,
+      "count": 27,
+      "cumulative": 28870
+    },
+    {
+      "track": "理科",
+      "score": 279,
+      "count": 27,
+      "cumulative": 28897
+    },
+    {
+      "track": "理科",
+      "score": 278,
+      "count": 26,
+      "cumulative": 28923
+    },
+    {
+      "track": "理科",
+      "score": 277,
+      "count": 26,
+      "cumulative": 28949
+    },
+    {
+      "track": "理科",
+      "score": 276,
+      "count": 25,
+      "cumulative": 28974
+    },
+    {
+      "track": "理科",
+      "score": 275,
+      "count": 25,
+      "cumulative": 28999
+    },
+    {
+      "track": "理科",
+      "score": 274,
+      "count": 24,
+      "cumulative": 29023
+    },
+    {
+      "track": "理科",
+      "score": 273,
+      "count": 24,
+      "cumulative": 29047
+    },
+    {
+      "track": "理科",
+      "score": 272,
+      "count": 23,
+      "cumulative": 29070
+    },
+    {
+      "track": "理科",
+      "score": 271,
+      "count": 23,
+      "cumulative": 29093
+    },
+    {
+      "track": "理科",
+      "score": 270,
+      "count": 22,
+      "cumulative": 29115
+    },
+    {
+      "track": "理科",
+      "score": 269,
+      "count": 22,
+      "cumulative": 29137
+    },
+    {
+      "track": "理科",
+      "score": 268,
+      "count": 21,
+      "cumulative": 29158
+    },
+    {
+      "track": "理科",
+      "score": 267,
+      "count": 21,
+      "cumulative": 29179
+    },
+    {
+      "track": "理科",
+      "score": 266,
+      "count": 21,
+      "cumulative": 29200
+    },
+    {
+      "track": "理科",
+      "score": 265,
+      "count": 20,
+      "cumulative": 29220
+    },
+    {
+      "track": "理科",
+      "score": 264,
+      "count": 20,
+      "cumulative": 29240
+    },
+    {
+      "track": "理科",
+      "score": 263,
+      "count": 19,
+      "cumulative": 29259
+    },
+    {
+      "track": "理科",
+      "score": 262,
+      "count": 19,
+      "cumulative": 29278
+    },
+    {
+      "track": "理科",
+      "score": 261,
+      "count": 18,
+      "cumulative": 29296
+    },
+    {
+      "track": "理科",
+      "score": 260,
+      "count": 18,
+      "cumulative": 29314
+    },
+    {
+      "track": "理科",
+      "score": 259,
+      "count": 18,
+      "cumulative": 29332
+    },
+    {
+      "track": "理科",
+      "score": 258,
+      "count": 17,
+      "cumulative": 29349
+    },
+    {
+      "track": "理科",
+      "score": 257,
+      "count": 17,
+      "cumulative": 29366
+    },
+    {
+      "track": "理科",
+      "score": 256,
+      "count": 16,
+      "cumulative": 29382
+    },
+    {
+      "track": "理科",
+      "score": 255,
+      "count": 16,
+      "cumulative": 29398
+    },
+    {
+      "track": "理科",
+      "score": 254,
+      "count": 16,
+      "cumulative": 29414
+    },
+    {
+      "track": "理科",
+      "score": 253,
+      "count": 15,
+      "cumulative": 29429
+    },
+    {
+      "track": "理科",
+      "score": 252,
+      "count": 15,
+      "cumulative": 29444
+    },
+    {
+      "track": "理科",
+      "score": 251,
+      "count": 15,
+      "cumulative": 29459
+    },
+    {
+      "track": "理科",
+      "score": 250,
+      "count": 14,
+      "cumulative": 29473
+    },
+    {
+      "track": "理科",
+      "score": 249,
+      "count": 14,
+      "cumulative": 29487
+    },
+    {
+      "track": "理科",
+      "score": 248,
+      "count": 14,
+      "cumulative": 29501
+    },
+    {
+      "track": "理科",
+      "score": 247,
+      "count": 13,
+      "cumulative": 29514
+    },
+    {
+      "track": "理科",
+      "score": 246,
+      "count": 13,
+      "cumulative": 29527
+    },
+    {
+      "track": "理科",
+      "score": 245,
+      "count": 13,
+      "cumulative": 29540
+    },
+    {
+      "track": "理科",
+      "score": 244,
+      "count": 12,
+      "cumulative": 29552
+    },
+    {
+      "track": "理科",
+      "score": 243,
+      "count": 12,
+      "cumulative": 29564
+    },
+    {
+      "track": "理科",
+      "score": 242,
+      "count": 12,
+      "cumulative": 29576
+    },
+    {
+      "track": "理科",
+      "score": 241,
+      "count": 12,
+      "cumulative": 29588
+    },
+    {
+      "track": "理科",
+      "score": 240,
+      "count": 11,
+      "cumulative": 29599
+    },
+    {
+      "track": "理科",
+      "score": 239,
+      "count": 11,
+      "cumulative": 29610
+    },
+    {
+      "track": "理科",
+      "score": 238,
+      "count": 11,
+      "cumulative": 29621
+    },
+    {
+      "track": "理科",
+      "score": 237,
+      "count": 10,
+      "cumulative": 29631
+    },
+    {
+      "track": "理科",
+      "score": 236,
+      "count": 10,
+      "cumulative": 29641
+    },
+    {
+      "track": "理科",
+      "score": 235,
+      "count": 10,
+      "cumulative": 29651
+    },
+    {
+      "track": "理科",
+      "score": 234,
+      "count": 10,
+      "cumulative": 29661
+    },
+    {
+      "track": "理科",
+      "score": 233,
+      "count": 9,
+      "cumulative": 29670
+    },
+    {
+      "track": "理科",
+      "score": 232,
+      "count": 9,
+      "cumulative": 29679
+    },
+    {
+      "track": "理科",
+      "score": 231,
+      "count": 9,
+      "cumulative": 29688
+    },
+    {
+      "track": "理科",
+      "score": 230,
+      "count": 9,
+      "cumulative": 29697
+    },
+    {
+      "track": "理科",
+      "score": 229,
+      "count": 9,
+      "cumulative": 29706
+    },
+    {
+      "track": "理科",
+      "score": 228,
+      "count": 8,
+      "cumulative": 29714
+    },
+    {
+      "track": "理科",
+      "score": 227,
+      "count": 8,
+      "cumulative": 29722
+    },
+    {
+      "track": "理科",
+      "score": 226,
+      "count": 8,
+      "cumulative": 29730
+    },
+    {
+      "track": "理科",
+      "score": 225,
+      "count": 8,
+      "cumulative": 29738
+    },
+    {
+      "track": "理科",
+      "score": 224,
+      "count": 7,
+      "cumulative": 29745
+    },
+    {
+      "track": "理科",
+      "score": 223,
+      "count": 7,
+      "cumulative": 29752
+    },
+    {
+      "track": "理科",
+      "score": 222,
+      "count": 7,
+      "cumulative": 29759
+    },
+    {
+      "track": "理科",
+      "score": 221,
+      "count": 7,
+      "cumulative": 29766
+    },
+    {
+      "track": "理科",
+      "score": 220,
+      "count": 7,
+      "cumulative": 29773
+    },
+    {
+      "track": "理科",
+      "score": 219,
+      "count": 7,
+      "cumulative": 29780
+    },
+    {
+      "track": "理科",
+      "score": 218,
+      "count": 6,
+      "cumulative": 29786
+    },
+    {
+      "track": "理科",
+      "score": 217,
+      "count": 6,
+      "cumulative": 29792
+    },
+    {
+      "track": "理科",
+      "score": 216,
+      "count": 6,
+      "cumulative": 29798
+    },
+    {
+      "track": "理科",
+      "score": 215,
+      "count": 6,
+      "cumulative": 29804
+    },
+    {
+      "track": "理科",
+      "score": 214,
+      "count": 6,
+      "cumulative": 29810
+    },
+    {
+      "track": "理科",
+      "score": 213,
+      "count": 6,
+      "cumulative": 29816
+    },
+    {
+      "track": "理科",
+      "score": 212,
+      "count": 5,
+      "cumulative": 29821
+    },
+    {
+      "track": "理科",
+      "score": 211,
+      "count": 5,
+      "cumulative": 29826
+    },
+    {
+      "track": "理科",
+      "score": 210,
+      "count": 5,
+      "cumulative": 29831
+    },
+    {
+      "track": "理科",
+      "score": 209,
+      "count": 5,
+      "cumulative": 29836
+    },
+    {
+      "track": "理科",
+      "score": 208,
+      "count": 5,
+      "cumulative": 29841
+    },
+    {
+      "track": "理科",
+      "score": 207,
+      "count": 5,
+      "cumulative": 29846
+    },
+    {
+      "track": "理科",
+      "score": 206,
+      "count": 5,
+      "cumulative": 29851
+    },
+    {
+      "track": "理科",
+      "score": 205,
+      "count": 4,
+      "cumulative": 29855
+    },
+    {
+      "track": "理科",
+      "score": 204,
+      "count": 4,
+      "cumulative": 29859
+    },
+    {
+      "track": "理科",
+      "score": 203,
+      "count": 4,
+      "cumulative": 29863
+    },
+    {
+      "track": "理科",
+      "score": 202,
+      "count": 4,
+      "cumulative": 29867
+    },
+    {
+      "track": "理科",
+      "score": 201,
+      "count": 4,
+      "cumulative": 29871
+    },
+    {
+      "track": "理科",
+      "score": 200,
+      "count": 4,
+      "cumulative": 29875
+    },
+    {
+      "track": "理科",
+      "score": 199,
+      "count": 4,
+      "cumulative": 29879
+    },
+    {
+      "track": "理科",
+      "score": 198,
+      "count": 4,
+      "cumulative": 29883
+    },
+    {
+      "track": "理科",
+      "score": 197,
+      "count": 3,
+      "cumulative": 29886
+    },
+    {
+      "track": "理科",
+      "score": 196,
+      "count": 3,
+      "cumulative": 29889
+    },
+    {
+      "track": "理科",
+      "score": 195,
+      "count": 3,
+      "cumulative": 29892
+    },
+    {
+      "track": "理科",
+      "score": 194,
+      "count": 3,
+      "cumulative": 29895
+    },
+    {
+      "track": "理科",
+      "score": 193,
+      "count": 3,
+      "cumulative": 29898
+    },
+    {
+      "track": "理科",
+      "score": 192,
+      "count": 3,
+      "cumulative": 29901
+    },
+    {
+      "track": "理科",
+      "score": 191,
+      "count": 3,
+      "cumulative": 29904
+    },
+    {
+      "track": "理科",
+      "score": 190,
+      "count": 3,
+      "cumulative": 29907
+    },
+    {
+      "track": "理科",
+      "score": 189,
+      "count": 3,
+      "cumulative": 29910
+    },
+    {
+      "track": "理科",
+      "score": 188,
+      "count": 3,
+      "cumulative": 29913
+    },
+    {
+      "track": "理科",
+      "score": 187,
+      "count": 3,
+      "cumulative": 29916
+    },
+    {
+      "track": "理科",
+      "score": 186,
+      "count": 2,
+      "cumulative": 29918
+    },
+    {
+      "track": "理科",
+      "score": 185,
+      "count": 2,
+      "cumulative": 29920
+    },
+    {
+      "track": "理科",
+      "score": 184,
+      "count": 2,
+      "cumulative": 29922
+    },
+    {
+      "track": "理科",
+      "score": 183,
+      "count": 2,
+      "cumulative": 29924
+    },
+    {
+      "track": "理科",
+      "score": 182,
+      "count": 2,
+      "cumulative": 29926
+    },
+    {
+      "track": "理科",
+      "score": 181,
+      "count": 2,
+      "cumulative": 29928
+    },
+    {
+      "track": "理科",
+      "score": 180,
+      "count": 2,
+      "cumulative": 29930
+    },
+    {
+      "track": "理科",
+      "score": 179,
+      "count": 2,
+      "cumulative": 29932
+    },
+    {
+      "track": "理科",
+      "score": 178,
+      "count": 2,
+      "cumulative": 29934
+    },
+    {
+      "track": "理科",
+      "score": 177,
+      "count": 2,
+      "cumulative": 29936
+    },
+    {
+      "track": "理科",
+      "score": 176,
+      "count": 2,
+      "cumulative": 29938
+    },
+    {
+      "track": "理科",
+      "score": 175,
+      "count": 2,
+      "cumulative": 29940
+    },
+    {
+      "track": "理科",
+      "score": 174,
+      "count": 2,
+      "cumulative": 29942
+    },
+    {
+      "track": "理科",
+      "score": 173,
+      "count": 2,
+      "cumulative": 29944
+    },
+    {
+      "track": "理科",
+      "score": 172,
+      "count": 2,
+      "cumulative": 29946
+    },
+    {
+      "track": "理科",
+      "score": 171,
+      "count": 2,
+      "cumulative": 29948
+    },
+    {
+      "track": "理科",
+      "score": 170,
+      "count": 1,
+      "cumulative": 29949
+    },
+    {
+      "track": "理科",
+      "score": 169,
+      "count": 1,
+      "cumulative": 29950
+    },
+    {
+      "track": "理科",
+      "score": 168,
+      "count": 1,
+      "cumulative": 29951
+    },
+    {
+      "track": "理科",
+      "score": 167,
+      "count": 1,
+      "cumulative": 29952
+    },
+    {
+      "track": "理科",
+      "score": 166,
+      "count": 1,
+      "cumulative": 29953
+    },
+    {
+      "track": "理科",
+      "score": 165,
+      "count": 1,
+      "cumulative": 29954
+    },
+    {
+      "track": "理科",
+      "score": 164,
+      "count": 1,
+      "cumulative": 29955
+    },
+    {
+      "track": "理科",
+      "score": 163,
+      "count": 1,
+      "cumulative": 29956
+    },
+    {
+      "track": "理科",
+      "score": 162,
+      "count": 1,
+      "cumulative": 29957
+    },
+    {
+      "track": "理科",
+      "score": 161,
+      "count": 1,
+      "cumulative": 29958
+    },
+    {
+      "track": "理科",
+      "score": 160,
+      "count": 1,
+      "cumulative": 29959
+    },
+    {
+      "track": "理科",
+      "score": 159,
+      "count": 1,
+      "cumulative": 29960
+    },
+    {
+      "track": "理科",
+      "score": 158,
+      "count": 1,
+      "cumulative": 29961
+    },
+    {
+      "track": "理科",
+      "score": 157,
+      "count": 1,
+      "cumulative": 29962
+    },
+    {
+      "track": "理科",
+      "score": 156,
+      "count": 1,
+      "cumulative": 29963
+    },
+    {
+      "track": "理科",
+      "score": 155,
+      "count": 1,
+      "cumulative": 29964
+    },
+    {
+      "track": "理科",
+      "score": 154,
+      "count": 1,
+      "cumulative": 29965
+    },
+    {
+      "track": "理科",
+      "score": 153,
+      "count": 1,
+      "cumulative": 29966
+    },
+    {
+      "track": "理科",
+      "score": 152,
+      "count": 1,
+      "cumulative": 29967
+    },
+    {
+      "track": "理科",
+      "score": 151,
+      "count": 1,
+      "cumulative": 29968
+    },
+    {
+      "track": "理科",
+      "score": 150,
+      "count": 1,
+      "cumulative": 29969
+    },
+    {
+      "track": "理科",
+      "score": 149,
+      "count": 1,
+      "cumulative": 29970
+    },
+    {
+      "track": "理科",
+      "score": 148,
+      "count": 1,
+      "cumulative": 29971
+    },
+    {
+      "track": "理科",
+      "score": 147,
+      "count": 1,
+      "cumulative": 29972
+    },
+    {
+      "track": "理科",
+      "score": 146,
+      "count": 1,
+      "cumulative": 29973
+    },
+    {
+      "track": "理科",
+      "score": 145,
+      "count": 1,
+      "cumulative": 29974
+    },
+    {
+      "track": "理科",
+      "score": 144,
+      "count": 1,
+      "cumulative": 29975
+    },
+    {
+      "track": "理科",
+      "score": 143,
+      "count": 1,
+      "cumulative": 29976
+    },
+    {
+      "track": "理科",
+      "score": 142,
+      "count": 1,
+      "cumulative": 29977
+    },
+    {
+      "track": "理科",
+      "score": 141,
+      "count": 1,
+      "cumulative": 29978
+    },
+    {
+      "track": "理科",
+      "score": 140,
+      "count": 1,
+      "cumulative": 29979
+    },
+    {
+      "track": "理科",
+      "score": 139,
+      "count": 0,
+      "cumulative": 29979
+    },
+    {
+      "track": "理科",
+      "score": 138,
+      "count": 0,
+      "cumulative": 29979
+    },
+    {
+      "track": "理科",
+      "score": 137,
+      "count": 0,
+      "cumulative": 29979
+    },
+    {
+      "track": "理科",
+      "score": 136,
+      "count": 0,
+      "cumulative": 29979
+    },
+    {
+      "track": "理科",
+      "score": 135,
+      "count": 0,
+      "cumulative": 29979
+    },
+    {
+      "track": "理科",
+      "score": 134,
+      "count": 0,
+      "cumulative": 29979
+    },
+    {
+      "track": "理科",
+      "score": 133,
+      "count": 0,
+      "cumulative": 29979
+    },
+    {
+      "track": "理科",
+      "score": 132,
+      "count": 0,
+      "cumulative": 29979
+    },
+    {
+      "track": "理科",
+      "score": 131,
+      "count": 0,
+      "cumulative": 29979
+    },
+    {
+      "track": "理科",
+      "score": 130,
+      "count": 0,
+      "cumulative": 29979
+    },
+    {
+      "track": "理科",
+      "score": 129,
+      "count": 0,
+      "cumulative": 29979
+    },
+    {
+      "track": "理科",
+      "score": 128,
+      "count": 0,
+      "cumulative": 29979
+    },
+    {
+      "track": "理科",
+      "score": 127,
+      "count": 0,
+      "cumulative": 29979
+    },
+    {
+      "track": "理科",
+      "score": 126,
+      "count": 0,
+      "cumulative": 29979
+    },
+    {
+      "track": "理科",
+      "score": 125,
+      "count": 0,
+      "cumulative": 29979
+    },
+    {
+      "track": "理科",
+      "score": 124,
+      "count": 0,
+      "cumulative": 29979
+    },
+    {
+      "track": "理科",
+      "score": 123,
+      "count": 0,
+      "cumulative": 29979
+    },
+    {
+      "track": "理科",
+      "score": 122,
+      "count": 0,
+      "cumulative": 29979
+    },
+    {
+      "track": "理科",
+      "score": 121,
+      "count": 0,
+      "cumulative": 29979
+    },
+    {
+      "track": "理科",
+      "score": 120,
+      "count": 0,
+      "cumulative": 29979
+    },
+    {
+      "track": "理科",
+      "score": 119,
+      "count": 0,
+      "cumulative": 29979
+    },
+    {
+      "track": "理科",
+      "score": 118,
+      "count": 0,
+      "cumulative": 29979
+    },
+    {
+      "track": "理科",
+      "score": 117,
+      "count": 0,
+      "cumulative": 29979
+    },
+    {
+      "track": "理科",
+      "score": 116,
+      "count": 0,
+      "cumulative": 29979
+    },
+    {
+      "track": "理科",
+      "score": 115,
+      "count": 0,
+      "cumulative": 29979
+    },
+    {
+      "track": "理科",
+      "score": 114,
+      "count": 0,
+      "cumulative": 29979
+    },
+    {
+      "track": "理科",
+      "score": 113,
+      "count": 0,
+      "cumulative": 29979
+    },
+    {
+      "track": "理科",
+      "score": 112,
+      "count": 0,
+      "cumulative": 29979
+    },
+    {
+      "track": "理科",
+      "score": 111,
+      "count": 0,
+      "cumulative": 29979
+    },
+    {
+      "track": "理科",
+      "score": 110,
+      "count": 0,
+      "cumulative": 29979
+    },
+    {
+      "track": "理科",
+      "score": 109,
+      "count": 0,
+      "cumulative": 29979
+    },
+    {
+      "track": "理科",
+      "score": 108,
+      "count": 0,
+      "cumulative": 29979
+    },
+    {
+      "track": "理科",
+      "score": 107,
+      "count": 0,
+      "cumulative": 29979
+    },
+    {
+      "track": "理科",
+      "score": 106,
+      "count": 0,
+      "cumulative": 29979
+    },
+    {
+      "track": "理科",
+      "score": 105,
+      "count": 0,
+      "cumulative": 29979
+    },
+    {
+      "track": "理科",
+      "score": 104,
+      "count": 0,
+      "cumulative": 29979
+    },
+    {
+      "track": "理科",
+      "score": 103,
+      "count": 0,
+      "cumulative": 29979
+    },
+    {
+      "track": "理科",
+      "score": 102,
+      "count": 0,
+      "cumulative": 29979
+    },
+    {
+      "track": "理科",
+      "score": 101,
+      "count": 0,
+      "cumulative": 29979
+    },
+    {
+      "track": "理科",
+      "score": 100,
+      "count": 0,
+      "cumulative": 29979
+    },
+    {
+      "track": "理科",
+      "score": 99,
+      "count": 0,
+      "cumulative": 29979
+    },
+    {
+      "track": "理科",
+      "score": 98,
+      "count": 0,
+      "cumulative": 29979
+    },
+    {
+      "track": "理科",
+      "score": 97,
+      "count": 0,
+      "cumulative": 29979
+    },
+    {
+      "track": "理科",
+      "score": 96,
+      "count": 0,
+      "cumulative": 29979
+    },
+    {
+      "track": "理科",
+      "score": 95,
+      "count": 0,
+      "cumulative": 29979
+    },
+    {
+      "track": "理科",
+      "score": 94,
+      "count": 0,
+      "cumulative": 29979
+    },
+    {
+      "track": "理科",
+      "score": 93,
+      "count": 0,
+      "cumulative": 29979
+    },
+    {
+      "track": "理科",
+      "score": 92,
+      "count": 0,
+      "cumulative": 29979
+    },
+    {
+      "track": "理科",
+      "score": 91,
+      "count": 0,
+      "cumulative": 29979
+    },
+    {
+      "track": "理科",
+      "score": 90,
+      "count": 0,
+      "cumulative": 29979
+    },
+    {
+      "track": "理科",
+      "score": 89,
+      "count": 0,
+      "cumulative": 29979
+    },
+    {
+      "track": "理科",
+      "score": 88,
+      "count": 0,
+      "cumulative": 29979
+    },
+    {
+      "track": "理科",
+      "score": 87,
+      "count": 0,
+      "cumulative": 29979
+    },
+    {
+      "track": "理科",
+      "score": 86,
+      "count": 0,
+      "cumulative": 29979
+    },
+    {
+      "track": "理科",
+      "score": 85,
+      "count": 0,
+      "cumulative": 29979
+    },
+    {
+      "track": "理科",
+      "score": 84,
+      "count": 0,
+      "cumulative": 29979
+    },
+    {
+      "track": "理科",
+      "score": 83,
+      "count": 0,
+      "cumulative": 29979
+    },
+    {
+      "track": "理科",
+      "score": 82,
+      "count": 0,
+      "cumulative": 29979
+    },
+    {
+      "track": "理科",
+      "score": 81,
+      "count": 0,
+      "cumulative": 29979
+    },
+    {
+      "track": "理科",
+      "score": 80,
+      "count": 0,
+      "cumulative": 29979
+    },
+    {
+      "track": "理科",
+      "score": 79,
+      "count": 0,
+      "cumulative": 29979
+    },
+    {
+      "track": "理科",
+      "score": 78,
+      "count": 0,
+      "cumulative": 29979
+    },
+    {
+      "track": "理科",
+      "score": 77,
+      "count": 0,
+      "cumulative": 29979
+    },
+    {
+      "track": "理科",
+      "score": 76,
+      "count": 0,
+      "cumulative": 29979
+    },
+    {
+      "track": "理科",
+      "score": 75,
+      "count": 0,
+      "cumulative": 29979
+    },
+    {
+      "track": "理科",
+      "score": 74,
+      "count": 0,
+      "cumulative": 29979
+    },
+    {
+      "track": "理科",
+      "score": 73,
+      "count": 0,
+      "cumulative": 29979
+    },
+    {
+      "track": "理科",
+      "score": 72,
+      "count": 0,
+      "cumulative": 29979
+    },
+    {
+      "track": "理科",
+      "score": 71,
+      "count": 0,
+      "cumulative": 29979
+    },
+    {
+      "track": "理科",
+      "score": 70,
+      "count": 0,
+      "cumulative": 29979
+    },
+    {
+      "track": "理科",
+      "score": 69,
+      "count": 0,
+      "cumulative": 29979
+    },
+    {
+      "track": "理科",
+      "score": 68,
+      "count": 0,
+      "cumulative": 29979
+    },
+    {
+      "track": "理科",
+      "score": 67,
+      "count": 0,
+      "cumulative": 29979
+    },
+    {
+      "track": "理科",
+      "score": 66,
+      "count": 0,
+      "cumulative": 29979
+    },
+    {
+      "track": "理科",
+      "score": 65,
+      "count": 0,
+      "cumulative": 29979
+    },
+    {
+      "track": "理科",
+      "score": 64,
+      "count": 0,
+      "cumulative": 29979
+    },
+    {
+      "track": "理科",
+      "score": 63,
+      "count": 0,
+      "cumulative": 29979
+    },
+    {
+      "track": "理科",
+      "score": 62,
+      "count": 0,
+      "cumulative": 29979
+    },
+    {
+      "track": "理科",
+      "score": 61,
+      "count": 0,
+      "cumulative": 29979
+    },
+    {
+      "track": "理科",
+      "score": 60,
+      "count": 0,
+      "cumulative": 29979
+    },
+    {
+      "track": "理科",
+      "score": 59,
+      "count": 0,
+      "cumulative": 29979
+    },
+    {
+      "track": "理科",
+      "score": 58,
+      "count": 0,
+      "cumulative": 29979
+    },
+    {
+      "track": "理科",
+      "score": 57,
+      "count": 0,
+      "cumulative": 29979
+    },
+    {
+      "track": "理科",
+      "score": 56,
+      "count": 0,
+      "cumulative": 29979
+    },
+    {
+      "track": "理科",
+      "score": 55,
+      "count": 0,
+      "cumulative": 29979
+    },
+    {
+      "track": "理科",
+      "score": 54,
+      "count": 0,
+      "cumulative": 29979
+    },
+    {
+      "track": "理科",
+      "score": 53,
+      "count": 0,
+      "cumulative": 29979
+    },
+    {
+      "track": "理科",
+      "score": 52,
+      "count": 0,
+      "cumulative": 29979
+    },
+    {
+      "track": "理科",
+      "score": 51,
+      "count": 0,
+      "cumulative": 29979
+    },
+    {
+      "track": "理科",
+      "score": 50,
+      "count": 0,
+      "cumulative": 29979
+    },
+    {
+      "track": "理科",
+      "score": 49,
+      "count": 0,
+      "cumulative": 29979
+    },
+    {
+      "track": "理科",
+      "score": 48,
+      "count": 0,
+      "cumulative": 29979
+    },
+    {
+      "track": "理科",
+      "score": 47,
+      "count": 0,
+      "cumulative": 29979
+    },
+    {
+      "track": "理科",
+      "score": 46,
+      "count": 0,
+      "cumulative": 29979
+    },
+    {
+      "track": "理科",
+      "score": 45,
+      "count": 0,
+      "cumulative": 29979
+    },
+    {
+      "track": "理科",
+      "score": 44,
+      "count": 0,
+      "cumulative": 29979
+    },
+    {
+      "track": "理科",
+      "score": 43,
+      "count": 0,
+      "cumulative": 29979
+    },
+    {
+      "track": "理科",
+      "score": 42,
+      "count": 0,
+      "cumulative": 29979
+    },
+    {
+      "track": "理科",
+      "score": 41,
+      "count": 0,
+      "cumulative": 29979
+    },
+    {
+      "track": "理科",
+      "score": 40,
+      "count": 0,
+      "cumulative": 29979
+    },
+    {
+      "track": "理科",
+      "score": 39,
+      "count": 0,
+      "cumulative": 29979
+    },
+    {
+      "track": "理科",
+      "score": 38,
+      "count": 0,
+      "cumulative": 29979
+    },
+    {
+      "track": "理科",
+      "score": 37,
+      "count": 0,
+      "cumulative": 29979
+    },
+    {
+      "track": "理科",
+      "score": 36,
+      "count": 0,
+      "cumulative": 29979
+    },
+    {
+      "track": "理科",
+      "score": 35,
+      "count": 0,
+      "cumulative": 29979
+    },
+    {
+      "track": "理科",
+      "score": 34,
+      "count": 0,
+      "cumulative": 29979
+    },
+    {
+      "track": "理科",
+      "score": 33,
+      "count": 0,
+      "cumulative": 29979
+    },
+    {
+      "track": "理科",
+      "score": 32,
+      "count": 0,
+      "cumulative": 29979
+    },
+    {
+      "track": "理科",
+      "score": 31,
+      "count": 0,
+      "cumulative": 29979
+    },
+    {
+      "track": "理科",
+      "score": 30,
+      "count": 0,
+      "cumulative": 29979
+    },
+    {
+      "track": "理科",
+      "score": 29,
+      "count": 0,
+      "cumulative": 29979
+    },
+    {
+      "track": "理科",
+      "score": 28,
+      "count": 0,
+      "cumulative": 29979
+    },
+    {
+      "track": "理科",
+      "score": 27,
+      "count": 0,
+      "cumulative": 29979
+    },
+    {
+      "track": "理科",
+      "score": 26,
+      "count": 0,
+      "cumulative": 29979
+    },
+    {
+      "track": "理科",
+      "score": 25,
+      "count": 0,
+      "cumulative": 29979
+    },
+    {
+      "track": "理科",
+      "score": 24,
+      "count": 0,
+      "cumulative": 29979
+    },
+    {
+      "track": "理科",
+      "score": 23,
+      "count": 0,
+      "cumulative": 29979
+    },
+    {
+      "track": "理科",
+      "score": 22,
+      "count": 0,
+      "cumulative": 29979
+    },
+    {
+      "track": "理科",
+      "score": 21,
+      "count": 0,
+      "cumulative": 29979
+    },
+    {
+      "track": "理科",
+      "score": 20,
+      "count": 0,
+      "cumulative": 29979
+    },
+    {
+      "track": "理科",
+      "score": 19,
+      "count": 0,
+      "cumulative": 29979
+    },
+    {
+      "track": "理科",
+      "score": 18,
+      "count": 0,
+      "cumulative": 29979
+    },
+    {
+      "track": "理科",
+      "score": 17,
+      "count": 0,
+      "cumulative": 29979
+    },
+    {
+      "track": "理科",
+      "score": 16,
+      "count": 0,
+      "cumulative": 29979
+    },
+    {
+      "track": "理科",
+      "score": 15,
+      "count": 0,
+      "cumulative": 29979
+    },
+    {
+      "track": "理科",
+      "score": 14,
+      "count": 0,
+      "cumulative": 29979
+    },
+    {
+      "track": "理科",
+      "score": 13,
+      "count": 0,
+      "cumulative": 29979
+    },
+    {
+      "track": "理科",
+      "score": 12,
+      "count": 0,
+      "cumulative": 29979
+    },
+    {
+      "track": "理科",
+      "score": 11,
+      "count": 0,
+      "cumulative": 29979
+    },
+    {
+      "track": "理科",
+      "score": 10,
+      "count": 0,
+      "cumulative": 29979
+    },
+    {
+      "track": "理科",
+      "score": 9,
+      "count": 0,
+      "cumulative": 29979
+    },
+    {
+      "track": "理科",
+      "score": 8,
+      "count": 0,
+      "cumulative": 29979
+    },
+    {
+      "track": "理科",
+      "score": 7,
+      "count": 0,
+      "cumulative": 29979
+    },
+    {
+      "track": "理科",
+      "score": 6,
+      "count": 0,
+      "cumulative": 29979
+    },
+    {
+      "track": "理科",
+      "score": 5,
+      "count": 0,
+      "cumulative": 29979
+    },
+    {
+      "track": "理科",
+      "score": 4,
+      "count": 0,
+      "cumulative": 29979
+    },
+    {
+      "track": "理科",
+      "score": 3,
+      "count": 0,
+      "cumulative": 29979
+    },
+    {
+      "track": "理科",
+      "score": 2,
+      "count": 0,
+      "cumulative": 29979
+    },
+    {
+      "track": "理科",
+      "score": 1,
+      "count": 0,
+      "cumulative": 29979
+    },
+    {
+      "track": "理科",
+      "score": 0,
+      "count": 0,
+      "cumulative": 29979
+    },
+    {
+      "track": "文科",
+      "score": 750,
+      "count": 0,
+      "cumulative": 0
+    },
+    {
+      "track": "文科",
+      "score": 749,
+      "count": 0,
+      "cumulative": 0
+    },
+    {
+      "track": "文科",
+      "score": 748,
+      "count": 0,
+      "cumulative": 0
+    },
+    {
+      "track": "文科",
+      "score": 747,
+      "count": 0,
+      "cumulative": 0
+    },
+    {
+      "track": "文科",
+      "score": 746,
+      "count": 0,
+      "cumulative": 0
+    },
+    {
+      "track": "文科",
+      "score": 745,
+      "count": 0,
+      "cumulative": 0
+    },
+    {
+      "track": "文科",
+      "score": 744,
+      "count": 0,
+      "cumulative": 0
+    },
+    {
+      "track": "文科",
+      "score": 743,
+      "count": 0,
+      "cumulative": 0
+    },
+    {
+      "track": "文科",
+      "score": 742,
+      "count": 0,
+      "cumulative": 0
+    },
+    {
+      "track": "文科",
+      "score": 741,
+      "count": 0,
+      "cumulative": 0
+    },
+    {
+      "track": "文科",
+      "score": 740,
+      "count": 0,
+      "cumulative": 0
+    },
+    {
+      "track": "文科",
+      "score": 739,
+      "count": 0,
+      "cumulative": 0
+    },
+    {
+      "track": "文科",
+      "score": 738,
+      "count": 0,
+      "cumulative": 0
+    },
+    {
+      "track": "文科",
+      "score": 737,
+      "count": 0,
+      "cumulative": 0
+    },
+    {
+      "track": "文科",
+      "score": 736,
+      "count": 0,
+      "cumulative": 0
+    },
+    {
+      "track": "文科",
+      "score": 735,
+      "count": 0,
+      "cumulative": 0
+    },
+    {
+      "track": "文科",
+      "score": 734,
+      "count": 0,
+      "cumulative": 0
+    },
+    {
+      "track": "文科",
+      "score": 733,
+      "count": 0,
+      "cumulative": 0
+    },
+    {
+      "track": "文科",
+      "score": 732,
+      "count": 0,
+      "cumulative": 0
+    },
+    {
+      "track": "文科",
+      "score": 731,
+      "count": 0,
+      "cumulative": 0
+    },
+    {
+      "track": "文科",
+      "score": 730,
+      "count": 0,
+      "cumulative": 0
+    },
+    {
+      "track": "文科",
+      "score": 729,
+      "count": 0,
+      "cumulative": 0
+    },
+    {
+      "track": "文科",
+      "score": 728,
+      "count": 0,
+      "cumulative": 0
+    },
+    {
+      "track": "文科",
+      "score": 727,
+      "count": 0,
+      "cumulative": 0
+    },
+    {
+      "track": "文科",
+      "score": 726,
+      "count": 0,
+      "cumulative": 0
+    },
+    {
+      "track": "文科",
+      "score": 725,
+      "count": 0,
+      "cumulative": 0
+    },
+    {
+      "track": "文科",
+      "score": 724,
+      "count": 0,
+      "cumulative": 0
+    },
+    {
+      "track": "文科",
+      "score": 723,
+      "count": 0,
+      "cumulative": 0
+    },
+    {
+      "track": "文科",
+      "score": 722,
+      "count": 0,
+      "cumulative": 0
+    },
+    {
+      "track": "文科",
+      "score": 721,
+      "count": 0,
+      "cumulative": 0
+    },
+    {
+      "track": "文科",
+      "score": 720,
+      "count": 0,
+      "cumulative": 0
+    },
+    {
+      "track": "文科",
+      "score": 719,
+      "count": 0,
+      "cumulative": 0
+    },
+    {
+      "track": "文科",
+      "score": 718,
+      "count": 0,
+      "cumulative": 0
+    },
+    {
+      "track": "文科",
+      "score": 717,
+      "count": 0,
+      "cumulative": 0
+    },
+    {
+      "track": "文科",
+      "score": 716,
+      "count": 0,
+      "cumulative": 0
+    },
+    {
+      "track": "文科",
+      "score": 715,
+      "count": 0,
+      "cumulative": 0
+    },
+    {
+      "track": "文科",
+      "score": 714,
+      "count": 0,
+      "cumulative": 0
+    },
+    {
+      "track": "文科",
+      "score": 713,
+      "count": 0,
+      "cumulative": 0
+    },
+    {
+      "track": "文科",
+      "score": 712,
+      "count": 0,
+      "cumulative": 0
+    },
+    {
+      "track": "文科",
+      "score": 711,
+      "count": 0,
+      "cumulative": 0
+    },
+    {
+      "track": "文科",
+      "score": 710,
+      "count": 0,
+      "cumulative": 0
+    },
+    {
+      "track": "文科",
+      "score": 709,
+      "count": 0,
+      "cumulative": 0
+    },
+    {
+      "track": "文科",
+      "score": 708,
+      "count": 0,
+      "cumulative": 0
+    },
+    {
+      "track": "文科",
+      "score": 707,
+      "count": 0,
+      "cumulative": 0
+    },
+    {
+      "track": "文科",
+      "score": 706,
+      "count": 0,
+      "cumulative": 0
+    },
+    {
+      "track": "文科",
+      "score": 705,
+      "count": 0,
+      "cumulative": 0
+    },
+    {
+      "track": "文科",
+      "score": 704,
+      "count": 0,
+      "cumulative": 0
+    },
+    {
+      "track": "文科",
+      "score": 703,
+      "count": 0,
+      "cumulative": 0
+    },
+    {
+      "track": "文科",
+      "score": 702,
+      "count": 0,
+      "cumulative": 0
+    },
+    {
+      "track": "文科",
+      "score": 701,
+      "count": 0,
+      "cumulative": 0
+    },
+    {
+      "track": "文科",
+      "score": 700,
+      "count": 0,
+      "cumulative": 0
+    },
+    {
+      "track": "文科",
+      "score": 699,
+      "count": 0,
+      "cumulative": 0
+    },
+    {
+      "track": "文科",
+      "score": 698,
+      "count": 0,
+      "cumulative": 0
+    },
+    {
+      "track": "文科",
+      "score": 697,
+      "count": 0,
+      "cumulative": 0
+    },
+    {
+      "track": "文科",
+      "score": 696,
+      "count": 0,
+      "cumulative": 0
+    },
+    {
+      "track": "文科",
+      "score": 695,
+      "count": 0,
+      "cumulative": 0
+    },
+    {
+      "track": "文科",
+      "score": 694,
+      "count": 0,
+      "cumulative": 0
+    },
+    {
+      "track": "文科",
+      "score": 693,
+      "count": 0,
+      "cumulative": 0
+    },
+    {
+      "track": "文科",
+      "score": 692,
+      "count": 0,
+      "cumulative": 0
+    },
+    {
+      "track": "文科",
+      "score": 691,
+      "count": 0,
+      "cumulative": 0
+    },
+    {
+      "track": "文科",
+      "score": 690,
+      "count": 1,
+      "cumulative": 1
+    },
+    {
+      "track": "文科",
+      "score": 689,
+      "count": 1,
+      "cumulative": 2
+    },
+    {
+      "track": "文科",
+      "score": 688,
+      "count": 1,
+      "cumulative": 3
+    },
+    {
+      "track": "文科",
+      "score": 687,
+      "count": 1,
+      "cumulative": 4
+    },
+    {
+      "track": "文科",
+      "score": 686,
+      "count": 1,
+      "cumulative": 5
+    },
+    {
+      "track": "文科",
+      "score": 685,
+      "count": 1,
+      "cumulative": 6
+    },
+    {
+      "track": "文科",
+      "score": 684,
+      "count": 1,
+      "cumulative": 7
+    },
+    {
+      "track": "文科",
+      "score": 683,
+      "count": 1,
+      "cumulative": 8
+    },
+    {
+      "track": "文科",
+      "score": 682,
+      "count": 1,
+      "cumulative": 9
+    },
+    {
+      "track": "文科",
+      "score": 681,
+      "count": 1,
+      "cumulative": 10
+    },
+    {
+      "track": "文科",
+      "score": 680,
+      "count": 1,
+      "cumulative": 11
+    },
+    {
+      "track": "文科",
+      "score": 679,
+      "count": 1,
+      "cumulative": 12
+    },
+    {
+      "track": "文科",
+      "score": 678,
+      "count": 1,
+      "cumulative": 13
+    },
+    {
+      "track": "文科",
+      "score": 677,
+      "count": 1,
+      "cumulative": 14
+    },
+    {
+      "track": "文科",
+      "score": 676,
+      "count": 1,
+      "cumulative": 15
+    },
+    {
+      "track": "文科",
+      "score": 675,
+      "count": 1,
+      "cumulative": 16
+    },
+    {
+      "track": "文科",
+      "score": 674,
+      "count": 1,
+      "cumulative": 17
+    },
+    {
+      "track": "文科",
+      "score": 673,
+      "count": 1,
+      "cumulative": 18
+    },
+    {
+      "track": "文科",
+      "score": 672,
+      "count": 1,
+      "cumulative": 19
+    },
+    {
+      "track": "文科",
+      "score": 671,
+      "count": 1,
+      "cumulative": 20
+    },
+    {
+      "track": "文科",
+      "score": 670,
+      "count": 1,
+      "cumulative": 21
+    },
+    {
+      "track": "文科",
+      "score": 669,
+      "count": 1,
+      "cumulative": 22
+    },
+    {
+      "track": "文科",
+      "score": 668,
+      "count": 1,
+      "cumulative": 23
+    },
+    {
+      "track": "文科",
+      "score": 667,
+      "count": 1,
+      "cumulative": 24
+    },
+    {
+      "track": "文科",
+      "score": 666,
+      "count": 1,
+      "cumulative": 25
+    },
+    {
+      "track": "文科",
+      "score": 665,
+      "count": 1,
+      "cumulative": 26
+    },
+    {
+      "track": "文科",
+      "score": 664,
+      "count": 1,
+      "cumulative": 27
+    },
+    {
+      "track": "文科",
+      "score": 663,
+      "count": 1,
+      "cumulative": 28
+    },
+    {
+      "track": "文科",
+      "score": 662,
+      "count": 2,
+      "cumulative": 30
+    },
+    {
+      "track": "文科",
+      "score": 661,
+      "count": 2,
+      "cumulative": 32
+    },
+    {
+      "track": "文科",
+      "score": 660,
+      "count": 2,
+      "cumulative": 34
+    },
+    {
+      "track": "文科",
+      "score": 659,
+      "count": 2,
+      "cumulative": 36
+    },
+    {
+      "track": "文科",
+      "score": 658,
+      "count": 2,
+      "cumulative": 38
+    },
+    {
+      "track": "文科",
+      "score": 657,
+      "count": 2,
+      "cumulative": 40
+    },
+    {
+      "track": "文科",
+      "score": 656,
+      "count": 2,
+      "cumulative": 42
+    },
+    {
+      "track": "文科",
+      "score": 655,
+      "count": 2,
+      "cumulative": 44
+    },
+    {
+      "track": "文科",
+      "score": 654,
+      "count": 2,
+      "cumulative": 46
+    },
+    {
+      "track": "文科",
+      "score": 653,
+      "count": 2,
+      "cumulative": 48
+    },
+    {
+      "track": "文科",
+      "score": 652,
+      "count": 2,
+      "cumulative": 50
+    },
+    {
+      "track": "文科",
+      "score": 651,
+      "count": 2,
+      "cumulative": 52
+    },
+    {
+      "track": "文科",
+      "score": 650,
+      "count": 2,
+      "cumulative": 54
+    },
+    {
+      "track": "文科",
+      "score": 649,
+      "count": 2,
+      "cumulative": 56
+    },
+    {
+      "track": "文科",
+      "score": 648,
+      "count": 3,
+      "cumulative": 59
+    },
+    {
+      "track": "文科",
+      "score": 647,
+      "count": 3,
+      "cumulative": 62
+    },
+    {
+      "track": "文科",
+      "score": 646,
+      "count": 3,
+      "cumulative": 65
+    },
+    {
+      "track": "文科",
+      "score": 645,
+      "count": 3,
+      "cumulative": 68
+    },
+    {
+      "track": "文科",
+      "score": 644,
+      "count": 3,
+      "cumulative": 71
+    },
+    {
+      "track": "文科",
+      "score": 643,
+      "count": 3,
+      "cumulative": 74
+    },
+    {
+      "track": "文科",
+      "score": 642,
+      "count": 3,
+      "cumulative": 77
+    },
+    {
+      "track": "文科",
+      "score": 641,
+      "count": 3,
+      "cumulative": 80
+    },
+    {
+      "track": "文科",
+      "score": 640,
+      "count": 3,
+      "cumulative": 83
+    },
+    {
+      "track": "文科",
+      "score": 639,
+      "count": 4,
+      "cumulative": 87
+    },
+    {
+      "track": "文科",
+      "score": 638,
+      "count": 4,
+      "cumulative": 91
+    },
+    {
+      "track": "文科",
+      "score": 637,
+      "count": 4,
+      "cumulative": 95
+    },
+    {
+      "track": "文科",
+      "score": 636,
+      "count": 4,
+      "cumulative": 99
+    },
+    {
+      "track": "文科",
+      "score": 635,
+      "count": 4,
+      "cumulative": 103
+    },
+    {
+      "track": "文科",
+      "score": 634,
+      "count": 4,
+      "cumulative": 107
+    },
+    {
+      "track": "文科",
+      "score": 633,
+      "count": 4,
+      "cumulative": 111
+    },
+    {
+      "track": "文科",
+      "score": 632,
+      "count": 4,
+      "cumulative": 115
+    },
+    {
+      "track": "文科",
+      "score": 631,
+      "count": 5,
+      "cumulative": 120
+    },
+    {
+      "track": "文科",
+      "score": 630,
+      "count": 5,
+      "cumulative": 125
+    },
+    {
+      "track": "文科",
+      "score": 629,
+      "count": 5,
+      "cumulative": 130
+    },
+    {
+      "track": "文科",
+      "score": 628,
+      "count": 5,
+      "cumulative": 135
+    },
+    {
+      "track": "文科",
+      "score": 627,
+      "count": 5,
+      "cumulative": 140
+    },
+    {
+      "track": "文科",
+      "score": 626,
+      "count": 5,
+      "cumulative": 145
+    },
+    {
+      "track": "文科",
+      "score": 625,
+      "count": 6,
+      "cumulative": 151
+    },
+    {
+      "track": "文科",
+      "score": 624,
+      "count": 6,
+      "cumulative": 157
+    },
+    {
+      "track": "文科",
+      "score": 623,
+      "count": 6,
+      "cumulative": 163
+    },
+    {
+      "track": "文科",
+      "score": 622,
+      "count": 6,
+      "cumulative": 169
+    },
+    {
+      "track": "文科",
+      "score": 621,
+      "count": 6,
+      "cumulative": 175
+    },
+    {
+      "track": "文科",
+      "score": 620,
+      "count": 7,
+      "cumulative": 182
+    },
+    {
+      "track": "文科",
+      "score": 619,
+      "count": 7,
+      "cumulative": 189
+    },
+    {
+      "track": "文科",
+      "score": 618,
+      "count": 7,
+      "cumulative": 196
+    },
+    {
+      "track": "文科",
+      "score": 617,
+      "count": 7,
+      "cumulative": 203
+    },
+    {
+      "track": "文科",
+      "score": 616,
+      "count": 7,
+      "cumulative": 210
+    },
+    {
+      "track": "文科",
+      "score": 615,
+      "count": 8,
+      "cumulative": 218
+    },
+    {
+      "track": "文科",
+      "score": 614,
+      "count": 8,
+      "cumulative": 226
+    },
+    {
+      "track": "文科",
+      "score": 613,
+      "count": 8,
+      "cumulative": 234
+    },
+    {
+      "track": "文科",
+      "score": 612,
+      "count": 8,
+      "cumulative": 242
+    },
+    {
+      "track": "文科",
+      "score": 611,
+      "count": 9,
+      "cumulative": 251
+    },
+    {
+      "track": "文科",
+      "score": 610,
+      "count": 9,
+      "cumulative": 260
+    },
+    {
+      "track": "文科",
+      "score": 609,
+      "count": 9,
+      "cumulative": 269
+    },
+    {
+      "track": "文科",
+      "score": 608,
+      "count": 9,
+      "cumulative": 278
+    },
+    {
+      "track": "文科",
+      "score": 607,
+      "count": 10,
+      "cumulative": 288
+    },
+    {
+      "track": "文科",
+      "score": 606,
+      "count": 10,
+      "cumulative": 298
+    },
+    {
+      "track": "文科",
+      "score": 605,
+      "count": 10,
+      "cumulative": 308
+    },
+    {
+      "track": "文科",
+      "score": 604,
+      "count": 11,
+      "cumulative": 319
+    },
+    {
+      "track": "文科",
+      "score": 603,
+      "count": 11,
+      "cumulative": 330
+    },
+    {
+      "track": "文科",
+      "score": 602,
+      "count": 11,
+      "cumulative": 341
+    },
+    {
+      "track": "文科",
+      "score": 601,
+      "count": 12,
+      "cumulative": 353
+    },
+    {
+      "track": "文科",
+      "score": 600,
+      "count": 12,
+      "cumulative": 365
+    },
+    {
+      "track": "文科",
+      "score": 599,
+      "count": 12,
+      "cumulative": 377
+    },
+    {
+      "track": "文科",
+      "score": 598,
+      "count": 13,
+      "cumulative": 390
+    },
+    {
+      "track": "文科",
+      "score": 597,
+      "count": 13,
+      "cumulative": 403
+    },
+    {
+      "track": "文科",
+      "score": 596,
+      "count": 13,
+      "cumulative": 416
+    },
+    {
+      "track": "文科",
+      "score": 595,
+      "count": 14,
+      "cumulative": 430
+    },
+    {
+      "track": "文科",
+      "score": 594,
+      "count": 14,
+      "cumulative": 444
+    },
+    {
+      "track": "文科",
+      "score": 593,
+      "count": 14,
+      "cumulative": 458
+    },
+    {
+      "track": "文科",
+      "score": 592,
+      "count": 15,
+      "cumulative": 473
+    },
+    {
+      "track": "文科",
+      "score": 591,
+      "count": 15,
+      "cumulative": 488
+    },
+    {
+      "track": "文科",
+      "score": 590,
+      "count": 16,
+      "cumulative": 504
+    },
+    {
+      "track": "文科",
+      "score": 589,
+      "count": 16,
+      "cumulative": 520
+    },
+    {
+      "track": "文科",
+      "score": 588,
+      "count": 16,
+      "cumulative": 536
+    },
+    {
+      "track": "文科",
+      "score": 587,
+      "count": 17,
+      "cumulative": 553
+    },
+    {
+      "track": "文科",
+      "score": 586,
+      "count": 17,
+      "cumulative": 570
+    },
+    {
+      "track": "文科",
+      "score": 585,
+      "count": 18,
+      "cumulative": 588
+    },
+    {
+      "track": "文科",
+      "score": 584,
+      "count": 18,
+      "cumulative": 606
+    },
+    {
+      "track": "文科",
+      "score": 583,
+      "count": 19,
+      "cumulative": 625
+    },
+    {
+      "track": "文科",
+      "score": 582,
+      "count": 19,
+      "cumulative": 644
+    },
+    {
+      "track": "文科",
+      "score": 581,
+      "count": 20,
+      "cumulative": 664
+    },
+    {
+      "track": "文科",
+      "score": 580,
+      "count": 20,
+      "cumulative": 684
+    },
+    {
+      "track": "文科",
+      "score": 579,
+      "count": 21,
+      "cumulative": 705
+    },
+    {
+      "track": "文科",
+      "score": 578,
+      "count": 21,
+      "cumulative": 726
+    },
+    {
+      "track": "文科",
+      "score": 577,
+      "count": 22,
+      "cumulative": 748
+    },
+    {
+      "track": "文科",
+      "score": 576,
+      "count": 22,
+      "cumulative": 770
+    },
+    {
+      "track": "文科",
+      "score": 575,
+      "count": 23,
+      "cumulative": 793
+    },
+    {
+      "track": "文科",
+      "score": 574,
+      "count": 23,
+      "cumulative": 816
+    },
+    {
+      "track": "文科",
+      "score": 573,
+      "count": 24,
+      "cumulative": 840
+    },
+    {
+      "track": "文科",
+      "score": 572,
+      "count": 25,
+      "cumulative": 865
+    },
+    {
+      "track": "文科",
+      "score": 571,
+      "count": 25,
+      "cumulative": 890
+    },
+    {
+      "track": "文科",
+      "score": 570,
+      "count": 26,
+      "cumulative": 916
+    },
+    {
+      "track": "文科",
+      "score": 569,
+      "count": 26,
+      "cumulative": 942
+    },
+    {
+      "track": "文科",
+      "score": 568,
+      "count": 27,
+      "cumulative": 969
+    },
+    {
+      "track": "文科",
+      "score": 567,
+      "count": 28,
+      "cumulative": 997
+    },
+    {
+      "track": "文科",
+      "score": 566,
+      "count": 28,
+      "cumulative": 1025
+    },
+    {
+      "track": "文科",
+      "score": 565,
+      "count": 29,
+      "cumulative": 1054
+    },
+    {
+      "track": "文科",
+      "score": 564,
+      "count": 30,
+      "cumulative": 1084
+    },
+    {
+      "track": "文科",
+      "score": 563,
+      "count": 30,
+      "cumulative": 1114
+    },
+    {
+      "track": "文科",
+      "score": 562,
+      "count": 31,
+      "cumulative": 1145
+    },
+    {
+      "track": "文科",
+      "score": 561,
+      "count": 32,
+      "cumulative": 1177
+    },
+    {
+      "track": "文科",
+      "score": 560,
+      "count": 32,
+      "cumulative": 1209
+    },
+    {
+      "track": "文科",
+      "score": 559,
+      "count": 33,
+      "cumulative": 1242
+    },
+    {
+      "track": "文科",
+      "score": 558,
+      "count": 34,
+      "cumulative": 1276
+    },
+    {
+      "track": "文科",
+      "score": 557,
+      "count": 35,
+      "cumulative": 1311
+    },
+    {
+      "track": "文科",
+      "score": 556,
+      "count": 35,
+      "cumulative": 1346
+    },
+    {
+      "track": "文科",
+      "score": 555,
+      "count": 36,
+      "cumulative": 1382
+    },
+    {
+      "track": "文科",
+      "score": 554,
+      "count": 37,
+      "cumulative": 1419
+    },
+    {
+      "track": "文科",
+      "score": 553,
+      "count": 38,
+      "cumulative": 1457
+    },
+    {
+      "track": "文科",
+      "score": 552,
+      "count": 38,
+      "cumulative": 1495
+    },
+    {
+      "track": "文科",
+      "score": 551,
+      "count": 39,
+      "cumulative": 1534
+    },
+    {
+      "track": "文科",
+      "score": 550,
+      "count": 40,
+      "cumulative": 1574
+    },
+    {
+      "track": "文科",
+      "score": 549,
+      "count": 41,
+      "cumulative": 1615
+    },
+    {
+      "track": "文科",
+      "score": 548,
+      "count": 42,
+      "cumulative": 1657
+    },
+    {
+      "track": "文科",
+      "score": 547,
+      "count": 42,
+      "cumulative": 1699
+    },
+    {
+      "track": "文科",
+      "score": 546,
+      "count": 43,
+      "cumulative": 1742
+    },
+    {
+      "track": "文科",
+      "score": 545,
+      "count": 44,
+      "cumulative": 1786
+    },
+    {
+      "track": "文科",
+      "score": 544,
+      "count": 45,
+      "cumulative": 1831
+    },
+    {
+      "track": "文科",
+      "score": 543,
+      "count": 46,
+      "cumulative": 1877
+    },
+    {
+      "track": "文科",
+      "score": 542,
+      "count": 47,
+      "cumulative": 1924
+    },
+    {
+      "track": "文科",
+      "score": 541,
+      "count": 48,
+      "cumulative": 1972
+    },
+    {
+      "track": "文科",
+      "score": 540,
+      "count": 49,
+      "cumulative": 2021
+    },
+    {
+      "track": "文科",
+      "score": 539,
+      "count": 49,
+      "cumulative": 2070
+    },
+    {
+      "track": "文科",
+      "score": 538,
+      "count": 50,
+      "cumulative": 2120
+    },
+    {
+      "track": "文科",
+      "score": 537,
+      "count": 51,
+      "cumulative": 2171
+    },
+    {
+      "track": "文科",
+      "score": 536,
+      "count": 52,
+      "cumulative": 2223
+    },
+    {
+      "track": "文科",
+      "score": 535,
+      "count": 53,
+      "cumulative": 2276
+    },
+    {
+      "track": "文科",
+      "score": 534,
+      "count": 54,
+      "cumulative": 2330
+    },
+    {
+      "track": "文科",
+      "score": 533,
+      "count": 55,
+      "cumulative": 2385
+    },
+    {
+      "track": "文科",
+      "score": 532,
+      "count": 56,
+      "cumulative": 2441
+    },
+    {
+      "track": "文科",
+      "score": 531,
+      "count": 57,
+      "cumulative": 2498
+    },
+    {
+      "track": "文科",
+      "score": 530,
+      "count": 58,
+      "cumulative": 2556
+    },
+    {
+      "track": "文科",
+      "score": 529,
+      "count": 59,
+      "cumulative": 2615
+    },
+    {
+      "track": "文科",
+      "score": 528,
+      "count": 60,
+      "cumulative": 2675
+    },
+    {
+      "track": "文科",
+      "score": 527,
+      "count": 61,
+      "cumulative": 2736
+    },
+    {
+      "track": "文科",
+      "score": 526,
+      "count": 62,
+      "cumulative": 2798
+    },
+    {
+      "track": "文科",
+      "score": 525,
+      "count": 63,
+      "cumulative": 2861
+    },
+    {
+      "track": "文科",
+      "score": 524,
+      "count": 64,
+      "cumulative": 2925
+    },
+    {
+      "track": "文科",
+      "score": 523,
+      "count": 65,
+      "cumulative": 2990
+    },
+    {
+      "track": "文科",
+      "score": 522,
+      "count": 66,
+      "cumulative": 3056
+    },
+    {
+      "track": "文科",
+      "score": 521,
+      "count": 67,
+      "cumulative": 3123
+    },
+    {
+      "track": "文科",
+      "score": 520,
+      "count": 68,
+      "cumulative": 3191
+    },
+    {
+      "track": "文科",
+      "score": 519,
+      "count": 70,
+      "cumulative": 3261
+    },
+    {
+      "track": "文科",
+      "score": 518,
+      "count": 71,
+      "cumulative": 3332
+    },
+    {
+      "track": "文科",
+      "score": 517,
+      "count": 72,
+      "cumulative": 3404
+    },
+    {
+      "track": "文科",
+      "score": 516,
+      "count": 73,
+      "cumulative": 3477
+    },
+    {
+      "track": "文科",
+      "score": 515,
+      "count": 74,
+      "cumulative": 3551
+    },
+    {
+      "track": "文科",
+      "score": 514,
+      "count": 75,
+      "cumulative": 3626
+    },
+    {
+      "track": "文科",
+      "score": 513,
+      "count": 76,
+      "cumulative": 3702
+    },
+    {
+      "track": "文科",
+      "score": 512,
+      "count": 77,
+      "cumulative": 3779
+    },
+    {
+      "track": "文科",
+      "score": 511,
+      "count": 78,
+      "cumulative": 3857
+    },
+    {
+      "track": "文科",
+      "score": 510,
+      "count": 79,
+      "cumulative": 3936
+    },
+    {
+      "track": "文科",
+      "score": 509,
+      "count": 81,
+      "cumulative": 4017
+    },
+    {
+      "track": "文科",
+      "score": 508,
+      "count": 82,
+      "cumulative": 4099
+    },
+    {
+      "track": "文科",
+      "score": 507,
+      "count": 83,
+      "cumulative": 4182
+    },
+    {
+      "track": "文科",
+      "score": 506,
+      "count": 84,
+      "cumulative": 4266
+    },
+    {
+      "track": "文科",
+      "score": 505,
+      "count": 85,
+      "cumulative": 4351
+    },
+    {
+      "track": "文科",
+      "score": 504,
+      "count": 86,
+      "cumulative": 4437
+    },
+    {
+      "track": "文科",
+      "score": 503,
+      "count": 87,
+      "cumulative": 4524
+    },
+    {
+      "track": "文科",
+      "score": 502,
+      "count": 88,
+      "cumulative": 4612
+    },
+    {
+      "track": "文科",
+      "score": 501,
+      "count": 90,
+      "cumulative": 4702
+    },
+    {
+      "track": "文科",
+      "score": 500,
+      "count": 91,
+      "cumulative": 4793
+    },
+    {
+      "track": "文科",
+      "score": 499,
+      "count": 92,
+      "cumulative": 4885
+    },
+    {
+      "track": "文科",
+      "score": 498,
+      "count": 93,
+      "cumulative": 4978
+    },
+    {
+      "track": "文科",
+      "score": 497,
+      "count": 94,
+      "cumulative": 5072
+    },
+    {
+      "track": "文科",
+      "score": 496,
+      "count": 95,
+      "cumulative": 5167
+    },
+    {
+      "track": "文科",
+      "score": 495,
+      "count": 96,
+      "cumulative": 5263
+    },
+    {
+      "track": "文科",
+      "score": 494,
+      "count": 98,
+      "cumulative": 5361
+    },
+    {
+      "track": "文科",
+      "score": 493,
+      "count": 99,
+      "cumulative": 5460
+    },
+    {
+      "track": "文科",
+      "score": 492,
+      "count": 100,
+      "cumulative": 5560
+    },
+    {
+      "track": "文科",
+      "score": 491,
+      "count": 101,
+      "cumulative": 5661
+    },
+    {
+      "track": "文科",
+      "score": 490,
+      "count": 102,
+      "cumulative": 5763
+    },
+    {
+      "track": "文科",
+      "score": 489,
+      "count": 103,
+      "cumulative": 5866
+    },
+    {
+      "track": "文科",
+      "score": 488,
+      "count": 104,
+      "cumulative": 5970
+    },
+    {
+      "track": "文科",
+      "score": 487,
+      "count": 105,
+      "cumulative": 6075
+    },
+    {
+      "track": "文科",
+      "score": 486,
+      "count": 106,
+      "cumulative": 6181
+    },
+    {
+      "track": "文科",
+      "score": 485,
+      "count": 108,
+      "cumulative": 6289
+    },
+    {
+      "track": "文科",
+      "score": 484,
+      "count": 109,
+      "cumulative": 6398
+    },
+    {
+      "track": "文科",
+      "score": 483,
+      "count": 110,
+      "cumulative": 6508
+    },
+    {
+      "track": "文科",
+      "score": 482,
+      "count": 111,
+      "cumulative": 6619
+    },
+    {
+      "track": "文科",
+      "score": 481,
+      "count": 112,
+      "cumulative": 6731
+    },
+    {
+      "track": "文科",
+      "score": 480,
+      "count": 113,
+      "cumulative": 6844
+    },
+    {
+      "track": "文科",
+      "score": 479,
+      "count": 114,
+      "cumulative": 6958
+    },
+    {
+      "track": "文科",
+      "score": 478,
+      "count": 115,
+      "cumulative": 7073
+    },
+    {
+      "track": "文科",
+      "score": 477,
+      "count": 116,
+      "cumulative": 7189
+    },
+    {
+      "track": "文科",
+      "score": 476,
+      "count": 117,
+      "cumulative": 7306
+    },
+    {
+      "track": "文科",
+      "score": 475,
+      "count": 118,
+      "cumulative": 7424
+    },
+    {
+      "track": "文科",
+      "score": 474,
+      "count": 119,
+      "cumulative": 7543
+    },
+    {
+      "track": "文科",
+      "score": 473,
+      "count": 120,
+      "cumulative": 7663
+    },
+    {
+      "track": "文科",
+      "score": 472,
+      "count": 121,
+      "cumulative": 7784
+    },
+    {
+      "track": "文科",
+      "score": 471,
+      "count": 122,
+      "cumulative": 7906
+    },
+    {
+      "track": "文科",
+      "score": 470,
+      "count": 123,
+      "cumulative": 8029
+    },
+    {
+      "track": "文科",
+      "score": 469,
+      "count": 124,
+      "cumulative": 8153
+    },
+    {
+      "track": "文科",
+      "score": 468,
+      "count": 125,
+      "cumulative": 8278
+    },
+    {
+      "track": "文科",
+      "score": 467,
+      "count": 126,
+      "cumulative": 8404
+    },
+    {
+      "track": "文科",
+      "score": 466,
+      "count": 127,
+      "cumulative": 8531
+    },
+    {
+      "track": "文科",
+      "score": 465,
+      "count": 128,
+      "cumulative": 8659
+    },
+    {
+      "track": "文科",
+      "score": 464,
+      "count": 129,
+      "cumulative": 8788
+    },
+    {
+      "track": "文科",
+      "score": 463,
+      "count": 129,
+      "cumulative": 8917
+    },
+    {
+      "track": "文科",
+      "score": 462,
+      "count": 130,
+      "cumulative": 9047
+    },
+    {
+      "track": "文科",
+      "score": 461,
+      "count": 131,
+      "cumulative": 9178
+    },
+    {
+      "track": "文科",
+      "score": 460,
+      "count": 132,
+      "cumulative": 9310
+    },
+    {
+      "track": "文科",
+      "score": 459,
+      "count": 133,
+      "cumulative": 9443
+    },
+    {
+      "track": "文科",
+      "score": 458,
+      "count": 134,
+      "cumulative": 9577
+    },
+    {
+      "track": "文科",
+      "score": 457,
+      "count": 134,
+      "cumulative": 9711
+    },
+    {
+      "track": "文科",
+      "score": 456,
+      "count": 135,
+      "cumulative": 9846
+    },
+    {
+      "track": "文科",
+      "score": 455,
+      "count": 136,
+      "cumulative": 9982
+    },
+    {
+      "track": "文科",
+      "score": 454,
+      "count": 137,
+      "cumulative": 10119
+    },
+    {
+      "track": "文科",
+      "score": 453,
+      "count": 137,
+      "cumulative": 10256
+    },
+    {
+      "track": "文科",
+      "score": 452,
+      "count": 138,
+      "cumulative": 10394
+    },
+    {
+      "track": "文科",
+      "score": 451,
+      "count": 139,
+      "cumulative": 10533
+    },
+    {
+      "track": "文科",
+      "score": 450,
+      "count": 139,
+      "cumulative": 10672
+    },
+    {
+      "track": "文科",
+      "score": 449,
+      "count": 140,
+      "cumulative": 10812
+    },
+    {
+      "track": "文科",
+      "score": 448,
+      "count": 141,
+      "cumulative": 10953
+    },
+    {
+      "track": "文科",
+      "score": 447,
+      "count": 141,
+      "cumulative": 11094
+    },
+    {
+      "track": "文科",
+      "score": 446,
+      "count": 142,
+      "cumulative": 11236
+    },
+    {
+      "track": "文科",
+      "score": 445,
+      "count": 142,
+      "cumulative": 11378
+    },
+    {
+      "track": "文科",
+      "score": 444,
+      "count": 143,
+      "cumulative": 11521
+    },
+    {
+      "track": "文科",
+      "score": 443,
+      "count": 144,
+      "cumulative": 11665
+    },
+    {
+      "track": "文科",
+      "score": 442,
+      "count": 144,
+      "cumulative": 11809
+    },
+    {
+      "track": "文科",
+      "score": 441,
+      "count": 145,
+      "cumulative": 11954
+    },
+    {
+      "track": "文科",
+      "score": 440,
+      "count": 145,
+      "cumulative": 12099
+    },
+    {
+      "track": "文科",
+      "score": 439,
+      "count": 145,
+      "cumulative": 12244
+    },
+    {
+      "track": "文科",
+      "score": 438,
+      "count": 146,
+      "cumulative": 12390
+    },
+    {
+      "track": "文科",
+      "score": 437,
+      "count": 146,
+      "cumulative": 12536
+    },
+    {
+      "track": "文科",
+      "score": 436,
+      "count": 147,
+      "cumulative": 12683
+    },
+    {
+      "track": "文科",
+      "score": 435,
+      "count": 147,
+      "cumulative": 12830
+    },
+    {
+      "track": "文科",
+      "score": 434,
+      "count": 147,
+      "cumulative": 12977
+    },
+    {
+      "track": "文科",
+      "score": 433,
+      "count": 148,
+      "cumulative": 13125
+    },
+    {
+      "track": "文科",
+      "score": 432,
+      "count": 148,
+      "cumulative": 13273
+    },
+    {
+      "track": "文科",
+      "score": 431,
+      "count": 148,
+      "cumulative": 13421
+    },
+    {
+      "track": "文科",
+      "score": 430,
+      "count": 148,
+      "cumulative": 13569
+    },
+    {
+      "track": "文科",
+      "score": 429,
+      "count": 149,
+      "cumulative": 13718
+    },
+    {
+      "track": "文科",
+      "score": 428,
+      "count": 149,
+      "cumulative": 13867
+    },
+    {
+      "track": "文科",
+      "score": 427,
+      "count": 149,
+      "cumulative": 14016
+    },
+    {
+      "track": "文科",
+      "score": 426,
+      "count": 149,
+      "cumulative": 14165
+    },
+    {
+      "track": "文科",
+      "score": 425,
+      "count": 149,
+      "cumulative": 14314
+    },
+    {
+      "track": "文科",
+      "score": 424,
+      "count": 149,
+      "cumulative": 14463
+    },
+    {
+      "track": "文科",
+      "score": 423,
+      "count": 149,
+      "cumulative": 14612
+    },
+    {
+      "track": "文科",
+      "score": 422,
+      "count": 150,
+      "cumulative": 14762
+    },
+    {
+      "track": "文科",
+      "score": 421,
+      "count": 150,
+      "cumulative": 14912
+    },
+    {
+      "track": "文科",
+      "score": 420,
+      "count": 150,
+      "cumulative": 15062
+    },
+    {
+      "track": "文科",
+      "score": 419,
+      "count": 150,
+      "cumulative": 15212
+    },
+    {
+      "track": "文科",
+      "score": 418,
+      "count": 150,
+      "cumulative": 15362
+    },
+    {
+      "track": "文科",
+      "score": 417,
+      "count": 149,
+      "cumulative": 15511
+    },
+    {
+      "track": "文科",
+      "score": 416,
+      "count": 149,
+      "cumulative": 15660
+    },
+    {
+      "track": "文科",
+      "score": 415,
+      "count": 149,
+      "cumulative": 15809
+    },
+    {
+      "track": "文科",
+      "score": 414,
+      "count": 149,
+      "cumulative": 15958
+    },
+    {
+      "track": "文科",
+      "score": 413,
+      "count": 149,
+      "cumulative": 16107
+    },
+    {
+      "track": "文科",
+      "score": 412,
+      "count": 149,
+      "cumulative": 16256
+    },
+    {
+      "track": "文科",
+      "score": 411,
+      "count": 149,
+      "cumulative": 16405
+    },
+    {
+      "track": "文科",
+      "score": 410,
+      "count": 148,
+      "cumulative": 16553
+    },
+    {
+      "track": "文科",
+      "score": 409,
+      "count": 148,
+      "cumulative": 16701
+    },
+    {
+      "track": "文科",
+      "score": 408,
+      "count": 148,
+      "cumulative": 16849
+    },
+    {
+      "track": "文科",
+      "score": 407,
+      "count": 148,
+      "cumulative": 16997
+    },
+    {
+      "track": "文科",
+      "score": 406,
+      "count": 147,
+      "cumulative": 17144
+    },
+    {
+      "track": "文科",
+      "score": 405,
+      "count": 147,
+      "cumulative": 17291
+    },
+    {
+      "track": "文科",
+      "score": 404,
+      "count": 147,
+      "cumulative": 17438
+    },
+    {
+      "track": "文科",
+      "score": 403,
+      "count": 146,
+      "cumulative": 17584
+    },
+    {
+      "track": "文科",
+      "score": 402,
+      "count": 146,
+      "cumulative": 17730
+    },
+    {
+      "track": "文科",
+      "score": 401,
+      "count": 145,
+      "cumulative": 17875
+    },
+    {
+      "track": "文科",
+      "score": 400,
+      "count": 145,
+      "cumulative": 18020
+    },
+    {
+      "track": "文科",
+      "score": 399,
+      "count": 145,
+      "cumulative": 18165
+    },
+    {
+      "track": "文科",
+      "score": 398,
+      "count": 144,
+      "cumulative": 18309
+    },
+    {
+      "track": "文科",
+      "score": 397,
+      "count": 144,
+      "cumulative": 18453
+    },
+    {
+      "track": "文科",
+      "score": 396,
+      "count": 143,
+      "cumulative": 18596
+    },
+    {
+      "track": "文科",
+      "score": 395,
+      "count": 142,
+      "cumulative": 18738
+    },
+    {
+      "track": "文科",
+      "score": 394,
+      "count": 142,
+      "cumulative": 18880
+    },
+    {
+      "track": "文科",
+      "score": 393,
+      "count": 141,
+      "cumulative": 19021
+    },
+    {
+      "track": "文科",
+      "score": 392,
+      "count": 141,
+      "cumulative": 19162
+    },
+    {
+      "track": "文科",
+      "score": 391,
+      "count": 140,
+      "cumulative": 19302
+    },
+    {
+      "track": "文科",
+      "score": 390,
+      "count": 139,
+      "cumulative": 19441
+    },
+    {
+      "track": "文科",
+      "score": 389,
+      "count": 139,
+      "cumulative": 19580
+    },
+    {
+      "track": "文科",
+      "score": 388,
+      "count": 138,
+      "cumulative": 19718
+    },
+    {
+      "track": "文科",
+      "score": 387,
+      "count": 137,
+      "cumulative": 19855
+    },
+    {
+      "track": "文科",
+      "score": 386,
+      "count": 137,
+      "cumulative": 19992
+    },
+    {
+      "track": "文科",
+      "score": 385,
+      "count": 136,
+      "cumulative": 20128
+    },
+    {
+      "track": "文科",
+      "score": 384,
+      "count": 135,
+      "cumulative": 20263
+    },
+    {
+      "track": "文科",
+      "score": 383,
+      "count": 134,
+      "cumulative": 20397
+    },
+    {
+      "track": "文科",
+      "score": 382,
+      "count": 134,
+      "cumulative": 20531
+    },
+    {
+      "track": "文科",
+      "score": 381,
+      "count": 133,
+      "cumulative": 20664
+    },
+    {
+      "track": "文科",
+      "score": 380,
+      "count": 132,
+      "cumulative": 20796
+    },
+    {
+      "track": "文科",
+      "score": 379,
+      "count": 131,
+      "cumulative": 20927
+    },
+    {
+      "track": "文科",
+      "score": 378,
+      "count": 130,
+      "cumulative": 21057
+    },
+    {
+      "track": "文科",
+      "score": 377,
+      "count": 129,
+      "cumulative": 21186
+    },
+    {
+      "track": "文科",
+      "score": 376,
+      "count": 129,
+      "cumulative": 21315
+    },
+    {
+      "track": "文科",
+      "score": 375,
+      "count": 128,
+      "cumulative": 21443
+    },
+    {
+      "track": "文科",
+      "score": 374,
+      "count": 127,
+      "cumulative": 21570
+    },
+    {
+      "track": "文科",
+      "score": 373,
+      "count": 126,
+      "cumulative": 21696
+    },
+    {
+      "track": "文科",
+      "score": 372,
+      "count": 125,
+      "cumulative": 21821
+    },
+    {
+      "track": "文科",
+      "score": 371,
+      "count": 124,
+      "cumulative": 21945
+    },
+    {
+      "track": "文科",
+      "score": 370,
+      "count": 123,
+      "cumulative": 22068
+    },
+    {
+      "track": "文科",
+      "score": 369,
+      "count": 122,
+      "cumulative": 22190
+    },
+    {
+      "track": "文科",
+      "score": 368,
+      "count": 121,
+      "cumulative": 22311
+    },
+    {
+      "track": "文科",
+      "score": 367,
+      "count": 120,
+      "cumulative": 22431
+    },
+    {
+      "track": "文科",
+      "score": 366,
+      "count": 119,
+      "cumulative": 22550
+    },
+    {
+      "track": "文科",
+      "score": 365,
+      "count": 118,
+      "cumulative": 22668
+    },
+    {
+      "track": "文科",
+      "score": 364,
+      "count": 117,
+      "cumulative": 22785
+    },
+    {
+      "track": "文科",
+      "score": 363,
+      "count": 116,
+      "cumulative": 22901
+    },
+    {
+      "track": "文科",
+      "score": 362,
+      "count": 115,
+      "cumulative": 23016
+    },
+    {
+      "track": "文科",
+      "score": 361,
+      "count": 114,
+      "cumulative": 23130
+    },
+    {
+      "track": "文科",
+      "score": 360,
+      "count": 113,
+      "cumulative": 23243
+    },
+    {
+      "track": "文科",
+      "score": 359,
+      "count": 112,
+      "cumulative": 23355
+    },
+    {
+      "track": "文科",
+      "score": 358,
+      "count": 111,
+      "cumulative": 23466
+    },
+    {
+      "track": "文科",
+      "score": 357,
+      "count": 110,
+      "cumulative": 23576
+    },
+    {
+      "track": "文科",
+      "score": 356,
+      "count": 109,
+      "cumulative": 23685
+    },
+    {
+      "track": "文科",
+      "score": 355,
+      "count": 108,
+      "cumulative": 23793
+    },
+    {
+      "track": "文科",
+      "score": 354,
+      "count": 106,
+      "cumulative": 23899
+    },
+    {
+      "track": "文科",
+      "score": 353,
+      "count": 105,
+      "cumulative": 24004
+    },
+    {
+      "track": "文科",
+      "score": 352,
+      "count": 104,
+      "cumulative": 24108
+    },
+    {
+      "track": "文科",
+      "score": 351,
+      "count": 103,
+      "cumulative": 24211
+    },
+    {
+      "track": "文科",
+      "score": 350,
+      "count": 102,
+      "cumulative": 24313
+    },
+    {
+      "track": "文科",
+      "score": 349,
+      "count": 101,
+      "cumulative": 24414
+    },
+    {
+      "track": "文科",
+      "score": 348,
+      "count": 100,
+      "cumulative": 24514
+    },
+    {
+      "track": "文科",
+      "score": 347,
+      "count": 99,
+      "cumulative": 24613
+    },
+    {
+      "track": "文科",
+      "score": 346,
+      "count": 98,
+      "cumulative": 24711
+    },
+    {
+      "track": "文科",
+      "score": 345,
+      "count": 96,
+      "cumulative": 24807
+    },
+    {
+      "track": "文科",
+      "score": 344,
+      "count": 95,
+      "cumulative": 24902
+    },
+    {
+      "track": "文科",
+      "score": 343,
+      "count": 94,
+      "cumulative": 24996
+    },
+    {
+      "track": "文科",
+      "score": 342,
+      "count": 93,
+      "cumulative": 25089
+    },
+    {
+      "track": "文科",
+      "score": 341,
+      "count": 92,
+      "cumulative": 25181
+    },
+    {
+      "track": "文科",
+      "score": 340,
+      "count": 91,
+      "cumulative": 25272
+    },
+    {
+      "track": "文科",
+      "score": 339,
+      "count": 90,
+      "cumulative": 25362
+    },
+    {
+      "track": "文科",
+      "score": 338,
+      "count": 88,
+      "cumulative": 25450
+    },
+    {
+      "track": "文科",
+      "score": 337,
+      "count": 87,
+      "cumulative": 25537
+    },
+    {
+      "track": "文科",
+      "score": 336,
+      "count": 86,
+      "cumulative": 25623
+    },
+    {
+      "track": "文科",
+      "score": 335,
+      "count": 85,
+      "cumulative": 25708
+    },
+    {
+      "track": "文科",
+      "score": 334,
+      "count": 84,
+      "cumulative": 25792
+    },
+    {
+      "track": "文科",
+      "score": 333,
+      "count": 83,
+      "cumulative": 25875
+    },
+    {
+      "track": "文科",
+      "score": 332,
+      "count": 82,
+      "cumulative": 25957
+    },
+    {
+      "track": "文科",
+      "score": 331,
+      "count": 81,
+      "cumulative": 26038
+    },
+    {
+      "track": "文科",
+      "score": 330,
+      "count": 79,
+      "cumulative": 26117
+    },
+    {
+      "track": "文科",
+      "score": 329,
+      "count": 78,
+      "cumulative": 26195
+    },
+    {
+      "track": "文科",
+      "score": 328,
+      "count": 77,
+      "cumulative": 26272
+    },
+    {
+      "track": "文科",
+      "score": 327,
+      "count": 76,
+      "cumulative": 26348
+    },
+    {
+      "track": "文科",
+      "score": 326,
+      "count": 75,
+      "cumulative": 26423
+    },
+    {
+      "track": "文科",
+      "score": 325,
+      "count": 74,
+      "cumulative": 26497
+    },
+    {
+      "track": "文科",
+      "score": 324,
+      "count": 73,
+      "cumulative": 26570
+    },
+    {
+      "track": "文科",
+      "score": 323,
+      "count": 72,
+      "cumulative": 26642
+    },
+    {
+      "track": "文科",
+      "score": 322,
+      "count": 71,
+      "cumulative": 26713
+    },
+    {
+      "track": "文科",
+      "score": 321,
+      "count": 70,
+      "cumulative": 26783
+    },
+    {
+      "track": "文科",
+      "score": 320,
+      "count": 68,
+      "cumulative": 26851
+    },
+    {
+      "track": "文科",
+      "score": 319,
+      "count": 67,
+      "cumulative": 26918
+    },
+    {
+      "track": "文科",
+      "score": 318,
+      "count": 66,
+      "cumulative": 26984
+    },
+    {
+      "track": "文科",
+      "score": 317,
+      "count": 65,
+      "cumulative": 27049
+    },
+    {
+      "track": "文科",
+      "score": 316,
+      "count": 64,
+      "cumulative": 27113
+    },
+    {
+      "track": "文科",
+      "score": 315,
+      "count": 63,
+      "cumulative": 27176
+    },
+    {
+      "track": "文科",
+      "score": 314,
+      "count": 62,
+      "cumulative": 27238
+    },
+    {
+      "track": "文科",
+      "score": 313,
+      "count": 61,
+      "cumulative": 27299
+    },
+    {
+      "track": "文科",
+      "score": 312,
+      "count": 60,
+      "cumulative": 27359
+    },
+    {
+      "track": "文科",
+      "score": 311,
+      "count": 59,
+      "cumulative": 27418
+    },
+    {
+      "track": "文科",
+      "score": 310,
+      "count": 58,
+      "cumulative": 27476
+    },
+    {
+      "track": "文科",
+      "score": 309,
+      "count": 57,
+      "cumulative": 27533
+    },
+    {
+      "track": "文科",
+      "score": 308,
+      "count": 56,
+      "cumulative": 27589
+    },
+    {
+      "track": "文科",
+      "score": 307,
+      "count": 55,
+      "cumulative": 27644
+    },
+    {
+      "track": "文科",
+      "score": 306,
+      "count": 54,
+      "cumulative": 27698
+    },
+    {
+      "track": "文科",
+      "score": 305,
+      "count": 53,
+      "cumulative": 27751
+    },
+    {
+      "track": "文科",
+      "score": 304,
+      "count": 52,
+      "cumulative": 27803
+    },
+    {
+      "track": "文科",
+      "score": 303,
+      "count": 51,
+      "cumulative": 27854
+    },
+    {
+      "track": "文科",
+      "score": 302,
+      "count": 50,
+      "cumulative": 27904
+    },
+    {
+      "track": "文科",
+      "score": 301,
+      "count": 49,
+      "cumulative": 27953
+    },
+    {
+      "track": "文科",
+      "score": 300,
+      "count": 49,
+      "cumulative": 28002
+    },
+    {
+      "track": "文科",
+      "score": 299,
+      "count": 48,
+      "cumulative": 28050
+    },
+    {
+      "track": "文科",
+      "score": 298,
+      "count": 47,
+      "cumulative": 28097
+    },
+    {
+      "track": "文科",
+      "score": 297,
+      "count": 46,
+      "cumulative": 28143
+    },
+    {
+      "track": "文科",
+      "score": 296,
+      "count": 45,
+      "cumulative": 28188
+    },
+    {
+      "track": "文科",
+      "score": 295,
+      "count": 44,
+      "cumulative": 28232
+    },
+    {
+      "track": "文科",
+      "score": 294,
+      "count": 43,
+      "cumulative": 28275
+    },
+    {
+      "track": "文科",
+      "score": 293,
+      "count": 42,
+      "cumulative": 28317
+    },
+    {
+      "track": "文科",
+      "score": 292,
+      "count": 42,
+      "cumulative": 28359
+    },
+    {
+      "track": "文科",
+      "score": 291,
+      "count": 41,
+      "cumulative": 28400
+    },
+    {
+      "track": "文科",
+      "score": 290,
+      "count": 40,
+      "cumulative": 28440
+    },
+    {
+      "track": "文科",
+      "score": 289,
+      "count": 39,
+      "cumulative": 28479
+    },
+    {
+      "track": "文科",
+      "score": 288,
+      "count": 38,
+      "cumulative": 28517
+    },
+    {
+      "track": "文科",
+      "score": 287,
+      "count": 38,
+      "cumulative": 28555
+    },
+    {
+      "track": "文科",
+      "score": 286,
+      "count": 37,
+      "cumulative": 28592
+    },
+    {
+      "track": "文科",
+      "score": 285,
+      "count": 36,
+      "cumulative": 28628
+    },
+    {
+      "track": "文科",
+      "score": 284,
+      "count": 35,
+      "cumulative": 28663
+    },
+    {
+      "track": "文科",
+      "score": 283,
+      "count": 35,
+      "cumulative": 28698
+    },
+    {
+      "track": "文科",
+      "score": 282,
+      "count": 34,
+      "cumulative": 28732
+    },
+    {
+      "track": "文科",
+      "score": 281,
+      "count": 33,
+      "cumulative": 28765
+    },
+    {
+      "track": "文科",
+      "score": 280,
+      "count": 32,
+      "cumulative": 28797
+    },
+    {
+      "track": "文科",
+      "score": 279,
+      "count": 32,
+      "cumulative": 28829
+    },
+    {
+      "track": "文科",
+      "score": 278,
+      "count": 31,
+      "cumulative": 28860
+    },
+    {
+      "track": "文科",
+      "score": 277,
+      "count": 30,
+      "cumulative": 28890
+    },
+    {
+      "track": "文科",
+      "score": 276,
+      "count": 30,
+      "cumulative": 28920
+    },
+    {
+      "track": "文科",
+      "score": 275,
+      "count": 29,
+      "cumulative": 28949
+    },
+    {
+      "track": "文科",
+      "score": 274,
+      "count": 28,
+      "cumulative": 28977
+    },
+    {
+      "track": "文科",
+      "score": 273,
+      "count": 28,
+      "cumulative": 29005
+    },
+    {
+      "track": "文科",
+      "score": 272,
+      "count": 27,
+      "cumulative": 29032
+    },
+    {
+      "track": "文科",
+      "score": 271,
+      "count": 26,
+      "cumulative": 29058
+    },
+    {
+      "track": "文科",
+      "score": 270,
+      "count": 26,
+      "cumulative": 29084
+    },
+    {
+      "track": "文科",
+      "score": 269,
+      "count": 25,
+      "cumulative": 29109
+    },
+    {
+      "track": "文科",
+      "score": 268,
+      "count": 25,
+      "cumulative": 29134
+    },
+    {
+      "track": "文科",
+      "score": 267,
+      "count": 24,
+      "cumulative": 29158
+    },
+    {
+      "track": "文科",
+      "score": 266,
+      "count": 23,
+      "cumulative": 29181
+    },
+    {
+      "track": "文科",
+      "score": 265,
+      "count": 23,
+      "cumulative": 29204
+    },
+    {
+      "track": "文科",
+      "score": 264,
+      "count": 22,
+      "cumulative": 29226
+    },
+    {
+      "track": "文科",
+      "score": 263,
+      "count": 22,
+      "cumulative": 29248
+    },
+    {
+      "track": "文科",
+      "score": 262,
+      "count": 21,
+      "cumulative": 29269
+    },
+    {
+      "track": "文科",
+      "score": 261,
+      "count": 21,
+      "cumulative": 29290
+    },
+    {
+      "track": "文科",
+      "score": 260,
+      "count": 20,
+      "cumulative": 29310
+    },
+    {
+      "track": "文科",
+      "score": 259,
+      "count": 20,
+      "cumulative": 29330
+    },
+    {
+      "track": "文科",
+      "score": 258,
+      "count": 19,
+      "cumulative": 29349
+    },
+    {
+      "track": "文科",
+      "score": 257,
+      "count": 19,
+      "cumulative": 29368
+    },
+    {
+      "track": "文科",
+      "score": 256,
+      "count": 18,
+      "cumulative": 29386
+    },
+    {
+      "track": "文科",
+      "score": 255,
+      "count": 18,
+      "cumulative": 29404
+    },
+    {
+      "track": "文科",
+      "score": 254,
+      "count": 17,
+      "cumulative": 29421
+    },
+    {
+      "track": "文科",
+      "score": 253,
+      "count": 17,
+      "cumulative": 29438
+    },
+    {
+      "track": "文科",
+      "score": 252,
+      "count": 16,
+      "cumulative": 29454
+    },
+    {
+      "track": "文科",
+      "score": 251,
+      "count": 16,
+      "cumulative": 29470
+    },
+    {
+      "track": "文科",
+      "score": 250,
+      "count": 16,
+      "cumulative": 29486
+    },
+    {
+      "track": "文科",
+      "score": 249,
+      "count": 15,
+      "cumulative": 29501
+    },
+    {
+      "track": "文科",
+      "score": 248,
+      "count": 15,
+      "cumulative": 29516
+    },
+    {
+      "track": "文科",
+      "score": 247,
+      "count": 14,
+      "cumulative": 29530
+    },
+    {
+      "track": "文科",
+      "score": 246,
+      "count": 14,
+      "cumulative": 29544
+    },
+    {
+      "track": "文科",
+      "score": 245,
+      "count": 14,
+      "cumulative": 29558
+    },
+    {
+      "track": "文科",
+      "score": 244,
+      "count": 13,
+      "cumulative": 29571
+    },
+    {
+      "track": "文科",
+      "score": 243,
+      "count": 13,
+      "cumulative": 29584
+    },
+    {
+      "track": "文科",
+      "score": 242,
+      "count": 13,
+      "cumulative": 29597
+    },
+    {
+      "track": "文科",
+      "score": 241,
+      "count": 12,
+      "cumulative": 29609
+    },
+    {
+      "track": "文科",
+      "score": 240,
+      "count": 12,
+      "cumulative": 29621
+    },
+    {
+      "track": "文科",
+      "score": 239,
+      "count": 12,
+      "cumulative": 29633
+    },
+    {
+      "track": "文科",
+      "score": 238,
+      "count": 11,
+      "cumulative": 29644
+    },
+    {
+      "track": "文科",
+      "score": 237,
+      "count": 11,
+      "cumulative": 29655
+    },
+    {
+      "track": "文科",
+      "score": 236,
+      "count": 11,
+      "cumulative": 29666
+    },
+    {
+      "track": "文科",
+      "score": 235,
+      "count": 10,
+      "cumulative": 29676
+    },
+    {
+      "track": "文科",
+      "score": 234,
+      "count": 10,
+      "cumulative": 29686
+    },
+    {
+      "track": "文科",
+      "score": 233,
+      "count": 10,
+      "cumulative": 29696
+    },
+    {
+      "track": "文科",
+      "score": 232,
+      "count": 9,
+      "cumulative": 29705
+    },
+    {
+      "track": "文科",
+      "score": 231,
+      "count": 9,
+      "cumulative": 29714
+    },
+    {
+      "track": "文科",
+      "score": 230,
+      "count": 9,
+      "cumulative": 29723
+    },
+    {
+      "track": "文科",
+      "score": 229,
+      "count": 9,
+      "cumulative": 29732
+    },
+    {
+      "track": "文科",
+      "score": 228,
+      "count": 8,
+      "cumulative": 29740
+    },
+    {
+      "track": "文科",
+      "score": 227,
+      "count": 8,
+      "cumulative": 29748
+    },
+    {
+      "track": "文科",
+      "score": 226,
+      "count": 8,
+      "cumulative": 29756
+    },
+    {
+      "track": "文科",
+      "score": 225,
+      "count": 8,
+      "cumulative": 29764
+    },
+    {
+      "track": "文科",
+      "score": 224,
+      "count": 7,
+      "cumulative": 29771
+    },
+    {
+      "track": "文科",
+      "score": 223,
+      "count": 7,
+      "cumulative": 29778
+    },
+    {
+      "track": "文科",
+      "score": 222,
+      "count": 7,
+      "cumulative": 29785
+    },
+    {
+      "track": "文科",
+      "score": 221,
+      "count": 7,
+      "cumulative": 29792
+    },
+    {
+      "track": "文科",
+      "score": 220,
+      "count": 7,
+      "cumulative": 29799
+    },
+    {
+      "track": "文科",
+      "score": 219,
+      "count": 6,
+      "cumulative": 29805
+    },
+    {
+      "track": "文科",
+      "score": 218,
+      "count": 6,
+      "cumulative": 29811
+    },
+    {
+      "track": "文科",
+      "score": 217,
+      "count": 6,
+      "cumulative": 29817
+    },
+    {
+      "track": "文科",
+      "score": 216,
+      "count": 6,
+      "cumulative": 29823
+    },
+    {
+      "track": "文科",
+      "score": 215,
+      "count": 6,
+      "cumulative": 29829
+    },
+    {
+      "track": "文科",
+      "score": 214,
+      "count": 5,
+      "cumulative": 29834
+    },
+    {
+      "track": "文科",
+      "score": 213,
+      "count": 5,
+      "cumulative": 29839
+    },
+    {
+      "track": "文科",
+      "score": 212,
+      "count": 5,
+      "cumulative": 29844
+    },
+    {
+      "track": "文科",
+      "score": 211,
+      "count": 5,
+      "cumulative": 29849
+    },
+    {
+      "track": "文科",
+      "score": 210,
+      "count": 5,
+      "cumulative": 29854
+    },
+    {
+      "track": "文科",
+      "score": 209,
+      "count": 5,
+      "cumulative": 29859
+    },
+    {
+      "track": "文科",
+      "score": 208,
+      "count": 4,
+      "cumulative": 29863
+    },
+    {
+      "track": "文科",
+      "score": 207,
+      "count": 4,
+      "cumulative": 29867
+    },
+    {
+      "track": "文科",
+      "score": 206,
+      "count": 4,
+      "cumulative": 29871
+    },
+    {
+      "track": "文科",
+      "score": 205,
+      "count": 4,
+      "cumulative": 29875
+    },
+    {
+      "track": "文科",
+      "score": 204,
+      "count": 4,
+      "cumulative": 29879
+    },
+    {
+      "track": "文科",
+      "score": 203,
+      "count": 4,
+      "cumulative": 29883
+    },
+    {
+      "track": "文科",
+      "score": 202,
+      "count": 4,
+      "cumulative": 29887
+    },
+    {
+      "track": "文科",
+      "score": 201,
+      "count": 4,
+      "cumulative": 29891
+    },
+    {
+      "track": "文科",
+      "score": 200,
+      "count": 3,
+      "cumulative": 29894
+    },
+    {
+      "track": "文科",
+      "score": 199,
+      "count": 3,
+      "cumulative": 29897
+    },
+    {
+      "track": "文科",
+      "score": 198,
+      "count": 3,
+      "cumulative": 29900
+    },
+    {
+      "track": "文科",
+      "score": 197,
+      "count": 3,
+      "cumulative": 29903
+    },
+    {
+      "track": "文科",
+      "score": 196,
+      "count": 3,
+      "cumulative": 29906
+    },
+    {
+      "track": "文科",
+      "score": 195,
+      "count": 3,
+      "cumulative": 29909
+    },
+    {
+      "track": "文科",
+      "score": 194,
+      "count": 3,
+      "cumulative": 29912
+    },
+    {
+      "track": "文科",
+      "score": 193,
+      "count": 3,
+      "cumulative": 29915
+    },
+    {
+      "track": "文科",
+      "score": 192,
+      "count": 3,
+      "cumulative": 29918
+    },
+    {
+      "track": "文科",
+      "score": 191,
+      "count": 2,
+      "cumulative": 29920
+    },
+    {
+      "track": "文科",
+      "score": 190,
+      "count": 2,
+      "cumulative": 29922
+    },
+    {
+      "track": "文科",
+      "score": 189,
+      "count": 2,
+      "cumulative": 29924
+    },
+    {
+      "track": "文科",
+      "score": 188,
+      "count": 2,
+      "cumulative": 29926
+    },
+    {
+      "track": "文科",
+      "score": 187,
+      "count": 2,
+      "cumulative": 29928
+    },
+    {
+      "track": "文科",
+      "score": 186,
+      "count": 2,
+      "cumulative": 29930
+    },
+    {
+      "track": "文科",
+      "score": 185,
+      "count": 2,
+      "cumulative": 29932
+    },
+    {
+      "track": "文科",
+      "score": 184,
+      "count": 2,
+      "cumulative": 29934
+    },
+    {
+      "track": "文科",
+      "score": 183,
+      "count": 2,
+      "cumulative": 29936
+    },
+    {
+      "track": "文科",
+      "score": 182,
+      "count": 2,
+      "cumulative": 29938
+    },
+    {
+      "track": "文科",
+      "score": 181,
+      "count": 2,
+      "cumulative": 29940
+    },
+    {
+      "track": "文科",
+      "score": 180,
+      "count": 2,
+      "cumulative": 29942
+    },
+    {
+      "track": "文科",
+      "score": 179,
+      "count": 2,
+      "cumulative": 29944
+    },
+    {
+      "track": "文科",
+      "score": 178,
+      "count": 2,
+      "cumulative": 29946
+    },
+    {
+      "track": "文科",
+      "score": 177,
+      "count": 1,
+      "cumulative": 29947
+    },
+    {
+      "track": "文科",
+      "score": 176,
+      "count": 1,
+      "cumulative": 29948
+    },
+    {
+      "track": "文科",
+      "score": 175,
+      "count": 1,
+      "cumulative": 29949
+    },
+    {
+      "track": "文科",
+      "score": 174,
+      "count": 1,
+      "cumulative": 29950
+    },
+    {
+      "track": "文科",
+      "score": 173,
+      "count": 1,
+      "cumulative": 29951
+    },
+    {
+      "track": "文科",
+      "score": 172,
+      "count": 1,
+      "cumulative": 29952
+    },
+    {
+      "track": "文科",
+      "score": 171,
+      "count": 1,
+      "cumulative": 29953
+    },
+    {
+      "track": "文科",
+      "score": 170,
+      "count": 1,
+      "cumulative": 29954
+    },
+    {
+      "track": "文科",
+      "score": 169,
+      "count": 1,
+      "cumulative": 29955
+    },
+    {
+      "track": "文科",
+      "score": 168,
+      "count": 1,
+      "cumulative": 29956
+    },
+    {
+      "track": "文科",
+      "score": 167,
+      "count": 1,
+      "cumulative": 29957
+    },
+    {
+      "track": "文科",
+      "score": 166,
+      "count": 1,
+      "cumulative": 29958
+    },
+    {
+      "track": "文科",
+      "score": 165,
+      "count": 1,
+      "cumulative": 29959
+    },
+    {
+      "track": "文科",
+      "score": 164,
+      "count": 1,
+      "cumulative": 29960
+    },
+    {
+      "track": "文科",
+      "score": 163,
+      "count": 1,
+      "cumulative": 29961
+    },
+    {
+      "track": "文科",
+      "score": 162,
+      "count": 1,
+      "cumulative": 29962
+    },
+    {
+      "track": "文科",
+      "score": 161,
+      "count": 1,
+      "cumulative": 29963
+    },
+    {
+      "track": "文科",
+      "score": 160,
+      "count": 1,
+      "cumulative": 29964
+    },
+    {
+      "track": "文科",
+      "score": 159,
+      "count": 1,
+      "cumulative": 29965
+    },
+    {
+      "track": "文科",
+      "score": 158,
+      "count": 1,
+      "cumulative": 29966
+    },
+    {
+      "track": "文科",
+      "score": 157,
+      "count": 1,
+      "cumulative": 29967
+    },
+    {
+      "track": "文科",
+      "score": 156,
+      "count": 1,
+      "cumulative": 29968
+    },
+    {
+      "track": "文科",
+      "score": 155,
+      "count": 1,
+      "cumulative": 29969
+    },
+    {
+      "track": "文科",
+      "score": 154,
+      "count": 1,
+      "cumulative": 29970
+    },
+    {
+      "track": "文科",
+      "score": 153,
+      "count": 1,
+      "cumulative": 29971
+    },
+    {
+      "track": "文科",
+      "score": 152,
+      "count": 1,
+      "cumulative": 29972
+    },
+    {
+      "track": "文科",
+      "score": 151,
+      "count": 1,
+      "cumulative": 29973
+    },
+    {
+      "track": "文科",
+      "score": 150,
+      "count": 1,
+      "cumulative": 29974
+    },
+    {
+      "track": "文科",
+      "score": 149,
+      "count": 0,
+      "cumulative": 29974
+    },
+    {
+      "track": "文科",
+      "score": 148,
+      "count": 0,
+      "cumulative": 29974
+    },
+    {
+      "track": "文科",
+      "score": 147,
+      "count": 0,
+      "cumulative": 29974
+    },
+    {
+      "track": "文科",
+      "score": 146,
+      "count": 0,
+      "cumulative": 29974
+    },
+    {
+      "track": "文科",
+      "score": 145,
+      "count": 0,
+      "cumulative": 29974
+    },
+    {
+      "track": "文科",
+      "score": 144,
+      "count": 0,
+      "cumulative": 29974
+    },
+    {
+      "track": "文科",
+      "score": 143,
+      "count": 0,
+      "cumulative": 29974
+    },
+    {
+      "track": "文科",
+      "score": 142,
+      "count": 0,
+      "cumulative": 29974
+    },
+    {
+      "track": "文科",
+      "score": 141,
+      "count": 0,
+      "cumulative": 29974
+    },
+    {
+      "track": "文科",
+      "score": 140,
+      "count": 0,
+      "cumulative": 29974
+    },
+    {
+      "track": "文科",
+      "score": 139,
+      "count": 0,
+      "cumulative": 29974
+    },
+    {
+      "track": "文科",
+      "score": 138,
+      "count": 0,
+      "cumulative": 29974
+    },
+    {
+      "track": "文科",
+      "score": 137,
+      "count": 0,
+      "cumulative": 29974
+    },
+    {
+      "track": "文科",
+      "score": 136,
+      "count": 0,
+      "cumulative": 29974
+    },
+    {
+      "track": "文科",
+      "score": 135,
+      "count": 0,
+      "cumulative": 29974
+    },
+    {
+      "track": "文科",
+      "score": 134,
+      "count": 0,
+      "cumulative": 29974
+    },
+    {
+      "track": "文科",
+      "score": 133,
+      "count": 0,
+      "cumulative": 29974
+    },
+    {
+      "track": "文科",
+      "score": 132,
+      "count": 0,
+      "cumulative": 29974
+    },
+    {
+      "track": "文科",
+      "score": 131,
+      "count": 0,
+      "cumulative": 29974
+    },
+    {
+      "track": "文科",
+      "score": 130,
+      "count": 0,
+      "cumulative": 29974
+    },
+    {
+      "track": "文科",
+      "score": 129,
+      "count": 0,
+      "cumulative": 29974
+    },
+    {
+      "track": "文科",
+      "score": 128,
+      "count": 0,
+      "cumulative": 29974
+    },
+    {
+      "track": "文科",
+      "score": 127,
+      "count": 0,
+      "cumulative": 29974
+    },
+    {
+      "track": "文科",
+      "score": 126,
+      "count": 0,
+      "cumulative": 29974
+    },
+    {
+      "track": "文科",
+      "score": 125,
+      "count": 0,
+      "cumulative": 29974
+    },
+    {
+      "track": "文科",
+      "score": 124,
+      "count": 0,
+      "cumulative": 29974
+    },
+    {
+      "track": "文科",
+      "score": 123,
+      "count": 0,
+      "cumulative": 29974
+    },
+    {
+      "track": "文科",
+      "score": 122,
+      "count": 0,
+      "cumulative": 29974
+    },
+    {
+      "track": "文科",
+      "score": 121,
+      "count": 0,
+      "cumulative": 29974
+    },
+    {
+      "track": "文科",
+      "score": 120,
+      "count": 0,
+      "cumulative": 29974
+    },
+    {
+      "track": "文科",
+      "score": 119,
+      "count": 0,
+      "cumulative": 29974
+    },
+    {
+      "track": "文科",
+      "score": 118,
+      "count": 0,
+      "cumulative": 29974
+    },
+    {
+      "track": "文科",
+      "score": 117,
+      "count": 0,
+      "cumulative": 29974
+    },
+    {
+      "track": "文科",
+      "score": 116,
+      "count": 0,
+      "cumulative": 29974
+    },
+    {
+      "track": "文科",
+      "score": 115,
+      "count": 0,
+      "cumulative": 29974
+    },
+    {
+      "track": "文科",
+      "score": 114,
+      "count": 0,
+      "cumulative": 29974
+    },
+    {
+      "track": "文科",
+      "score": 113,
+      "count": 0,
+      "cumulative": 29974
+    },
+    {
+      "track": "文科",
+      "score": 112,
+      "count": 0,
+      "cumulative": 29974
+    },
+    {
+      "track": "文科",
+      "score": 111,
+      "count": 0,
+      "cumulative": 29974
+    },
+    {
+      "track": "文科",
+      "score": 110,
+      "count": 0,
+      "cumulative": 29974
+    },
+    {
+      "track": "文科",
+      "score": 109,
+      "count": 0,
+      "cumulative": 29974
+    },
+    {
+      "track": "文科",
+      "score": 108,
+      "count": 0,
+      "cumulative": 29974
+    },
+    {
+      "track": "文科",
+      "score": 107,
+      "count": 0,
+      "cumulative": 29974
+    },
+    {
+      "track": "文科",
+      "score": 106,
+      "count": 0,
+      "cumulative": 29974
+    },
+    {
+      "track": "文科",
+      "score": 105,
+      "count": 0,
+      "cumulative": 29974
+    },
+    {
+      "track": "文科",
+      "score": 104,
+      "count": 0,
+      "cumulative": 29974
+    },
+    {
+      "track": "文科",
+      "score": 103,
+      "count": 0,
+      "cumulative": 29974
+    },
+    {
+      "track": "文科",
+      "score": 102,
+      "count": 0,
+      "cumulative": 29974
+    },
+    {
+      "track": "文科",
+      "score": 101,
+      "count": 0,
+      "cumulative": 29974
+    },
+    {
+      "track": "文科",
+      "score": 100,
+      "count": 0,
+      "cumulative": 29974
+    },
+    {
+      "track": "文科",
+      "score": 99,
+      "count": 0,
+      "cumulative": 29974
+    },
+    {
+      "track": "文科",
+      "score": 98,
+      "count": 0,
+      "cumulative": 29974
+    },
+    {
+      "track": "文科",
+      "score": 97,
+      "count": 0,
+      "cumulative": 29974
+    },
+    {
+      "track": "文科",
+      "score": 96,
+      "count": 0,
+      "cumulative": 29974
+    },
+    {
+      "track": "文科",
+      "score": 95,
+      "count": 0,
+      "cumulative": 29974
+    },
+    {
+      "track": "文科",
+      "score": 94,
+      "count": 0,
+      "cumulative": 29974
+    },
+    {
+      "track": "文科",
+      "score": 93,
+      "count": 0,
+      "cumulative": 29974
+    },
+    {
+      "track": "文科",
+      "score": 92,
+      "count": 0,
+      "cumulative": 29974
+    },
+    {
+      "track": "文科",
+      "score": 91,
+      "count": 0,
+      "cumulative": 29974
+    },
+    {
+      "track": "文科",
+      "score": 90,
+      "count": 0,
+      "cumulative": 29974
+    },
+    {
+      "track": "文科",
+      "score": 89,
+      "count": 0,
+      "cumulative": 29974
+    },
+    {
+      "track": "文科",
+      "score": 88,
+      "count": 0,
+      "cumulative": 29974
+    },
+    {
+      "track": "文科",
+      "score": 87,
+      "count": 0,
+      "cumulative": 29974
+    },
+    {
+      "track": "文科",
+      "score": 86,
+      "count": 0,
+      "cumulative": 29974
+    },
+    {
+      "track": "文科",
+      "score": 85,
+      "count": 0,
+      "cumulative": 29974
+    },
+    {
+      "track": "文科",
+      "score": 84,
+      "count": 0,
+      "cumulative": 29974
+    },
+    {
+      "track": "文科",
+      "score": 83,
+      "count": 0,
+      "cumulative": 29974
+    },
+    {
+      "track": "文科",
+      "score": 82,
+      "count": 0,
+      "cumulative": 29974
+    },
+    {
+      "track": "文科",
+      "score": 81,
+      "count": 0,
+      "cumulative": 29974
+    },
+    {
+      "track": "文科",
+      "score": 80,
+      "count": 0,
+      "cumulative": 29974
+    },
+    {
+      "track": "文科",
+      "score": 79,
+      "count": 0,
+      "cumulative": 29974
+    },
+    {
+      "track": "文科",
+      "score": 78,
+      "count": 0,
+      "cumulative": 29974
+    },
+    {
+      "track": "文科",
+      "score": 77,
+      "count": 0,
+      "cumulative": 29974
+    },
+    {
+      "track": "文科",
+      "score": 76,
+      "count": 0,
+      "cumulative": 29974
+    },
+    {
+      "track": "文科",
+      "score": 75,
+      "count": 0,
+      "cumulative": 29974
+    },
+    {
+      "track": "文科",
+      "score": 74,
+      "count": 0,
+      "cumulative": 29974
+    },
+    {
+      "track": "文科",
+      "score": 73,
+      "count": 0,
+      "cumulative": 29974
+    },
+    {
+      "track": "文科",
+      "score": 72,
+      "count": 0,
+      "cumulative": 29974
+    },
+    {
+      "track": "文科",
+      "score": 71,
+      "count": 0,
+      "cumulative": 29974
+    },
+    {
+      "track": "文科",
+      "score": 70,
+      "count": 0,
+      "cumulative": 29974
+    },
+    {
+      "track": "文科",
+      "score": 69,
+      "count": 0,
+      "cumulative": 29974
+    },
+    {
+      "track": "文科",
+      "score": 68,
+      "count": 0,
+      "cumulative": 29974
+    },
+    {
+      "track": "文科",
+      "score": 67,
+      "count": 0,
+      "cumulative": 29974
+    },
+    {
+      "track": "文科",
+      "score": 66,
+      "count": 0,
+      "cumulative": 29974
+    },
+    {
+      "track": "文科",
+      "score": 65,
+      "count": 0,
+      "cumulative": 29974
+    },
+    {
+      "track": "文科",
+      "score": 64,
+      "count": 0,
+      "cumulative": 29974
+    },
+    {
+      "track": "文科",
+      "score": 63,
+      "count": 0,
+      "cumulative": 29974
+    },
+    {
+      "track": "文科",
+      "score": 62,
+      "count": 0,
+      "cumulative": 29974
+    },
+    {
+      "track": "文科",
+      "score": 61,
+      "count": 0,
+      "cumulative": 29974
+    },
+    {
+      "track": "文科",
+      "score": 60,
+      "count": 0,
+      "cumulative": 29974
+    },
+    {
+      "track": "文科",
+      "score": 59,
+      "count": 0,
+      "cumulative": 29974
+    },
+    {
+      "track": "文科",
+      "score": 58,
+      "count": 0,
+      "cumulative": 29974
+    },
+    {
+      "track": "文科",
+      "score": 57,
+      "count": 0,
+      "cumulative": 29974
+    },
+    {
+      "track": "文科",
+      "score": 56,
+      "count": 0,
+      "cumulative": 29974
+    },
+    {
+      "track": "文科",
+      "score": 55,
+      "count": 0,
+      "cumulative": 29974
+    },
+    {
+      "track": "文科",
+      "score": 54,
+      "count": 0,
+      "cumulative": 29974
+    },
+    {
+      "track": "文科",
+      "score": 53,
+      "count": 0,
+      "cumulative": 29974
+    },
+    {
+      "track": "文科",
+      "score": 52,
+      "count": 0,
+      "cumulative": 29974
+    },
+    {
+      "track": "文科",
+      "score": 51,
+      "count": 0,
+      "cumulative": 29974
+    },
+    {
+      "track": "文科",
+      "score": 50,
+      "count": 0,
+      "cumulative": 29974
+    },
+    {
+      "track": "文科",
+      "score": 49,
+      "count": 0,
+      "cumulative": 29974
+    },
+    {
+      "track": "文科",
+      "score": 48,
+      "count": 0,
+      "cumulative": 29974
+    },
+    {
+      "track": "文科",
+      "score": 47,
+      "count": 0,
+      "cumulative": 29974
+    },
+    {
+      "track": "文科",
+      "score": 46,
+      "count": 0,
+      "cumulative": 29974
+    },
+    {
+      "track": "文科",
+      "score": 45,
+      "count": 0,
+      "cumulative": 29974
+    },
+    {
+      "track": "文科",
+      "score": 44,
+      "count": 0,
+      "cumulative": 29974
+    },
+    {
+      "track": "文科",
+      "score": 43,
+      "count": 0,
+      "cumulative": 29974
+    },
+    {
+      "track": "文科",
+      "score": 42,
+      "count": 0,
+      "cumulative": 29974
+    },
+    {
+      "track": "文科",
+      "score": 41,
+      "count": 0,
+      "cumulative": 29974
+    },
+    {
+      "track": "文科",
+      "score": 40,
+      "count": 0,
+      "cumulative": 29974
+    },
+    {
+      "track": "文科",
+      "score": 39,
+      "count": 0,
+      "cumulative": 29974
+    },
+    {
+      "track": "文科",
+      "score": 38,
+      "count": 0,
+      "cumulative": 29974
+    },
+    {
+      "track": "文科",
+      "score": 37,
+      "count": 0,
+      "cumulative": 29974
+    },
+    {
+      "track": "文科",
+      "score": 36,
+      "count": 0,
+      "cumulative": 29974
+    },
+    {
+      "track": "文科",
+      "score": 35,
+      "count": 0,
+      "cumulative": 29974
+    },
+    {
+      "track": "文科",
+      "score": 34,
+      "count": 0,
+      "cumulative": 29974
+    },
+    {
+      "track": "文科",
+      "score": 33,
+      "count": 0,
+      "cumulative": 29974
+    },
+    {
+      "track": "文科",
+      "score": 32,
+      "count": 0,
+      "cumulative": 29974
+    },
+    {
+      "track": "文科",
+      "score": 31,
+      "count": 0,
+      "cumulative": 29974
+    },
+    {
+      "track": "文科",
+      "score": 30,
+      "count": 0,
+      "cumulative": 29974
+    },
+    {
+      "track": "文科",
+      "score": 29,
+      "count": 0,
+      "cumulative": 29974
+    },
+    {
+      "track": "文科",
+      "score": 28,
+      "count": 0,
+      "cumulative": 29974
+    },
+    {
+      "track": "文科",
+      "score": 27,
+      "count": 0,
+      "cumulative": 29974
+    },
+    {
+      "track": "文科",
+      "score": 26,
+      "count": 0,
+      "cumulative": 29974
+    },
+    {
+      "track": "文科",
+      "score": 25,
+      "count": 0,
+      "cumulative": 29974
+    },
+    {
+      "track": "文科",
+      "score": 24,
+      "count": 0,
+      "cumulative": 29974
+    },
+    {
+      "track": "文科",
+      "score": 23,
+      "count": 0,
+      "cumulative": 29974
+    },
+    {
+      "track": "文科",
+      "score": 22,
+      "count": 0,
+      "cumulative": 29974
+    },
+    {
+      "track": "文科",
+      "score": 21,
+      "count": 0,
+      "cumulative": 29974
+    },
+    {
+      "track": "文科",
+      "score": 20,
+      "count": 0,
+      "cumulative": 29974
+    },
+    {
+      "track": "文科",
+      "score": 19,
+      "count": 0,
+      "cumulative": 29974
+    },
+    {
+      "track": "文科",
+      "score": 18,
+      "count": 0,
+      "cumulative": 29974
+    },
+    {
+      "track": "文科",
+      "score": 17,
+      "count": 0,
+      "cumulative": 29974
+    },
+    {
+      "track": "文科",
+      "score": 16,
+      "count": 0,
+      "cumulative": 29974
+    },
+    {
+      "track": "文科",
+      "score": 15,
+      "count": 0,
+      "cumulative": 29974
+    },
+    {
+      "track": "文科",
+      "score": 14,
+      "count": 0,
+      "cumulative": 29974
+    },
+    {
+      "track": "文科",
+      "score": 13,
+      "count": 0,
+      "cumulative": 29974
+    },
+    {
+      "track": "文科",
+      "score": 12,
+      "count": 0,
+      "cumulative": 29974
+    },
+    {
+      "track": "文科",
+      "score": 11,
+      "count": 0,
+      "cumulative": 29974
+    },
+    {
+      "track": "文科",
+      "score": 10,
+      "count": 0,
+      "cumulative": 29974
+    },
+    {
+      "track": "文科",
+      "score": 9,
+      "count": 0,
+      "cumulative": 29974
+    },
+    {
+      "track": "文科",
+      "score": 8,
+      "count": 0,
+      "cumulative": 29974
+    },
+    {
+      "track": "文科",
+      "score": 7,
+      "count": 0,
+      "cumulative": 29974
+    },
+    {
+      "track": "文科",
+      "score": 6,
+      "count": 0,
+      "cumulative": 29974
+    },
+    {
+      "track": "文科",
+      "score": 5,
+      "count": 0,
+      "cumulative": 29974
+    },
+    {
+      "track": "文科",
+      "score": 4,
+      "count": 0,
+      "cumulative": 29974
+    },
+    {
+      "track": "文科",
+      "score": 3,
+      "count": 0,
+      "cumulative": 29974
+    },
+    {
+      "track": "文科",
+      "score": 2,
+      "count": 0,
+      "cumulative": 29974
+    },
+    {
+      "track": "文科",
+      "score": 1,
+      "count": 0,
+      "cumulative": 29974
+    },
+    {
+      "track": "文科",
+      "score": 0,
+      "count": 0,
+      "cumulative": 29974
+    }
+  ],
+  "schools": [
+    {
+      "code": "DA001",
+      "name": "示例理工大学甲",
+      "level": "985",
+      "type": "理工",
+      "region": "东部"
+    },
+    {
+      "code": "DA002",
+      "name": "示例综合大学乙",
+      "level": "985",
+      "type": "综合",
+      "region": "东部"
+    },
+    {
+      "code": "DA003",
+      "name": "示例师范大学丙",
+      "level": "211",
+      "type": "师范",
+      "region": "中部"
+    },
+    {
+      "code": "DA004",
+      "name": "示例财经学院丁",
+      "level": "211",
+      "type": "财经",
+      "region": "西部"
+    },
+    {
+      "code": "DA005",
+      "name": "示例医科大学戊",
+      "level": "双一流",
+      "type": "医药",
+      "region": "中部"
+    },
+    {
+      "code": "DA006",
+      "name": "示例工业大学己",
+      "level": "普通本科",
+      "type": "理工",
+      "region": "西部"
+    },
+    {
+      "code": "DA007",
+      "name": "示例外国语学院庚",
+      "level": "普通本科",
+      "type": "语言",
+      "region": "东部"
+    },
+    {
+      "code": "DA008",
+      "name": "示例农林学院辛",
+      "level": "普通本科",
+      "type": "农林",
+      "region": "中部"
+    },
+    {
+      "code": "DA009",
+      "name": "示例科技学院壬",
+      "level": "普通本科",
+      "type": "理工",
+      "region": "东部"
+    },
+    {
+      "code": "DA011",
+      "name": "示例艺术学院子",
+      "level": "普通本科",
+      "type": "艺术",
+      "region": "中部"
+    },
+    {
+      "code": "DA012",
+      "name": "示例大学巳",
+      "level": "双一流",
+      "type": "综合",
+      "region": "西部"
+    }
+  ],
+  "groups": [
+    {
+      "schoolCode": "DA001",
+      "group": "01组",
+      "batch": "本科一批",
+      "track": "理科",
+      "requirement": {},
+      "planCount": 57,
+      "minScore": 621,
+      "minRank": 653,
+      "sourceUrl": "synthetic://demo-generator",
+      "fetchedAt": "2026-10-31"
+    },
+    {
+      "schoolCode": "DA002",
+      "group": "01组",
+      "batch": "本科一批",
+      "track": "理科",
+      "requirement": {},
+      "planCount": 70,
+      "minScore": 587,
+      "minRank": 1523,
+      "sourceUrl": "synthetic://demo-generator",
+      "fetchedAt": "2026-10-31"
+    },
+    {
+      "schoolCode": "DA002",
+      "group": "02组",
+      "batch": "本科一批",
+      "track": "文科",
+      "requirement": {},
+      "planCount": 48,
+      "minScore": 554,
+      "minRank": 1383,
+      "sourceUrl": "synthetic://demo-generator",
+      "fetchedAt": "2026-10-31"
+    },
+    {
+      "schoolCode": "DA003",
+      "group": "01组",
+      "batch": "本科一批",
+      "track": "理科",
+      "requirement": {},
+      "planCount": 41,
+      "minScore": 566,
+      "minRank": 2395,
+      "sourceUrl": "synthetic://demo-generator",
+      "fetchedAt": "2026-10-31"
+    },
+    {
+      "schoolCode": "DA003",
+      "group": "02组",
+      "batch": "本科一批",
+      "track": "文科",
+      "requirement": {},
+      "planCount": 42,
+      "minScore": 533,
+      "minRank": 2345,
+      "sourceUrl": "synthetic://demo-generator",
+      "fetchedAt": "2026-10-31"
+    },
+    {
+      "schoolCode": "DA004",
+      "group": "01组",
+      "batch": "本科一批",
+      "track": "理科",
+      "requirement": {},
+      "planCount": 47,
+      "minScore": 552,
+      "minRank": 3164,
+      "sourceUrl": "synthetic://demo-generator",
+      "fetchedAt": "2026-10-31"
+    },
+    {
+      "schoolCode": "DA004",
+      "group": "02组",
+      "batch": "本科一批",
+      "track": "文科",
+      "requirement": {},
+      "planCount": 76,
+      "minScore": 519,
+      "minRank": 3211,
+      "sourceUrl": "synthetic://demo-generator",
+      "fetchedAt": "2026-10-31"
+    },
+    {
+      "schoolCode": "DA005",
+      "group": "01组",
+      "batch": "本科一批",
+      "track": "理科",
+      "requirement": {},
+      "planCount": 28,
+      "minScore": 581,
+      "minRank": 1753,
+      "sourceUrl": "synthetic://demo-generator",
+      "fetchedAt": "2026-10-31"
+    },
+    {
+      "schoolCode": "DA006",
+      "group": "01组",
+      "batch": "本科二批",
+      "track": "理科",
+      "requirement": {},
+      "planCount": 31,
+      "minScore": 529,
+      "minRank": 4830,
+      "sourceUrl": "synthetic://demo-generator",
+      "fetchedAt": "2026-10-31"
+    },
+    {
+      "schoolCode": "DA007",
+      "group": "01组",
+      "batch": "本科二批",
+      "track": "理科",
+      "requirement": {},
+      "planCount": 35,
+      "minScore": 516,
+      "minRank": 5924,
+      "sourceUrl": "synthetic://demo-generator",
+      "fetchedAt": "2026-10-31"
+    },
+    {
+      "schoolCode": "DA007",
+      "group": "02组",
+      "batch": "本科二批",
+      "track": "文科",
+      "requirement": {},
+      "planCount": 72,
+      "minScore": 481,
+      "minRank": 6683,
+      "sourceUrl": "synthetic://demo-generator",
+      "fetchedAt": "2026-10-31"
+    },
+    {
+      "schoolCode": "DA008",
+      "group": "01组",
+      "batch": "本科二批",
+      "track": "理科",
+      "requirement": {},
+      "planCount": 72,
+      "minScore": 492,
+      "minRank": 8449,
+      "sourceUrl": "synthetic://demo-generator",
+      "fetchedAt": "2026-10-31"
+    },
+    {
+      "schoolCode": "DA008",
+      "group": "02组",
+      "batch": "本科二批",
+      "track": "文科",
+      "requirement": {},
+      "planCount": 38,
+      "minScore": 459,
+      "minRank": 9344,
+      "sourceUrl": "synthetic://demo-generator",
+      "fetchedAt": "2026-10-31"
+    },
+    {
+      "schoolCode": "DA009",
+      "group": "01组",
+      "batch": "本科二批",
+      "track": "理科",
+      "requirement": {},
+      "planCount": 31,
+      "minScore": 490,
+      "minRank": 8693,
+      "sourceUrl": "synthetic://demo-generator",
+      "fetchedAt": "2026-10-31"
+    },
+    {
+      "schoolCode": "DA011",
+      "group": "01组",
+      "batch": "本科二批",
+      "track": "理科",
+      "requirement": {},
+      "planCount": 74,
+      "minScore": 439,
+      "minRank": 15166,
+      "sourceUrl": "synthetic://demo-generator",
+      "fetchedAt": "2026-10-31"
+    },
+    {
+      "schoolCode": "DA011",
+      "group": "02组",
+      "batch": "本科二批",
+      "track": "文科",
+      "requirement": {},
+      "planCount": 21,
+      "minScore": 438,
+      "minRank": 12275,
+      "sourceUrl": "synthetic://demo-generator",
+      "fetchedAt": "2026-10-31"
+    },
+    {
+      "schoolCode": "DA012",
+      "group": "01组",
+      "batch": "本科一批",
+      "track": "理科",
+      "requirement": {},
+      "planCount": 30,
+      "minScore": 542,
+      "minRank": 3825,
+      "sourceUrl": "synthetic://demo-generator",
+      "fetchedAt": "2026-10-31"
+    },
+    {
+      "schoolCode": "DA012",
+      "group": "02组",
+      "batch": "本科一批",
+      "track": "文科",
+      "requirement": {},
+      "planCount": 73,
+      "minScore": 514,
+      "minRank": 3557,
+      "sourceUrl": "synthetic://demo-generator",
+      "fetchedAt": "2026-10-31"
+    }
+  ]
+}

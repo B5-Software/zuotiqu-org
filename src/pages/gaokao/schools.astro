@@ -1,0 +1,147 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import DisclaimerBar from '../../components/DisclaimerBar.astro';
+import { disclaimers } from '../../config/site';
+---
+
+<BaseLayout title="院校查询" description="按省份、层次、地区和关键词查询院校，查看近几年的专业组分数线。">
+  <header class="page-head">
+    <h1>院校查询</h1>
+    <p class="lead">按省份、层次、地区或关键词筛选院校，展开即可看近几年各专业组的最低分和位次。</p>
+  </header>
+
+  <DisclaimerBar text={disclaimers.gaokao} />
+
+  <div class="warn demo-banner" id="s-banner" hidden>
+    <strong>演示数据：</strong>学校、专业组和分数线均为虚构，只用来看看功能。
+  </div>
+
+  <section class="panel filters" aria-label="筛选条件">
+    <div class="field">
+      <label for="s-province">省份</label>
+      <select id="s-province"></select>
+    </div>
+    <div class="field">
+      <label for="s-level">层次</label>
+      <select id="s-level"><option value="">全部层次</option></select>
+    </div>
+    <div class="field">
+      <label for="s-region">地区</label>
+      <select id="s-region"><option value="">全部地区</option></select>
+    </div>
+    <div class="field">
+      <label for="s-keyword">关键词</label>
+      <input id="s-keyword" type="search" placeholder="院校名称" autocomplete="off" />
+    </div>
+  </section>
+
+  <p class="muted" id="s-count" aria-live="polite"></p>
+  <p class="muted" id="s-status" aria-live="polite"></p>
+  <ul class="school-list" id="s-list"></ul>
+
+  <p class="muted note">
+    要按分数或位次做参考，请去<a href="/gaokao">模拟志愿</a>。
+  </p>
+</BaseLayout>
+
+<script>
+  import { mountSchools } from '../../lib/gaokao/schools-ui';
+  mountSchools();
+</script>
+
+<style is:global>
+  .page-head {
+    margin-bottom: var(--space-4);
+  }
+
+  .demo-banner {
+    margin-bottom: var(--space-4);
+  }
+
+  .filters {
+    display: grid;
+    gap: var(--space-4);
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    margin-bottom: var(--space-4);
+  }
+
+  .filters .field {
+    display: grid;
+    gap: var(--space-1);
+  }
+
+  .filters label {
+    font-weight: 600;
+  }
+
+  .filters select,
+  .filters input {
+    min-height: 44px;
+    padding: var(--space-2) var(--space-3);
+    border: 1.5px solid var(--ink);
+    border-radius: var(--radius-sm);
+    background: var(--card);
+    color: var(--ink);
+    font: inherit;
+    max-width: 100%;
+  }
+
+  .school-list {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    gap: var(--space-3);
+  }
+
+  .school {
+    background: var(--card);
+    border: 1.5px solid var(--ink);
+    border-radius: var(--radius);
+    padding: var(--space-3) var(--space-4);
+    box-shadow: var(--shadow);
+  }
+
+  .school-head {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--space-2);
+  }
+
+  .school summary {
+    cursor: pointer;
+    color: var(--blue);
+    margin-top: var(--space-2);
+  }
+
+  .table-wrap {
+    overflow-x: auto;
+    margin-top: var(--space-3);
+  }
+
+  table.trend {
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 0.9rem;
+  }
+
+  table.trend th,
+  table.trend td {
+    border-bottom: 1px dashed var(--line-strong);
+    padding: var(--space-2);
+    text-align: left;
+    white-space: nowrap;
+  }
+
+  table.trend td {
+    font-variant-numeric: tabular-nums;
+  }
+
+  .small {
+    font-size: 0.88rem;
+  }
+
+  .note {
+    margin-top: var(--space-6);
+  }
+</style>
