@@ -1,11 +1,12 @@
 export type ModuleStatus = 'live' | 'soon';
 
 export interface SiteModule {
-  id: 'wiki' | 'chaogang' | 'restart' | 'run' | 'gaokao';
+  id: 'wiki' | 'chaogang' | 'restart' | 'run' | 'gaokao' | 'zhiyaoxuebusi';
   title: string;
   href: string;
   summary: string;
   status: ModuleStatus;
+  external?: boolean;
 }
 
 export const modules: SiteModule[] = [
@@ -36,6 +37,14 @@ export const modules: SiteModule[] = [
     href: '/run',
     summary: '无尽跑酷，躲开作业堆，收集满分卷。',
     status: 'live',
+  },
+  {
+    id: 'zhiyaoxuebusi',
+    title: '只要学不死，就往死里学',
+    href: 'https://zhiyaoxuebusi.pages.dev/',
+    summary: '从高三到大学与社会，体验学习、成长与人生选择的校园模拟游戏。',
+    status: 'live',
+    external: true,
   },
   {
     id: 'gaokao',
