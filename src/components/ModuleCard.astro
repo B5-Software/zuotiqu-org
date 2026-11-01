@@ -9,10 +9,10 @@ const { module } = Astro.props;
 const isLive = module.status === 'live';
 ---
 
-<a class="card" href={module.href} aria-disabled={!isLive}>
+<a class="card" href={module.href} aria-disabled={!isLive} target={module.external ? '_blank' : undefined} rel={module.external ? 'noopener noreferrer' : undefined}>
   <h3>{module.title}</h3>
   <p class="muted">{module.summary}</p>
-  <span class="tag">{isLive ? '开放' : '施工中'}</span>
+  <span class="tag">{module.external ? '前往游戏 ↗' : isLive ? '开放' : '施工中'}</span>
 </a>
 
 <style>
