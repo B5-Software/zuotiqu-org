@@ -83,7 +83,7 @@ export function mountRun(): void {
   const readyHtml = () => `
     <div class="overlay-card">
       <h2>准备开跑</h2>
-      <p>空格或点击跳跃，↓ 或下半屏长按蹲下。躲开作业堆、早八闹钟、家长群通知和月考排名榜。</p>
+      <p class="hint">空格或点击跳跃，↓ 或下半屏长按蹲下。躲开作业堆、早八闹钟、家长群通知和月考排名榜。</p>
       <button class="btn btn-primary" type="button" data-action="start">开始</button>
     </div>`;
 
@@ -120,7 +120,10 @@ export function mountRun(): void {
   };
 
   const setPauseLabel = () => {
-    if (pauseBtn) pauseBtn.textContent = state === 'playing' ? '暂停' : '继续';
+    if (!pauseBtn) return;
+    const label = { ready: '开始', playing: '暂停', paused: '继续', over: '再跑一局' }[state];
+    pauseBtn.textContent = label;
+    pauseBtn.classList.toggle('btn-primary', state !== 'playing');
   };
 
   const finish = () => {
@@ -228,6 +231,40 @@ export function mountRun(): void {
     }
   });
 
+  const fsBtn = document.getElementById('run-fullscreen') as HTMLButtonElement | null;
+  const exitFsBtn = document.getElementById('run-exit-fs') as HTMLButtonElement | null;
+  const stage = canvas.parentElement as HTMLElement;
+  type FsStage = HTMLElement & { webkitRequestFullscreen?: () => Promise<void> | void };
+  type FsDoc = Document & {
+    webkitFullscreenElement?: Element | null;
+    webkitExitFullscreen?: () => Promise<void> | void;
+  };
+  const fsSupported = typeof stage.requestFullscreen === 'function' || typeof (stage as FsStage).webkitRequestFullscreen === 'function';
+  const isFullscreen = () => ((document as FsDoc).fullscreenElement ?? (document as FsDoc).webkitFullscreenElement) === stage;
+  const updateFsLabel = () => {
+    if (fsBtn) fsBtn.textContent = isFullscreen() ? '退出全屏' : '全屏';
+  };
+  const toggleFullscreen = async () => {
+    try {
+      if (isFullscreen()) {
+        if (document.exitFullscreen) await document.exitFullscreen();
+        else await (document as FsDoc).webkitExitFullscreen?.();
+      } else if (stage.requestFullscreen) {
+        await stage.requestFullscreen();
+      } else {
+        await (stage as FsStage).webkitRequestFullscreen?.();
+      }
+    } catch {
+      // 浏览器拒绝全屏（例如没有用户手势）时保持原样
+    }
+    updateFsLabel();
+  };
+  if (fsBtn && !fsSupported) fsBtn.hidden = true;
+  fsBtn?.addEventListener('click', () => void toggleFullscreen());
+  exitFsBtn?.addEventListener('click', () => void toggleFullscreen());
+  document.addEventListener('fullscreenchange', updateFsLabel);
+  document.addEventListener('webkitfullscreenchange', updateFsLabel);
+
   const onKeyDown = (event: KeyboardEvent) => {
     const code = event.code;
     if (code === 'Space' || code === 'ArrowUp' || code === 'KeyW') {
@@ -244,6 +281,9 @@ export function mountRun(): void {
     } else if (code === 'ArrowDown' || code === 'KeyS') {
       event.preventDefault();
       duckHeld = true;
+    } else if (code === 'KeyF') {
+      event.preventDefault();
+      void toggleFullscreen();
     } else if (code === 'KeyP' || code === 'Escape') {
       if (state === 'playing') pause();
       else if (state === 'paused') resume();
@@ -283,6 +323,7 @@ export function mountRun(): void {
   pauseBtn?.addEventListener('click', () => {
     if (state === 'playing') pause();
     else if (state === 'paused') resume();
+    else start();
   });
 
   muteBtn?.addEventListener('click', () => {
@@ -293,6 +334,7 @@ export function mountRun(): void {
   });
 
   showOverlay(readyHtml());
+  setPauseLabel();
   if (hudBest) hudBest.textContent = String(best);
   requestAnimationFrame(frame);
 }

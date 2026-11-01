@@ -20,9 +20,11 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     <div class="stage">
       <canvas id="run-canvas" aria-label="跑酷画面，按空格跳跃"></canvas>
       <div id="run-overlay" class="overlay" hidden></div>
+      <button id="run-exit-fs" class="btn run-exit-fs" type="button">退出全屏</button>
     </div>
     <div class="toolbar">
       <button id="run-pause" class="btn" type="button">暂停</button>
+      <button id="run-fullscreen" class="btn" type="button">全屏</button>
       <button id="run-mute" class="btn" type="button">开启音效</button>
     </div>
   </section>
@@ -88,10 +90,10 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     position: absolute;
     inset: 0;
     display: flex;
-    align-items: center;
     justify-content: center;
-    padding: var(--space-4);
-    background: rgba(251, 248, 239, 0.9);
+    overflow-y: auto;
+    padding: var(--space-3);
+    background: rgba(251, 248, 239, 0.94);
   }
 
   .run .overlay[hidden] {
@@ -100,7 +102,24 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
   .run .overlay-card {
     max-width: 480px;
+    margin: auto;
     text-align: center;
+  }
+
+  @media (max-width: 600px) {
+    .run .overlay-card .hint {
+      display: none;
+    }
+
+    .run .overlay-card h2 {
+      font-size: 1.15rem;
+      margin-bottom: var(--space-2);
+    }
+
+    .run .overlay-card p {
+      margin-bottom: var(--space-2);
+      font-size: 0.92rem;
+    }
   }
 
   .run .overlay-card h2 {
@@ -128,6 +147,44 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     flex-wrap: wrap;
     gap: var(--space-3);
     margin-top: var(--space-4);
+  }
+
+  .run .run-exit-fs {
+    display: none;
+    position: absolute;
+    top: var(--space-3);
+    right: var(--space-3);
+    z-index: 5;
+    background: var(--paper);
+  }
+
+  .run .stage:fullscreen .run-exit-fs,
+  .run .stage:-webkit-full-screen .run-exit-fs {
+    display: inline-flex;
+  }
+
+  .run .stage:fullscreen,
+  .run .stage:-webkit-full-screen {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 0;
+    border-radius: 0;
+    background: var(--paper);
+  }
+
+  .run .stage:fullscreen canvas,
+  .run .stage:-webkit-full-screen canvas {
+    width: min(100vw, calc(100vh * 960 / 400));
+    max-height: 100vh;
+    height: auto;
+  }
+
+  .run .stage:fullscreen .overlay,
+  .run .stage:-webkit-full-screen .overlay {
+    padding: var(--space-4);
   }
 
   .run .note {

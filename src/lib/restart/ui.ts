@@ -4,20 +4,32 @@ import { escapeHtml } from '../html';
 import { renderShareCard } from '../share/card';
 import { shareImage } from '../share/share';
 import {
+  ALLOC_MAX,
+  ALLOC_MIN,
+  ALLOC_STEP,
+  ALLOC_TOTAL,
+  DEFAULT_ALLOC,
+  TALENT_PICK,
+  TALENT_POOL_SIZE,
   advanceToEvent,
   applyChoice,
-  createLife,
+  createLifeWith,
+  drawPool,
   finishLife,
+  previewProps,
+  randomAllocation,
   type CurvePoint,
   type LifeData,
   type LifeState,
   type LogEntry,
+  type Props,
 } from './engine';
 import {
   PROP_LABELS,
   PROPS,
   STAGE_LABELS,
   type Achievement,
+  type Effects,
   type Ending,
   type GameEvent,
   type Rarity,
@@ -35,6 +47,13 @@ const SERIES: Array<{ key: keyof CurvePoint; color: string }> = [
 const data: LifeData = { talents, events, endings, achievements };
 const talentById = new Map<string, Talent>(talents.map((t) => [t.id, t]));
 const rng = () => Math.random();
+
+function effectsText(effects: Effects): string {
+  return Object.entries(effects)
+    .filter(([, v]) => v)
+    .map(([k, v]) => `${PROP_LABELS[k as keyof typeof PROP_LABELS]} ${(v ?? 0) > 0 ? '+' : ''}${v}`)
+    .join(' · ');
+}
 
 function statBars(state: LifeState): string {
   return PROPS.map((k) => {
@@ -91,6 +110,75 @@ function chartSvg(curve: CurvePoint[]): string {
   </svg>`;
 }
 
+function conflictsWithPicked(t: Talent, picked: string[]): boolean {
+  return picked.some(
+    (id) => (t.excludes ?? []).includes(id) || (talentById.get(id)?.excludes ?? []).includes(t.id),
+  );
+}
+
+function renderTalentStage(pool: Talent[], picked: string[]): string {
+  const full = picked.length >= TALENT_PICK;
+  const cards = pool
+    .map((t) => {
+      const selected = picked.includes(t.id);
+      const conflict = !selected && conflictsWithPicked(t, picked);
+      const disabled = !selected && (full || conflict);
+      const excludes = (t.excludes ?? []).map((id) => talentById.get(id)?.name ?? id);
+      return `<li>
+        <button type="button" class="pool-card rarity-${t.rarity}" data-action="pick" data-id="${escapeHtml(t.id)}"
+          aria-pressed="${selected}" ${disabled ? 'disabled' : ''}>
+          <span class="tag">${RARITY_LABEL[t.rarity]}</span>
+          <strong>${escapeHtml(t.name)}</strong>
+          <span class="muted small">${escapeHtml(t.description)}</span>
+          <span class="effects">${escapeHtml(effectsText(t.effects)) || '无开局属性变化'}</span>
+          ${excludes.length ? `<span class="small muted">与 ${escapeHtml(excludes.join('、'))} 互斥</span>` : ''}
+          ${conflict ? '<span class="conflict">与已选天赋互斥</span>' : ''}
+        </button>
+      </li>`;
+    })
+    .join('');
+  return `
+    <h2>选择天赋</h2>
+    <p>从下面 ${pool.length} 个天赋里选 ${TALENT_PICK} 个。互斥的天赋不能同时选；不满意可以换一批。</p>
+    <p class="pick-status" aria-live="polite">已选 <strong>${picked.length}</strong> / ${TALENT_PICK}</p>
+    <ul class="pool">${cards}</ul>
+    <div class="actions">
+      <button class="btn" type="button" data-action="reroll">换一批</button>
+      <button class="btn btn-primary" type="button" data-action="to-allocate" ${picked.length === TALENT_PICK ? '' : 'disabled'}>下一步：分配属性</button>
+    </div>`;
+}
+
+function renderAllocStage(picked: string[], allocation: Props): string {
+  const used = PROPS.reduce((s, k) => s + allocation[k], 0);
+  const remaining = ALLOC_TOTAL - used;
+  const preview = previewProps(data, picked, allocation);
+  const rows = PROPS.map((k) => {
+    const v = allocation[k];
+    const canMinus = v - ALLOC_STEP >= ALLOC_MIN;
+    const canPlus = v + ALLOC_STEP <= ALLOC_MAX && remaining >= ALLOC_STEP;
+    return `<li class="alloc-row">
+      <span class="alloc-name">${PROP_LABELS[k]}</span>
+      <button class="btn small-btn" type="button" data-action="alloc" data-prop="${k}" data-delta="${-ALLOC_STEP}"
+        ${canMinus ? '' : 'disabled'} aria-label="${PROP_LABELS[k]}减少">−</button>
+      <span class="alloc-value">${v}</span>
+      <button class="btn small-btn" type="button" data-action="alloc" data-prop="${k}" data-delta="${ALLOC_STEP}"
+        ${canPlus ? '' : 'disabled'} aria-label="${PROP_LABELS[k]}增加">+</button>
+      <span class="alloc-final muted small">含天赋 ${Math.round(preview[k])}</span>
+    </li>`;
+  }).join('');
+  return `
+    <h2>分配属性</h2>
+    <p>六项属性的点数总和固定为 ${ALLOC_TOTAL}，每项在 ${ALLOC_MIN}–${ALLOC_MAX} 之间，每次加减 ${ALLOC_STEP}。</p>
+    <p class="budget" aria-live="polite">剩余可分配 <strong>${remaining}</strong> 点</p>
+    <ul class="alloc">${rows}</ul>
+    <div class="actions">
+      <button class="btn" type="button" data-action="back-talents">返回换天赋</button>
+      <button class="btn" type="button" data-action="alloc-random">随机分配</button>
+      <button class="btn" type="button" data-action="alloc-default">恢复默认</button>
+      <button class="btn btn-primary" type="button" data-action="confirm-birth" ${remaining === 0 ? '' : 'disabled'}>开始人生</button>
+    </div>`;
+}
+
 function renderBirth(state: LifeState): string {
   const cards = state.talents
     .map((id) => {
@@ -108,7 +196,7 @@ function renderBirth(state: LifeState): string {
     : '';
   return `
     <h2>出生</h2>
-    <p>你在一个普通的家庭出生，这一局有 3 个天赋。</p>
+    <p>你带着 ${state.talents.length} 个天赋出生了，下面是你的开局属性（已含天赋效果）。</p>
     <ul class="talents">${cards}</ul>
     ${notes}
     <ul class="stats">${statBars(state)}</ul>
@@ -169,15 +257,40 @@ export function mountRestart(root: HTMLElement): void {
   let current: GameEvent | null = null;
   let ending: Ending | null = null;
   let got: Achievement[] = [];
+  let pool: Talent[] = [];
+  let picked: string[] = [];
+  let allocation: Props = { ...DEFAULT_ALLOC };
 
   const show = (html: string) => {
     root.innerHTML = html;
   };
 
+  const toTalents = (reroll: boolean) => {
+    if (reroll || pool.length === 0) {
+      pool = drawPool(talents, rng, TALENT_POOL_SIZE);
+      picked = [];
+    }
+    show(renderTalentStage(pool, picked));
+  };
+
+  const toAllocate = () => {
+    allocation = { ...DEFAULT_ALLOC };
+    show(renderAllocStage(picked, allocation));
+  };
+
   const start = () => {
-    state = createLife(data, rng);
+    state = null;
     ending = null;
-    show(renderBirth(state));
+    toTalents(true);
+  };
+
+  const confirmBirth = () => {
+    try {
+      state = createLifeWith(data, { talents: [...picked], allocation: { ...allocation } });
+      show(renderBirth(state));
+    } catch (err) {
+      show(`${renderAllocStage(picked, allocation)}<p class="warn">${escapeHtml(err instanceof Error ? err.message : '开局失败')}</p>`);
+    }
   };
 
   const next = () => {
@@ -229,11 +342,48 @@ export function mountRestart(root: HTMLElement): void {
 
   root.addEventListener('click', (event) => {
     const target = (event.target as HTMLElement).closest<HTMLElement>('[data-action]');
-    if (!target) return;
+    if (!target || (target as HTMLButtonElement).disabled) return;
     switch (target.dataset.action) {
       case 'start':
       case 'restart':
         start();
+        break;
+      case 'pick': {
+        const id = target.dataset.id ?? '';
+        if (picked.includes(id)) {
+          picked = picked.filter((x) => x !== id);
+        } else if (picked.length < TALENT_PICK) {
+          picked = [...picked, id];
+        }
+        show(renderTalentStage(pool, picked));
+        break;
+      }
+      case 'reroll':
+        toTalents(true);
+        break;
+      case 'to-allocate':
+        if (picked.length === TALENT_PICK) toAllocate();
+        break;
+      case 'back-talents':
+        toTalents(false);
+        break;
+      case 'alloc': {
+        const prop = target.dataset.prop as keyof Props;
+        const delta = Number(target.dataset.delta);
+        allocation = { ...allocation, [prop]: allocation[prop] + delta };
+        show(renderAllocStage(picked, allocation));
+        break;
+      }
+      case 'alloc-random':
+        allocation = randomAllocation(rng);
+        show(renderAllocStage(picked, allocation));
+        break;
+      case 'alloc-default':
+        allocation = { ...DEFAULT_ALLOC };
+        show(renderAllocStage(picked, allocation));
+        break;
+      case 'confirm-birth':
+        confirmBirth();
         break;
       case 'next':
         next();
@@ -248,6 +398,6 @@ export function mountRestart(root: HTMLElement): void {
   });
 
   show(`<h2>准备好了吗？</h2>
-    <p>这一局会随机抽 3 个天赋。每一年有一定概率遇到一件事，你的选择会改变分数、体力、快乐、人脉和卷度。</p>
+    <p>先从随机的天赋里选 3 个，再把六项属性的点数分配好，然后一年一年地过。每一年有一定概率遇到一件事，你的选择会改变分数、体力、快乐、人脉和卷度。</p>
     <div class="actions"><button class="btn btn-primary" data-action="start" type="button">开始新的一生</button></div>`);
 }

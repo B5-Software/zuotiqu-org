@@ -7,14 +7,14 @@
 | 路径 | 模块 | 说明 |
 |---|---|---|
 | `/wiki` | 黑话 Wiki | 做题区与学生黑话词典，支持搜索、分类、随机，可投稿 |
-| `/chaogang` | 超纲解法生成器 | 给简单题配一套用不着的高阶解法，答案用 mathjs 实际计算并校验 |
-| `/restart` | 做题区版人生重开 | 随机天赋、逐年事件、结局与成就，附人生曲线 |
-| `/run` | 做题区快跑 | 无尽跑酷，Canvas 2D 实现，支持触屏与键盘 |
+| `/chaogang` | 超纲解法生成器 | 自己填题目参数，或随机出一题，再配一套用不着的高阶解法；答案用 mathjs 实际计算并校验 |
+| `/restart` | 做题区版人生重开 | 自选天赋、按固定总和分配属性，逐年事件、结局与成就，附人生曲线 |
+| `/run` | 做题区快跑 | 无尽跑酷，Canvas 2D 实现，支持触屏、键盘与全屏 |
 | `/gaokao` | 模拟志愿 | 按省份、分数或位次和选科，给出冲、稳、保参考；全部在浏览器本地计算 |
 | `/gaokao/schools` | 院校查询 | 按省份、层次、地区、关键词筛选，查看近几年分数线 |
 | `/about`、`/privacy` | 关于与隐私 | 致谢、许可证、隐私说明 |
 
-ZTQI 做题区指数量表是另一个项目，本站首页只预留了入口。
+ZTQI 做题区指数量表是另一个项目。本站把它的 `site/` 静态站同步到 `public/ztqi/`，首页入口默认指向站内 `/ztqi/`。同步后的目录包含量表、研究论文、问卷与答题卡的 PDF/TeX，来源 commit 记录在 [`docs/ztqi-sync.json`](./docs/ztqi-sync.json)。
 
 ## 技术栈
 
@@ -43,13 +43,18 @@ node scripts/smoke-e2e.mjs
 
 ## 配置
 
-复制 `.env.example` 为 `.env`，填写 ZTQI 的线上地址：
+ZTQI 默认使用站内的 `/ztqi/`。如果把它部署在别处，可以复制 `.env.example` 为 `.env` 并填写外部地址：
 
 ```
 PUBLIC_ZTQI_URL=https://example.com/ztqi
 ```
 
-留空时首页只显示"入口预留"，不生成链接。
+更新站内 ZTQI 内容时，从来源仓库同步 `site/`（只同步对外发布的静态站，不复制私有源材料）：
+
+```bash
+node scripts/sync-ztqi.mjs                 # 从 B5-Software/ZTQI-dev 克隆后同步
+node scripts/sync-ztqi.mjs <本地仓库路径>   # 或使用已有的本地检出
+```
 
 ## 参与贡献
 

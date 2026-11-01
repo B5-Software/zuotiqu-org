@@ -17,10 +17,21 @@ const templates = listTemplates();
   <section class="panel controls" aria-label="选择题型">
     <label for="template">题型</label>
     <select id="template">
-      <option value="">随机</option>
       {templates.map((t) => <option value={t.id}>{t.grade} · {t.title}</option>)}
     </select>
-    <button id="generate" class="btn btn-primary" type="button">出一道题</button>
+    <button id="random-one" class="btn" type="button">随机一题</button>
+  </section>
+
+  <section class="panel input-panel" aria-labelledby="input-title">
+    <h2 id="input-title">输入题目参数</h2>
+    <form id="overkill-form" novalidate>
+      <div id="fields" class="fields"></div>
+      <p class="error" id="form-error" role="alert"></p>
+      <div class="actions">
+        <button type="submit" class="btn btn-primary">生成解题</button>
+        <button type="button" id="fill-random" class="btn">随机填入</button>
+      </div>
+    </form>
   </section>
 
   <article id="problem" class="panel problem" aria-live="polite"></article>
@@ -61,6 +72,47 @@ const templates = listTemplates();
     color: var(--ink);
     font: inherit;
     max-width: 100%;
+  }
+
+  .fields {
+    display: grid;
+    gap: var(--space-3);
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    margin-bottom: var(--space-4);
+  }
+
+  .fields .field {
+    display: grid;
+    gap: var(--space-1);
+    font-weight: 600;
+  }
+
+  .fields input {
+    min-height: 44px;
+    padding: var(--space-2) var(--space-3);
+    border: 1.5px solid var(--ink);
+    border-radius: var(--radius-sm);
+    background: var(--card);
+    color: var(--ink);
+    font: inherit;
+    font-weight: 400;
+    max-width: 100%;
+  }
+
+  .field-hint {
+    font-weight: 400;
+  }
+
+  .input-panel .actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-3);
+  }
+
+  .error {
+    color: var(--red);
+    min-height: 1.4em;
+    margin: var(--space-2) 0;
   }
 
   .problem {

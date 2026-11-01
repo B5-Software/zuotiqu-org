@@ -26,7 +26,13 @@ const context = await browser.newContext({ viewport: { width: 1280, height: 900 
 const page = await context.newPage();
 page.on('pageerror', (err) => errors.push(`pageerror: ${err.message}`));
 page.on('console', (msg) => {
-  if (msg.type() === 'error') errors.push(`console: ${msg.text()}`);
+  if (msg.type() === 'error') {
+    const url = msg.location().url;
+    errors.push(`console: ${msg.text()}${url ? ` (${url})` : ''}`);
+  }
+});
+page.on('response', (res) => {
+  if (res.status() === 404) errors.push(`404: ${res.url()}`);
 });
 
 async function open(path) {
@@ -37,7 +43,12 @@ try {
   // 首页：ZTQI 入口预留、模块卡片
   await open('/');
   check('首页有五个模块卡片', (await page.locator('.grid-cards a.card').count()) === 5);
-  check('ZTQI 入口预留（未配置地址）', (await page.getByText('入口预留').count()) === 1);
+  check('首页 ZTQI 入口指向 /ztqi/', (await page.locator('a[href="/ztqi/"]').count()) >= 1);
+
+  const questionsResponse = page.waitForResponse((r) => r.url().endsWith('/ztqi/questions.json'), { timeout: 15000 });
+  await open('/ztqi/');
+  const qres = await questionsResponse;
+  check('ZTQI 页面加载并拿到题库', qres.ok());
 
   // Wiki：搜索别名、随机
   await open('/wiki');
@@ -54,16 +65,29 @@ try {
 
   // 超纲解法：出题、解法数量、评级
   await open('/chaogang');
-  await page.click('#generate');
-  check('超纲解法出题后有 3 个解法', (await page.locator('.solution').count()) === 3);
+  await page.click('#random-one');
+  check('超纲解法随机一题后有 3 个解法', (await page.locator('.solution').count()) === 3);
   check('超纲解法有评级标签', (await page.locator('[data-rating]').count()) === 1);
   await page.selectOption('#template', 'gcd');
-  await page.click('#generate');
-  check('超纲解法可指定题型', (await page.locator('.problem-head h2').textContent())?.includes('最大公约数') ?? false);
+  await page.fill('input[name="a"]', '36');
+  await page.fill('input[name="b"]', '24');
+  await page.click('#overkill-form button[type="submit"]');
+  const gcdTitle = (await page.locator('.problem-head h2').textContent()) ?? '';
+  const gcdAnswer = (await page.locator('.answer .value').textContent()) ?? '';
+  check('超纲解法按输入参数求解（36 与 24）', gcdTitle.includes('最大公约数') && gcdAnswer.includes('12'), gcdAnswer.trim());
+  await page.fill('input[name="a"]', '');
+  await page.click('#overkill-form button[type="submit"]');
+  check('超纲解法缺参数时给出提示', ((await page.locator('#form-error').textContent()) ?? '').includes('请填写'));
 
   // 人生重开：走完一局到结局
   await open('/restart');
   await page.click('[data-action="start"]');
+  for (let i = 0; i < 3; i++) {
+    await page.locator('[data-action="pick"][aria-pressed="false"]:not([disabled])').first().click();
+  }
+  check('人生重开自选 3 个天赋后可以进入分配', (await page.locator('[data-action="to-allocate"]:not([disabled])').count()) === 1);
+  await page.click('[data-action="to-allocate"]');
+  await page.click('[data-action="confirm-birth"]');
   await page.click('[data-action="next"]');
   let rounds = 0;
   while (rounds < 400) {
@@ -86,13 +110,23 @@ try {
   await page.waitForTimeout(1500);
   const score1 = Number(await page.locator('#hud-score').textContent());
   check('快跑开始后卷度增长', score1 > 0, `score=${score1}`);
+  await page.click('#run-fullscreen');
+  await page.waitForTimeout(400);
+  const fsState = await page.evaluate(() => ({
+    active: document.fullscreenElement?.classList.contains('stage') ?? false,
+    label: document.querySelector('#run-fullscreen')?.textContent ?? '',
+  }));
+  check('快跑可进入全屏', fsState.active && fsState.label.includes('退出'), fsState.label);
+  await page.click('#run-exit-fs');
+  await page.waitForTimeout(400);
+  check('快跑可退出全屏', (await page.evaluate(() => document.fullscreenElement === null)) && ((await page.locator('#run-fullscreen').textContent()) ?? '').includes('全屏'));
   await page.keyboard.press('Space');
   await page.waitForTimeout(200);
   await page.keyboard.press('KeyP');
   check('快跑按 P 可暂停', (await page.locator('#run-overlay').textContent())?.includes('已暂停') ?? false);
   await page.keyboard.press('KeyP');
   await page.waitForFunction(() => document.querySelector('[data-action="restart"]') !== null, null, { timeout: 60000 });
-  check('快跑撞上障碍后出现结算', await page.getByText('再跑一局').isVisible());
+  check('快跑撞上障碍后出现结算', await page.locator('#run-overlay [data-action="restart"]').isVisible());
 
   // 录取：计算参考、加入志愿表
   await open('/gaokao');

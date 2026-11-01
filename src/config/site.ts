@@ -1,7 +1,7 @@
 export const site = {
   name: '做题区.org',
   tagline: '唯分数论之外，还有一整片草稿纸。',
-  ztqiUrl: import.meta.env.PUBLIC_ZTQI_URL || '',
+  ztqiUrl: import.meta.env.PUBLIC_ZTQI_URL || '/ztqi/',
   repoUrl: 'https://github.com/B5-Software/zuotiqu-org',
   wikiNewIssueUrl:
     'https://github.com/B5-Software/zuotiqu-org/issues/new?template=wiki-entry.yml',

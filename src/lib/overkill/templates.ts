@@ -29,6 +29,7 @@ const evaluate = (expr: string) => math.evaluate(expr);
 
 export type Rng = () => number;
 export type Tier = 1 | 2 | 3 | 4 | 5;
+export type Values = Record<string, number>;
 
 export interface Solution {
   title: string;
@@ -42,17 +43,29 @@ export interface Built {
   solutions: Solution[];
 }
 
+export interface Field {
+  key: string;
+  label: string;
+  min: number;
+  max: number;
+  integer: boolean;
+  default: number;
+}
+
 export interface OverkillTemplate {
   id: string;
   title: string;
   grade: '小学' | '初中' | '高中';
-  build: (rng: Rng) => Built;
+  fields: Field[];
+  random: (rng: Rng) => Values;
+  solve: (values: Values) => Built;
 }
 
 const int = (rng: Rng, lo: number, hi: number): number => lo + Math.floor(rng() * (hi - lo + 1));
 const sgn = (n: number): string => (n < 0 ? `-${-n}` : `+${n}`);
 const fmt = (v: number): string => String(Math.round(v * 100) / 100);
 const eq = (v: number): string => (Number.isInteger(v) ? String(v) : String.raw`\approx ${fmt(v)}`);
+const val = (v: number): string => (Number.isInteger(v) ? String(v) : fmt(v));
 
 function factorize(n: number): Array<[number, number]> {
   const out: Array<[number, number]> = [];
@@ -93,16 +106,25 @@ const linear: OverkillTemplate = {
   id: 'linear',
   title: '一元一次方程',
   grade: '初中',
-  build(rng) {
+  fields: [
+    { key: 'a', label: 'x 的系数 a', min: -100, max: 100, integer: true, default: 2 },
+    { key: 'b', label: '常数项 b', min: -1000, max: 1000, integer: true, default: 3 },
+    { key: 'c', label: '等号右边 c', min: -1000, max: 1000, integer: true, default: 11 },
+  ],
+  random(rng) {
     const a = int(rng, 2, 9) * (rng() < 0.3 ? -1 : 1);
     const x = int(rng, -9, 9);
     const b = int(rng, 1, 20) * (rng() < 0.5 ? -1 : 1);
-    const c = a * x + b;
+    return { a, b, c: a * x + b };
+  },
+  solve({ a, b, c }) {
+    if (a === 0) throw new Error('x 的系数 a 不能为 0');
     const value = Number(evaluate(`(${c} - (${b})) / (${a})`));
+    const v = val(value);
     const g = String.raw`${a}x${sgn(b)}-${c}`;
     return {
       statement: String.raw`解方程 $${a}x${sgn(b)}=${c}$`,
-      answer: String.raw`$x=${value}$`,
+      answer: String.raw`$x=${v}$`,
       solutions: [
         {
           title: '拉格朗日乘数法',
@@ -112,7 +134,7 @@ const linear: OverkillTemplate = {
             String.raw`约束条件为 $g(x)=${g}=0$。`,
             String.raw`构造拉格朗日函数 $\mathcal{L}(x,\lambda)=f(x)-\lambda g(x)$。`,
             String.raw`令 $\partial\mathcal{L}/\partial x=0$，得 $\lambda=0$。这一步对结果没有任何贡献。`,
-            String.raw`回代约束，解得 $x=${value}$。`,
+            String.raw`回代约束，解得 $x=${v}$。`,
           ],
         },
         {
@@ -121,7 +143,7 @@ const linear: OverkillTemplate = {
           steps: [
             String.raw`令 $\varphi(x)=x-\frac{${g}}{${a}}$，于是方程等价于 $x=\varphi(x)$。`,
             String.raw`化简得 $\varphi(x)\equiv\frac{${c}${sgn(-b)}}{${a}}$，这是一个常值映射。`,
-            String.raw`常值映射的压缩常数为 $0$，由 Banach 不动点定理，不动点唯一，即 $x^*=${value}$。`,
+            String.raw`常值映射的压缩常数为 $0$，由 Banach 不动点定理，不动点唯一，即 $x^*=${v}$。`,
           ],
         },
         {
@@ -130,7 +152,7 @@ const linear: OverkillTemplate = {
           steps: [
             String.raw`令 $f(x)=${g}$，则 $f'(x)=${a}$。`,
             String.raw`取初值 $x_0=0$，迭代 $x_{n+1}=x_n-\frac{f(x_n)}{f'(x_n)}$。`,
-            String.raw`$f(0)=${b - c}$，故 $x_1=0-\frac{${b - c}}{${a}}=${value}$。`,
+            String.raw`$f(0)=${b - c}$，故 $x_1=0-\frac{${b - c}}{${a}}=${v}$。`,
             String.raw`线性函数的牛顿迭代一步就收敛，第二步可以省略。`,
           ],
         },
@@ -143,10 +165,16 @@ const addition: OverkillTemplate = {
   id: 'addition',
   title: '一加一（加法）',
   grade: '小学',
-  build(rng) {
-    const a = int(rng, 1, 9);
-    const b = int(rng, 1, 9);
+  fields: [
+    { key: 'a', label: '第一个加数 a', min: 0, max: 999, integer: true, default: 3 },
+    { key: 'b', label: '第二个加数 b', min: 0, max: 999, integer: true, default: 5 },
+  ],
+  random(rng) {
+    return { a: int(rng, 1, 9), b: int(rng, 1, 9) };
+  },
+  solve({ a, b }) {
     const s = a + b;
+    const m = s < 100 ? 100 : 1000;
     return {
       statement: String.raw`计算 $${a}+${b}$`,
       answer: String.raw`$${s}$`,
@@ -171,11 +199,11 @@ const addition: OverkillTemplate = {
           ],
         },
         {
-          title: '模 100 的加法群',
+          title: `模 ${m} 的加法群`,
           tier: 3,
           steps: [
-            String.raw`在群 $\mathbb{Z}/100\mathbb{Z}$ 中计算。`,
-            String.raw`运算封闭，且 $${a}+${b}=${s}<100$，因此无需取模。`,
+            String.raw`在群 $\mathbb{Z}/${m}\mathbb{Z}$ 中计算。`,
+            String.raw`运算封闭，且 $${a}+${b}=${s}<${m}$，因此无需取模。`,
             String.raw`结果为 $${s}$。`,
           ],
         },
@@ -188,7 +216,13 @@ const shortestPath: OverkillTemplate = {
   id: 'shortest-path',
   title: '两点间最短距离',
   grade: '初中',
-  build(rng) {
+  fields: [
+    { key: 'x1', label: 'P₁ 的横坐标', min: -1000, max: 1000, integer: true, default: 0 },
+    { key: 'y1', label: 'P₁ 的纵坐标', min: -1000, max: 1000, integer: true, default: 0 },
+    { key: 'x2', label: 'P₂ 的横坐标', min: -1000, max: 1000, integer: true, default: 3 },
+    { key: 'y2', label: 'P₂ 的纵坐标', min: -1000, max: 1000, integer: true, default: 4 },
+  ],
+  random(rng) {
     const x1 = int(rng, -9, 9);
     const y1 = int(rng, -9, 9);
     let x2 = int(rng, -9, 9);
@@ -197,6 +231,10 @@ const shortestPath: OverkillTemplate = {
       x2 = int(rng, -9, 9);
       y2 = int(rng, -9, 9);
     }
+    return { x1, y1, x2, y2 };
+  },
+  solve({ x1, y1, x2, y2 }) {
+    if (x1 === x2 && y1 === y2) throw new Error('两点不能重合');
     const dx = x2 - x1;
     const dy = y2 - y1;
     const value = Number(evaluate(`sqrt((${dx})^2 + (${dy})^2)`));
@@ -241,8 +279,11 @@ const arithmeticSum: OverkillTemplate = {
   id: 'arithmetic-sum',
   title: '1 加到 n',
   grade: '初中',
-  build(rng) {
-    const n = int(rng, 5, 100);
+  fields: [{ key: 'n', label: '上限 n', min: 1, max: 100000, integer: true, default: 100 }],
+  random(rng) {
+    return { n: int(rng, 5, 100) };
+  },
+  solve({ n }) {
     const value = Number(evaluate(`${n} * (${n} + 1) / 2`));
     return {
       statement: String.raw`计算 $1+2+3+\cdots+${n}$`,
@@ -284,9 +325,15 @@ const triangleAngles: OverkillTemplate = {
   id: 'triangle-angles',
   title: '三角形内角和',
   grade: '小学',
-  build(rng) {
-    const a = int(rng, 20, 80);
-    const b = int(rng, 20, 80);
+  fields: [
+    { key: 'a', label: '第一个内角 A（度）', min: 1, max: 178, integer: true, default: 60 },
+    { key: 'b', label: '第二个内角 B（度）', min: 1, max: 178, integer: true, default: 70 },
+  ],
+  random(rng) {
+    return { a: int(rng, 20, 80), b: int(rng, 20, 80) };
+  },
+  solve({ a, b }) {
+    if (a + b >= 180) throw new Error('两个内角之和必须小于 180°');
     const value = 180 - a - b;
     return {
       statement: String.raw`三角形的两个内角分别为 $${a}^\circ$ 和 $${b}^\circ$，求第三个内角。`,
@@ -327,8 +374,11 @@ const circleArea: OverkillTemplate = {
   id: 'circle-area',
   title: '圆的面积',
   grade: '初中',
-  build(rng) {
-    const r = int(rng, 1, 9);
+  fields: [{ key: 'r', label: '半径 r', min: 0.1, max: 10000, integer: false, default: 3 }],
+  random(rng) {
+    return { r: int(rng, 1, 9) };
+  },
+  solve({ r }) {
     const value = Number(evaluate(`pi * ${r}^2`));
     const ans = eq(value);
     return {
@@ -355,8 +405,8 @@ const circleArea: OverkillTemplate = {
           title: '蒙特卡洛积分',
           tier: 3,
           steps: [
-            String.raw`在边长为 $${2 * r}$ 的正方形内均匀撒点，统计落在圆内的比例 $p$。`,
-            String.raw`面积估计为 $(${2 * r})^2 p$。`,
+            String.raw`在边长为 $${fmt(2 * r)}$ 的正方形内均匀撒点，统计落在圆内的比例 $p$。`,
+            String.raw`面积估计为 $(${fmt(2 * r)})^2 p$。`,
             String.raw`撒点数趋于无穷时，估计值收敛到 $${ans}$。`,
           ],
         },
@@ -369,15 +419,24 @@ const chickenRabbit: OverkillTemplate = {
   id: 'chicken-rabbit',
   title: '鸡兔同笼',
   grade: '小学',
-  build(rng) {
+  fields: [
+    { key: 'heads', label: '总头数', min: 1, max: 100000, integer: true, default: 36 },
+    { key: 'legs', label: '总腿数', min: 0, max: 400000, integer: true, default: 104 },
+  ],
+  random(rng) {
     const chicken = int(rng, 1, 20);
     const rabbit = int(rng, 1, 20);
-    const heads = chicken + rabbit;
-    const legs = 2 * chicken + 4 * rabbit;
-    const value = Number(evaluate(`(${legs} - 2 * ${heads}) / 2`));
+    return { heads: chicken + rabbit, legs: 2 * chicken + 4 * rabbit };
+  },
+  solve({ heads, legs }) {
+    const diff = legs - 2 * heads;
+    if (diff < 0 || diff % 2 !== 0) throw new Error('腿数应为偶数，且不少于头数的两倍');
+    const rabbit = diff / 2;
+    const chicken = heads - rabbit;
+    if (chicken < 0) throw new Error('腿数太多：每只动物最多 4 条腿');
     return {
       statement: String.raw`鸡兔同笼，共 $${heads}$ 个头、$${legs}$ 条腿，问兔有几只？`,
-      answer: String.raw`兔 $${value}$ 只，鸡 $${heads - value}$ 只`,
+      answer: String.raw`兔 $${rabbit}$ 只，鸡 $${chicken}$ 只`,
       solutions: [
         {
           title: '线性规划单纯形法',
@@ -385,7 +444,7 @@ const chickenRabbit: OverkillTemplate = {
           steps: [
             String.raw`决策变量为鸡数 $c$ 与兔数 $r$，约束为 $c+r=${heads}$，$2c+4r=${legs}$。`,
             String.raw`可行域退化为一个点，单纯形法在第一次迭代时就到达该顶点。`,
-            String.raw`解得 $r=${value}$，$c=${heads - value}$。`,
+            String.raw`解得 $r=${rabbit}$，$c=${chicken}$。`,
           ],
         },
         {
@@ -394,7 +453,7 @@ const chickenRabbit: OverkillTemplate = {
           steps: [
             String.raw`写成矩阵形式 $\begin{pmatrix}1&1\\2&4\end{pmatrix}\begin{pmatrix}c\\r\end{pmatrix}=\begin{pmatrix}${heads}\\${legs}\end{pmatrix}$。`,
             String.raw`系数矩阵的行列式为 $2\neq 0$，可逆，左乘逆矩阵。`,
-            String.raw`得 $r=${value}$。`,
+            String.raw`得 $r=${rabbit}$。`,
           ],
         },
         {
@@ -403,7 +462,7 @@ const chickenRabbit: OverkillTemplate = {
           steps: [
             String.raw`令目标函数 $f(c,r)=r$，约束为 $g(c,r)=c+r-${heads}=0$ 与 $k(c,r)=2c+4r-${legs}=0$。`,
             String.raw`两个约束确定唯一的可行点，乘子只是把它算出来两次。`,
-            String.raw`最终 $r=${value}$。`,
+            String.raw`最终 $r=${rabbit}$。`,
           ],
         },
       ],
@@ -415,13 +474,21 @@ const percent: OverkillTemplate = {
   id: 'percent',
   title: '求百分之几',
   grade: '小学',
-  build(rng) {
-    const total = int(rng, 2, 50) * 10;
-    const p = [5, 10, 20, 25, 30, 40, 50, 60, 75][int(rng, 0, 8)];
-    const value = Number(evaluate(`${total} * ${p} / 100`));
+  fields: [
+    { key: 'total', label: '总数', min: 0, max: 1000000, integer: false, default: 200 },
+    { key: 'p', label: '百分比 p（%）', min: 0, max: 100, integer: false, default: 30 },
+  ],
+  random(rng) {
+    return {
+      total: int(rng, 2, 50) * 10,
+      p: [5, 10, 20, 25, 30, 40, 50, 60, 75][int(rng, 0, 8)],
+    };
+  },
+  solve({ total, p }) {
+    const value = (total * p) / 100;
     const ans = fmt(value);
     return {
-      statement: String.raw`$${total}$ 的 ${p}% 是多少？`,
+      statement: String.raw`$${total}$ 的 ${val(p)}% 是多少？`,
       answer: String.raw`$${ans}$`,
       solutions: [
         {
@@ -429,22 +496,22 @@ const percent: OverkillTemplate = {
           tier: 4,
           steps: [
             String.raw`取计数测度 $\mu$，令 $\Omega$ 为含有 $${total}$ 个单位的集合，$\mu(\Omega)=${total}$。`,
-            String.raw`子集 $A\subseteq\Omega$ 占比为 ${p}%，由勒贝格积分 $\mu(A)=\int_A d\mu$，得 $\mu(A)=${ans}$。`,
+            String.raw`子集 $A\subseteq\Omega$ 占比为 ${val(p)}%，由勒贝格积分 $\mu(A)=\int_A d\mu$，得 $\mu(A)=${ans}$。`,
           ],
         },
         {
           title: '概率论',
           tier: 3,
           steps: [
-            String.raw`令每个单位独立地以概率 $${p}\%$ 被选中，记随机变量为 $X$。`,
-            String.raw`其期望为 $\mathbb{E}[X]=${total}\times${p}\%=${ans}$。`,
+            String.raw`令每个单位独立地以概率 $${val(p)}\%$ 被选中，记随机变量为 $X$。`,
+            String.raw`其期望为 $\mathbb{E}[X]=${total}\times${val(p)}\%=${ans}$。`,
           ],
         },
         {
           title: '分数约分',
           tier: 1,
           steps: [
-            String.raw`把 ${p}% 写成 $\frac{${p}}{100}$，约分后再乘以 $${total}$。`,
+            String.raw`把 ${val(p)}% 写成 $\frac{${val(p)}}{100}$，约分后再乘以 $${total}$。`,
             String.raw`结果为 $${ans}$。`,
           ],
         },
@@ -457,10 +524,17 @@ const gcdTemplate: OverkillTemplate = {
   id: 'gcd',
   title: '最大公约数',
   grade: '初中',
-  build(rng) {
+  fields: [
+    { key: 'a', label: '第一个数 a', min: 1, max: 1000000, integer: true, default: 36 },
+    { key: 'b', label: '第二个数 b', min: 1, max: 1000000, integer: true, default: 24 },
+  ],
+  random(rng) {
     const a = int(rng, 6, 120);
     let b = int(rng, 6, 120);
     while (b === a) b = int(rng, 6, 120);
+    return { a, b };
+  },
+  solve({ a, b }) {
     const { steps: euclidSteps, g } = euclid(a, b);
     const fa = factorize(a);
     const fb = factorize(b);
@@ -470,7 +544,6 @@ const gcdTemplate: OverkillTemplate = {
         return [p, Math.min(k, kb)] as [number, number];
       })
       .filter(([, k]) => k > 0);
-    const commonText = factorText(common);
     return {
       statement: String.raw`求 $${a}$ 与 $${b}$ 的最大公约数。`,
       answer: String.raw`$${g}$`,
@@ -494,7 +567,7 @@ const gcdTemplate: OverkillTemplate = {
           tier: 3,
           steps: [
             String.raw`$${a}=${factorText(fa)}$，$${b}=${factorText(fb)}$。`,
-            String.raw`取公共素因子的最小幂次，得 $${commonText}$。`,
+            String.raw`取公共素因子的最小幂次，得 $${factorText(common)}$。`,
             String.raw`结果为 $${g}$。`,
           ],
         },
@@ -507,20 +580,26 @@ const pythagoras: OverkillTemplate = {
   id: 'pythagoras',
   title: '勾股定理',
   grade: '初中',
-  build(rng) {
-    const a = int(rng, 3, 30);
-    const b = int(rng, 3, 30);
-    const value = Number(evaluate(`sqrt(${a}^2 + ${b}^2)`));
+  fields: [
+    { key: 'a', label: '直角边 a', min: 0.001, max: 100000, integer: false, default: 3 },
+    { key: 'b', label: '直角边 b', min: 0.001, max: 100000, integer: false, default: 4 },
+  ],
+  random(rng) {
+    return { a: int(rng, 3, 30), b: int(rng, 3, 30) };
+  },
+  solve({ a, b }) {
+    const value = Number(evaluate(`sqrt((${a})^2 + (${b})^2)`));
     const ans = eq(value);
+    const sq = fmt(a * a + b * b);
     return {
-      statement: String.raw`直角三角形的两条直角边分别为 $${a}$ 和 $${b}$，求斜边长（保留两位小数）。`,
+      statement: String.raw`直角三角形的两条直角边分别为 $${val(a)}$ 和 $${val(b)}$，求斜边长（保留两位小数）。`,
       answer: String.raw`$${ans}$`,
       solutions: [
         {
           title: '复数的模',
           tier: 3,
           steps: [
-            String.raw`令复数 $z=${a}+${b}i$，其模为 $|z|=\sqrt{${a}^2+${b}^2}$。`,
+            String.raw`令复数 $z=${val(a)}+${val(b)}i$，其模为 $|z|=\sqrt{${val(a)}^2+${val(b)}^2}$。`,
             String.raw`复数的模即欧氏距离，结果为 $${ans}$。`,
           ],
         },
@@ -528,7 +607,7 @@ const pythagoras: OverkillTemplate = {
           title: '欧几里得范数',
           tier: 4,
           steps: [
-            String.raw`在 $\mathbb{R}^2$ 上赋予欧几里得范数 $\|\cdot\|_2$，取向量 $v=(${a},${b})$。`,
+            String.raw`在 $\mathbb{R}^2$ 上赋予欧几里得范数 $\|\cdot\|_2$，取向量 $v=(${val(a)},${val(b)})$。`,
             String.raw`范数满足三角不等式与齐次性，斜边长即为 $\|v\|_2=${ans}$。`,
           ],
         },
@@ -536,7 +615,7 @@ const pythagoras: OverkillTemplate = {
           title: '内积',
           tier: 1,
           steps: [
-            String.raw`$\langle v,v\rangle=${a}^2+${b}^2=${a * a + b * b}$。`,
+            String.raw`$\langle v,v\rangle=${val(a)}^2+${val(b)}^2=${sq}$。`,
             String.raw`开平方即得 $${ans}$。`,
           ],
         },

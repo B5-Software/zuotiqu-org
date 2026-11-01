@@ -1,6 +1,7 @@
 import type { Rng } from '../rng';
 import {
   PROPS,
+  PROP_LABELS,
   type Achievement,
   type Condition,
   type Effects,
@@ -55,10 +56,21 @@ export interface LifeResult {
   achievements: Achievement[];
 }
 
+export interface BirthChoice {
+  talents: string[];
+  allocation: Props;
+}
+
 export const MAX_AGE = 80;
 export const EVENT_CHANCE = 0.5;
+export const TALENT_POOL_SIZE = 10;
+export const TALENT_PICK = 3;
+export const ALLOC_TOTAL = 300;
+export const ALLOC_MIN = 10;
+export const ALLOC_MAX = 70;
+export const ALLOC_STEP = 5;
+export const DEFAULT_ALLOC: Props = { grade: 50, health: 70, family: 50, joy: 60, network: 40, juan: 30 };
 
-const BASE: Props = { grade: 50, health: 70, family: 50, joy: 60, network: 30, juan: 30 };
 const RARITY_WEIGHT: Record<Rarity, number> = { common: 60, rare: 30, legendary: 10 };
 
 function clamp(v: number): number {
@@ -96,7 +108,19 @@ function pickWeighted<T>(items: T[], weightOf: (item: T) => number, rng: Rng): T
   return items[items.length - 1];
 }
 
-export function drawTalents(pool: Talent[], rng: Rng, count = 3): Talent[] {
+export function drawPool(pool: Talent[], rng: Rng, size = TALENT_POOL_SIZE): Talent[] {
+  const out: Talent[] = [];
+  let candidates = [...pool];
+  while (out.length < size && candidates.length > 0) {
+    const pick = pickWeighted(candidates, (t) => RARITY_WEIGHT[t.rarity], rng);
+    if (!pick) break;
+    out.push(pick);
+    candidates = candidates.filter((t) => t.id !== pick.id);
+  }
+  return out;
+}
+
+export function drawTalents(pool: Talent[], rng: Rng, count = TALENT_PICK): Talent[] {
   const chosen: Talent[] = [];
   let candidates = [...pool];
   while (chosen.length < count && candidates.length > 0) {
@@ -113,11 +137,52 @@ export function drawTalents(pool: Talent[], rng: Rng, count = 3): Talent[] {
   return chosen;
 }
 
-export function createLife(data: LifeData, rng: Rng): LifeState {
+export function talentPickError(ids: string[], data: LifeData): string | null {
+  if (ids.length !== TALENT_PICK) return `请选择恰好 ${TALENT_PICK} 个天赋`;
+  if (new Set(ids).size !== ids.length) return '天赋不能重复选择';
+  const byId = new Map(data.talents.map((t) => [t.id, t]));
+  for (const id of ids) {
+    const t = byId.get(id);
+    if (!t) return `未知天赋 ${id}`;
+    for (const other of ids) {
+      if (other !== id && (t.excludes ?? []).includes(other)) {
+        return `「${t.name}」与「${byId.get(other)?.name ?? other}」互斥，不能同时选择`;
+      }
+    }
+  }
+  return null;
+}
+
+export function allocationError(alloc: Props): string | null {
+  for (const k of PROPS) {
+    const v = alloc[k];
+    if (!Number.isFinite(v) || v < ALLOC_MIN || v > ALLOC_MAX) {
+      return `${PROP_LABELS[k]}应在 ${ALLOC_MIN}–${ALLOC_MAX} 之间`;
+    }
+  }
+  const sum = PROPS.reduce((s, k) => s + alloc[k], 0);
+  if (sum !== ALLOC_TOTAL) return `六项点数之和应为 ${ALLOC_TOTAL}，当前为 ${sum}`;
+  return null;
+}
+
+export function randomAllocation(rng: Rng): Props {
+  const alloc = Object.fromEntries(PROPS.map((k) => [k, ALLOC_MIN])) as Props;
+  let remaining = ALLOC_TOTAL - ALLOC_MIN * PROPS.length;
+  while (remaining >= ALLOC_STEP) {
+    const open = PROPS.filter((k) => alloc[k] + ALLOC_STEP <= ALLOC_MAX);
+    if (open.length === 0) break;
+    const k = open[Math.floor(rng() * open.length)];
+    alloc[k] += ALLOC_STEP;
+    remaining -= ALLOC_STEP;
+  }
+  return alloc;
+}
+
+function computeBirth(data: LifeData, talentIds: string[], allocation: Props): LifeState {
   const state: LifeState = {
     age: 0,
-    props: { ...BASE },
-    talents: [],
+    props: { ...allocation },
+    talents: [...talentIds],
     notes: [],
     flags: new Set(),
     fired: new Set(),
@@ -125,13 +190,12 @@ export function createLife(data: LifeData, rng: Rng): LifeState {
     curve: [],
     dead: false,
   };
-  state.props.family = 30 + Math.floor(rng() * 41);
-
-  const drawn = drawTalents(data.talents, rng, 3);
-  state.talents = drawn.map((t) => t.id);
+  const drawn = talentIds
+    .map((id) => data.talents.find((t) => t.id === id))
+    .filter((t): t is Talent => Boolean(t));
   for (const t of drawn) applyEffects(state, t.effects);
 
-  const ids = new Set(state.talents);
+  const ids = new Set(talentIds);
   const seen = new Set<string>();
   for (const t of drawn) {
     for (const syn of t.synergies ?? []) {
@@ -143,9 +207,26 @@ export function createLife(data: LifeData, rng: Rng): LifeState {
       state.notes.push(syn.text);
     }
   }
-
   recordCurve(state);
   return state;
+}
+
+export function previewProps(data: LifeData, talentIds: string[], allocation: Props): Props {
+  return computeBirth(data, talentIds, allocation).props;
+}
+
+export function createLifeWith(data: LifeData, choice: BirthChoice): LifeState {
+  const error = talentPickError(choice.talents, data) ?? allocationError(choice.allocation);
+  if (error) throw new Error(error);
+  return computeBirth(data, choice.talents, choice.allocation);
+}
+
+export function createLife(data: LifeData, rng: Rng): LifeState {
+  const drawn = drawTalents(data.talents, rng, TALENT_PICK);
+  return createLifeWith(data, {
+    talents: drawn.map((t) => t.id),
+    allocation: randomAllocation(rng),
+  });
 }
 
 function recordCurve(state: LifeState): void {

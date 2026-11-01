@@ -1,4 +1,4 @@
-import { TEMPLATES, type OverkillTemplate, type Rng, type Solution, type Tier } from './templates';
+import { TEMPLATES, type Field, type OverkillTemplate, type Rng, type Solution, type Tier, type Values } from './templates';
 
 export const RATINGS: Record<Tier, string> = {
   1: '略微过度',
@@ -29,6 +29,24 @@ export function getTemplate(id: string): OverkillTemplate {
   return template;
 }
 
+export function fieldsFor(id: string): Field[] {
+  return getTemplate(id).fields;
+}
+
+export function randomValuesFor(id: string, rng: Rng = Math.random): Values {
+  return getTemplate(id).random(rng);
+}
+
+export function validateValues(template: OverkillTemplate, values: Values): string | null {
+  for (const f of template.fields) {
+    const v = values[f.key];
+    if (typeof v !== 'number' || !Number.isFinite(v)) return `请填写「${f.label}」`;
+    if (v < f.min || v > f.max) return `「${f.label}」应在 ${f.min} 到 ${f.max} 之间`;
+    if (f.integer && !Number.isInteger(v)) return `「${f.label}」应为整数`;
+  }
+  return null;
+}
+
 function shuffle<T>(items: readonly T[], rng: Rng): T[] {
   const out = [...items];
   for (let i = out.length - 1; i > 0; i--) {
@@ -38,11 +56,7 @@ function shuffle<T>(items: readonly T[], rng: Rng): T[] {
   return out;
 }
 
-export function generateOverkill(templateId: string | null, rng: Rng = Math.random): OverkillResult {
-  const template = templateId
-    ? getTemplate(templateId)
-    : TEMPLATES[Math.floor(rng() * TEMPLATES.length)];
-  const built = template.build(rng);
+function toResult(template: OverkillTemplate, built: ReturnType<OverkillTemplate['solve']>, rng: Rng): OverkillResult {
   const solutions = shuffle(built.solutions, rng).slice(0, 3);
   const tier = Math.max(...solutions.map((s) => s.tier)) as Tier;
   return {
@@ -55,4 +69,18 @@ export function generateOverkill(templateId: string | null, rng: Rng = Math.rand
     tier,
     rating: RATINGS[tier],
   };
+}
+
+export function generateOverkill(templateId: string | null, rng: Rng = Math.random): OverkillResult {
+  const template = templateId
+    ? getTemplate(templateId)
+    : TEMPLATES[Math.floor(rng() * TEMPLATES.length)];
+  return toResult(template, template.solve(template.random(rng)), rng);
+}
+
+export function generateFromInput(templateId: string, values: Values, rng: Rng = Math.random): OverkillResult {
+  const template = getTemplate(templateId);
+  const error = validateValues(template, values);
+  if (error) throw new Error(error);
+  return toResult(template, template.solve(values), rng);
 }
