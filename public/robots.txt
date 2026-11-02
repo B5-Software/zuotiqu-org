@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://做题区.org/sitemap-index.xml
+Sitemap: https://xn--cyqx3ed87g.org/sitemap-index.xml
