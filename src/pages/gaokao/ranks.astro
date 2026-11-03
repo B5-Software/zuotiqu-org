@@ -1,0 +1,125 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="2026陕西高考真实位次查询" description="陕西省教育考试院2026年一分一段表：普通物理、普通历史，同分位次范围及数据原文。">
+  <header>
+    <h1>2026陕西省 · 官方位次查询</h1>
+    <p class="lead">按陕西省教育考试院公布的<strong>普通物理／普通历史</strong>一分一段表查询同分人数及位次范围。结果对应<strong>2026年</strong>，不能将2026分数直接当作2027位次。</p>
+    <p><a href="/gaokao/sources">全国31省官方资料库</a> · <a href="/gaokao">模拟志愿</a></p>
+  </header>
+  <div class="warn" role="note"><strong>只显示经过原始表校验的数据。</strong> 如果导入任务还未成功，本站会显示“未上线”，不会用估算或虚构数据代替。位次在同分人数范围内，不能当作唯一精确名次。</div>
+  <section class="panel rank-panel">
+    <form id="rank-form" class="rank-form">
+      <label>2026年普通类
+        <select id="rank-subject">
+          <option value="物理">普通物理</option>
+          <option value="历史">普通历史</option>
+        </select>
+      </label>
+      <label>2026年高考成绩
+        <input type="number" id="rank-score" min="0" max="750" step="1" required placeholder="例如 600" inputmode="numeric" />
+      </label>
+      <button type="submit" class="btn btn-primary">查询真实位次</button>
+    </form>
+    <p id="rank-status" class="muted" role="status" aria-live="polite">正在确认官方数据可用性…</p>
+    <div id="rank-output" aria-live="polite"></div>
+  </section>
+  <section class="panel references">
+    <h2>官方数据原表</h2>
+    <p>数据发布时间：2026年6月25日，陕西省教育考试院。</p>
+    <p><a href="https://www.sneea.cn/info/1027/17658.htm" target="_blank" rel="noopener noreferrer">2026普通物理一分段统计表 ↗</a></p>
+    <p><a href="https://www.sneea.cn/info/1027/17659.htm" target="_blank" rel="noopener noreferrer">2026普通历史一分段统计表 ↗</a></p>
+    <p class="muted">不包含艺术、体育及加分等特殊情况的专门计算；实际报考必须以对应类别与省考试院最新政策为准。</p>
+  </section>
+</BaseLayout>
+
+<script>
+  interface RankRow {
+    score: number;
+    count: number;
+    cumulative: number;
+  }
+  interface Track {
+    source: string;
+    scoreRows: RankRow[];
+    topBucket: { scoreAtLeast: number; count: number; cumulative: number };
+    bottomBucket: { scoreAtMost: number; countIncludingAbsent: number; cumulative: number };
+  }
+  interface RankingData {
+    year: number;
+    province: string;
+    tracks: Record<'物理'|'历史', Track>;
+  }
+  const form = document.querySelector<HTMLFormElement>('#rank-form');
+  const subject = document.querySelector<HTMLSelectElement>('#rank-subject');
+  const scoreInput = document.querySelector<HTMLInputElement>('#rank-score');
+  const status = document.querySelector<HTMLElement>('#rank-status');
+  const output = document.querySelector<HTMLElement>('#rank-output');
+  let official: RankingData | null = null;
+
+  async function init() {
+    try {
+      const response = await fetch('/data/gaokao/shaanxi/2026-ranks.json', { cache: 'no-store' });
+      if (!response.ok) throw new Error('机读数据尚未完成发布');
+      const obj = await response.json() as RankingData;
+      if (obj.year !== 2026 || obj.province !== '陕西' || !obj.tracks?.['物理']?.scoreRows?.length || !obj.tracks?.['历史']?.scoreRows?.length)
+        throw new Error('数据尚未通过完整性校验');
+      official = obj;
+      if (status) status.textContent = '已接入：陕西省教育考试院2026年普通物理和普通历史原始分数段表。';
+    } catch {
+      if (status) status.textContent = '暂未接入通过校验的2026陕西机读数据；请使用下方的两份官方原表查询。';
+    }
+  }
+
+  form?.addEventListener('submit', (event) => {
+    event.preventDefault();
+    if (!output) return;
+    output.replaceChildren();
+    const value = Number(scoreInput?.value);
+    if (!scoreInput?.value || !Number.isInteger(value) || value < 0 || value > 750) {
+      output.textContent = '请输入0～750之间的整数分数。';
+      return;
+    }
+    const track = official?.tracks[subject?.value === '历史' ? '历史' : '物理'];
+    if (!track) {
+      output.textContent = '真实机读数据尚未就绪，不提供估算位次；请参考下方原表。';
+      return;
+    }
+    const row = track.scoreRows.find(r => r.score === value);
+    const panel = document.createElement('div');
+    panel.className = 'rank-result';
+    if (row) {
+      const first = row.cumulative - row.count + 1;
+      panel.innerHTML = '<p class="headline">位次范围：<strong>' + first.toLocaleString('zh-CN') + ' ～ ' + row.cumulative.toLocaleString('zh-CN') + '</strong></p>' +
+        '<p>该分数同分人数：' + row.count.toLocaleString('zh-CN') + ' 人；累计人数：' + row.cumulative.toLocaleString('zh-CN') + ' 人。</p>' +
+        '<p class="muted">同分考生可处在此范围内，本工具不推断你在同分考生中的精确顺序。</p>';
+    } else if (value >= track.topBucket.scoreAtLeast) {
+      panel.innerHTML = '<p class="headline">此分数位于官方合并高分档</p>' +
+        '<p>官方公布“' + track.topBucket.scoreAtLeast + '分及以上”共' + track.topBucket.count + '人；无法精确到该单一分值。</p>';
+    } else if (value <= track.bottomBucket.scoreAtMost) {
+      panel.innerHTML = '<p>该分数属于官方合并低分／缺考档，无法从原表得到单一分值的位次。</p>';
+    } else {
+      const above = track.scoreRows.find(r => r.score > value);
+      panel.textContent = above
+        ? '官方表中未单独列出该分数，可能为零人数分档；不能计算同分位次。上一分值的累计人数为 ' + above.cumulative + '。'
+        : '原表未收录该分值，无法核实位次。';
+    }
+    output.appendChild(panel);
+  });
+  void init();
+</script>
+
+<style>
+  header { margin-bottom: var(--space-3); }
+  .rank-panel { margin: var(--space-4) 0; }
+  .rank-form { display: grid; gap: var(--space-3); max-width: 520px; }
+  .rank-form label { display: grid; gap: var(--space-1); font-weight: 600; }
+  .rank-form select, .rank-form input { min-height: 44px; width: 100%; padding: var(--space-2) var(--space-3); background: var(--card); color: var(--ink); border: 1.5px solid var(--ink); border-radius: var(--radius-sm); font: inherit; }
+  .rank-form button { justify-self: start; }
+  #rank-output { margin-top: var(--space-3); }
+  .rank-result { border-top: 1px dashed var(--line-strong); padding-top: var(--space-3); }
+  .rank-result .headline { font-size: 1.15rem; }
+  .references { margin-top: var(--space-5); overflow-wrap: anywhere; }
+  .references h2 { margin-top: 0; }
+</style>
