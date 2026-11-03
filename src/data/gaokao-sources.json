@@ -42,8 +42,8 @@
       "name": "北京",
       "examMode": "3+3",
       "officialUrl": "https://www.bjeea.cn/",
-      "rank2026Url": "https://gaokao.chsi.com.cn/gkxx/ss/202606/20260624/2293845984.html",
-      "rankLinkLevel": "national-index",
+      "rank2026Url": "https://www.bjeea.cn/html/gkgz/tzgg/2026/0624/88238.html",
+      "rankLinkLevel": "direct-or-official-section",
       "admission2026Url": null,
       "note": "京考院招生公告、分数分布及专业组投档规则"
     },
@@ -62,10 +62,10 @@
       "name": "河北",
       "examMode": "3+1+2",
       "officialUrl": "https://www.hebeea.edu.cn/",
-      "rank2026Url": "https://gaokao.chsi.com.cn/gkxx/ss/202606/20260624/2293845984.html",
-      "rankLinkLevel": "national-index",
+      "rank2026Url": "https://www.hebeea.edu.cn/c/2026-06-24/493215.html",
+      "rankLinkLevel": "direct-or-official-section",
       "admission2026Url": null,
-      "note": "专业（类）+学校志愿及批次须逐年核对"
+      "note": "2026物理／历史官方统计表和智能参考系统，志愿提交仍须使用省级官方平台"
     },
     {
       "code": "SX",
@@ -82,8 +82,8 @@
       "name": "内蒙古",
       "examMode": "3+1+2",
       "officialUrl": "https://www.nm.zsks.cn/",
-      "rank2026Url": "https://gaokao.chsi.com.cn/gkxx/ss/202606/20260624/2293845984.html",
-      "rankLinkLevel": "national-index",
+      "rank2026Url": "https://www.nm.zsks.cn/xxgk/",
+      "rankLinkLevel": "direct-or-official-section",
       "admission2026Url": null,
       "note": "动态志愿录取规则需核查公告，不可套用其他省"
     },
@@ -92,8 +92,8 @@
       "name": "辽宁",
       "examMode": "3+1+2",
       "officialUrl": "https://www.lnzsks.com/",
-      "rank2026Url": "https://gaokao.chsi.com.cn/gkxx/ss/202606/20260624/2293845984.html",
-      "rankLinkLevel": "national-index",
+      "rank2026Url": "https://jyt.ln.gov.cn/jyt/jyzx/jyyw/2026063014014729932/",
+      "rankLinkLevel": "direct-or-official-section",
       "admission2026Url": null,
       "note": "查阅省级投档线和逐分段统计"
     },
@@ -112,8 +112,8 @@
       "name": "黑龙江",
       "examMode": "3+1+2",
       "officialUrl": "https://www.lzk.hl.cn/",
-      "rank2026Url": "https://gaokao.chsi.com.cn/gkxx/ss/202606/20260624/2293845984.html",
-      "rankLinkLevel": "national-index",
+      "rank2026Url": "https://jyt.hlj.gov.cn/jyt/c110476/202606/c00_31952462.shtml",
+      "rankLinkLevel": "direct-or-official-section",
       "admission2026Url": null,
       "note": "2026分段与投档表"
     },
@@ -155,7 +155,7 @@
       "rank2026Url": "https://gaokao.chsi.com.cn/gkxx/ss/202606/20260624/2293845984.html",
       "rankLinkLevel": "national-index",
       "admission2026Url": null,
-      "note": "院校专业组、投档线、一分一段"
+      "note": "安徽考试院；2026志愿填报服务平台可查2021—2025历年录取数据"
     },
     {
       "code": "FJ",
@@ -182,8 +182,8 @@
       "name": "山东",
       "examMode": "3+3",
       "officialUrl": "https://www.sdzk.cn/",
-      "rank2026Url": "https://gaokao.chsi.com.cn/gkxx/ss/202606/20260624/2293845984.html",
-      "rankLinkLevel": "national-index",
+      "rank2026Url": "https://www.sdzk.cn/NewsInfo.aspx?BCID=20&CID=1204&NewsID=7258",
+      "rankLinkLevel": "direct-or-official-section",
       "admission2026Url": "https://www.sdzk.cn/NewsInfo.aspx?BCID=20&CID=1204&NewsID=7312",
       "note": "专业+学校，官方2026专业投档录取表（Excel），须遵守原站使用规定"
     },
