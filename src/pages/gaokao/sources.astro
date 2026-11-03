@@ -77,6 +77,7 @@ const modeNames: Record<string, string> = {
             {p.admission2026Url && (
               <a href={p.admission2026Url} target="_blank" rel="noopener noreferrer">2026投档／招生表 ↗</a>
             )}
+            {p.code === 'SN' && <a href="/gaokao/records">陕西2026高校录取实录（8校180条） ↗</a>}
             {p.code === 'SN' && <a href="/gaokao/ranks">陕西2026官方位次查询（已机读校验） ↗</a>}
             {p.code === 'SN' && <a href="https://www.sneea.cn/info/1027/17659.htm" target="_blank" rel="noopener noreferrer">陕西2026历史一分段 ↗</a>}
             {p.code === 'AH' && <a href="https://xgk.ahzsks.cn/" target="_blank" rel="noopener noreferrer">安徽官方历年录取数据查询 ↗</a>}
