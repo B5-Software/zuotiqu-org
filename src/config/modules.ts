@@ -50,7 +50,7 @@ export const modules: SiteModule[] = [
     id: 'gaokao',
     title: '全国志愿资料库',
     href: '/gaokao/sources',
-    summary: '31省官方资料导航，含已校验的陕西2026真实位次查询。',
+    summary: '31省官方资料导航，陕西2026真实位次及高校录取实录。',
     status: 'live',
   },
 ];
