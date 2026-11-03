@@ -1,0 +1,38 @@
+name: Generate favicon assets
+
+on:
+  push:
+    paths:
+      - public/favicon.svg
+      - scripts/generate-favicons.py
+      - .github/workflows/generate-favicons.yml
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install vector renderer
+        run: python -m pip install 'cairosvg==2.7.1' 'pillow==11.3.0'
+      - name: Render brand favicon
+        run: python scripts/generate-favicons.py
+      - name: Commit generated icons
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add public/favicon.ico public/apple-touch-icon.png public/android-chrome-192x192.png public/android-chrome-512x512.png
+          if git diff --cached --quiet; then
+            echo "Generated assets are already up to date"
+          else
+            git commit -m "assets: generate favicon ICO and platform PNGs from brand SVG [skip ci]"
+            git pull --rebase origin main
+            git push origin HEAD:main
+          fi
