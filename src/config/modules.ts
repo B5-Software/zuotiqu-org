@@ -48,9 +48,9 @@ export const modules: SiteModule[] = [
   },
   {
     id: 'gaokao',
-    title: '录取数据与模拟志愿',
-    href: '/gaokao',
-    summary: '按位次看冲、稳、保，全部在本机计算。',
+    title: '全国志愿资料库',
+    href: '/gaokao/sources',
+    summary: '31省官方资料导航，含已校验的陕西2026真实位次查询。',
     status: 'live',
   },
 ];
