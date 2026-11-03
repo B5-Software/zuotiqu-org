@@ -41,7 +41,7 @@ export const modules: SiteModule[] = [
   {
     id: 'zhiyaoxuebusi',
     title: '只要学不死，就往死里学',
-    href: 'https://zhiyaoxuebusi.pages.dev/',
+    href: 'https://只要学不死.做题区.org/',
     summary: '从高三到大学与社会，体验学习、成长与人生选择的校园模拟游戏。',
     status: 'live',
     external: true,
