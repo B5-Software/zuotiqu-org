@@ -1,0 +1,24 @@
+{
+  "name": "做题区.org",
+  "short_name": "做题区",
+  "description": "唯分数论之外，还有一整片草稿纸。",
+  "start_url": "/",
+  "scope": "/",
+  "display": "browser",
+  "background_color": "#fbf8ef",
+  "theme_color": "#fbf8ef",
+  "icons": [
+    {
+      "src": "/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}
