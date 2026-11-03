@@ -1,0 +1,333 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="陕西2026高校录取实录查询"
+  description="按陕西2026年高考物理、历史分数或位次，检索高校招生办公室公布的真实专业组和专业录取记录。逐条显示出处与同分位次范围。"
+>
+  <header class="page-head">
+    <h1>陕西高校录取实录 · 2026</h1>
+    <p class="lead">真实高校招生公告 × 陕西官方一分一段表。按<strong>生源省份陕西</strong>、科类、分数／位次和关键词查专业组与专业录取记录，支持收藏和导出研究清单。</p>
+    <p class="muted"><a href="/gaokao/ranks">陕西官方位次查询</a> · <a href="/gaokao/sources">全国31省资料</a> · <a href="/gaokao">返回原模拟功能</a></p>
+  </header>
+
+  <div class="warn" role="note">
+    <strong>历史样本，并非正式填报建议。</strong> 当前是2026年8所高校的非全量录取公告，不能由此推断2027录取概率。
+    <strong>专业组投档线、专业组录取最低分、具体专业录取最低分是不同统计口径。</strong>
+    最低分只表示对应年份曾出现的结果；专业组代码、专业招生计划、选科要求、体检要求须以报考年份官方目录与招生章程为准。
+  </div>
+
+  <section class="panel form-panel" aria-labelledby="form-title">
+    <h2 id="form-title">查询条件</h2>
+    <div class="filters">
+      <label>首选科目
+        <select id="hist-track">
+          <option value="物理">物理</option>
+          <option value="历史">历史</option>
+        </select>
+      </label>
+      <label>比较方式
+        <select id="hist-mode">
+          <option value="score">按2026分数对照</option>
+          <option value="rank">按2026位次对照</option>
+        </select>
+      </label>
+      <label><span id="hist-value-label">2026高考分数（可不填）</span>
+        <input id="hist-value" type="number" min="0" max="750" step="1" inputmode="numeric" placeholder="例如 550" />
+      </label>
+      <label>查询院校／专业
+        <input id="hist-keyword" type="search" placeholder="如 生物、医学、电气、华北" autocomplete="off" />
+      </label>
+      <label>记录口径
+        <select id="hist-unit">
+          <option value="">全部口径（分别标识）</option>
+          <option value="group">只看院校专业组</option>
+          <option value="major">只看具体专业</option>
+        </select>
+      </label>
+      <label>分数对照
+        <select id="hist-order">
+          <option value="near">按最低分与输入条件接近程度</option>
+          <option value="high">按最低分从高到低</option>
+          <option value="low">按最低分从低到高</option>
+          <option value="school">按学校名称</option>
+        </select>
+      </label>
+    </div>
+    <div class="checks">
+      <label class="inline-check"><input id="hist-chemistry" type="checkbox" /> 我已选择化学（仅核查已明确公布要求的组）</label>
+      <label class="inline-check"><input id="hist-above" type="checkbox" /> 只看2026年最低分不高于我的分数／位次的记录</label>
+    </div>
+    <p class="muted small">输入留空可浏览全部样本。若用位次输入，请输入<strong>陕西2026年同一科类</strong>的位次；2027位次仅能作初步历史对照，不代表今年录取门槛。</p>
+    <p class="error" id="hist-error" role="alert"></p>
+    <p class="muted" id="hist-loading" role="status">正在读取经校验的录取样本…</p>
+  </section>
+
+  <section aria-labelledby="result-title" class="results">
+    <h2 id="result-title">官方历史记录</h2>
+    <p class="muted" id="hist-count" aria-live="polite"></p>
+    <div id="hist-list" class="entry-list"></div>
+    <button class="btn show-more" id="hist-more" type="button" hidden>再显示30条</button>
+  </section>
+
+  <section class="panel saved-panel" aria-labelledby="saved-title">
+    <h2 id="saved-title">我的研究清单</h2>
+    <p class="muted small">保存在当前设备的浏览器中，不上传成绩或收藏记录。此清单不能直接作为陕西省填报系统的正式志愿表。</p>
+    <p id="hist-saved-empty" class="muted">还没有收藏记录。</p>
+    <ol id="hist-saved" class="saved-list"></ol>
+    <button id="hist-export" class="btn" type="button" disabled>导出 CSV（附原始来源）</button>
+    <p id="hist-export-status" class="muted small" role="status"></p>
+  </section>
+
+  <section class="panel explainer" aria-labelledby="method-title">
+    <h2 id="method-title">数据方法、限制与核查</h2>
+    <ol>
+      <li>最低分取自<strong>高校自己的2026年陕西本科招生／录取公告</strong>，不同大学公告只覆盖该校本身，不能宣称全省所有专业已收录。</li>
+      <li>最低分对应的名次范围由<strong>陕西省教育考试院2026普通物理、普通历史一分一段表</strong>求出：同分首位次 = 累计人数 − 本分人数 + 1；末位次 = 累计人数。</li>
+      <li>“达到2026最低分”仅表示分数或位次在该历史样本门槛一侧，<strong>并不表示当年一定会被投档或录取</strong>；2027年招生计划、专业组和考生分布可能改变。</li>
+      <li>只有来源明确给出选科条件的专业组才核验“物理／历史、化学”。专业录取记录缺少正式组别与选科代码，标记为<strong>选科未核实</strong>，不能直接当成可填条目。</li>
+      <li>没有当前年份的全量专业组、招生计划、招生章程和三年可比数据之前，本站不会输出虚假的“录取概率”“保底保证”或自动排序的正式志愿。</li>
+    </ol>
+    <p><a href="/gaokao/sources">全国考试院资料及政策来源 →</a></p>
+  </section>
+</BaseLayout>
+
+<script>
+  type Track = '物理' | '历史';
+  type Unit = 'group' | 'major';
+  interface RecordItem {
+    id: string; sourceId: string; school: string; year: number; track: Track; batch: string;
+    unit: Unit; label: string; minimumType: string; minimumScore: number;
+    rankFrom: number; rankThrough: number; plan: number | null;
+    requiredSubjects: string[] | null; code: string | null; sourceUrl: string;
+  }
+  interface RecordData {
+    meta: { province: string; year: number; records: number; schools: number; method: string };
+    entries: RecordItem[];
+  }
+  const get = <T extends HTMLElement>(id: string): T => document.getElementById(id) as T;
+  const track = get<HTMLSelectElement>('hist-track');
+  const mode = get<HTMLSelectElement>('hist-mode');
+  const input = get<HTMLInputElement>('hist-value');
+  const valueLabel = get<HTMLElement>('hist-value-label');
+  const keyword = get<HTMLInputElement>('hist-keyword');
+  const unitFilter = get<HTMLSelectElement>('hist-unit');
+  const order = get<HTMLSelectElement>('hist-order');
+  const chemistry = get<HTMLInputElement>('hist-chemistry');
+  const above = get<HTMLInputElement>('hist-above');
+  const list = get<HTMLElement>('hist-list');
+  const count = get<HTMLElement>('hist-count');
+  const error = get<HTMLElement>('hist-error');
+  const more = get<HTMLButtonElement>('hist-more');
+  const savedList = get<HTMLElement>('hist-saved');
+  const savedEmpty = get<HTMLElement>('hist-saved-empty');
+  const exportButton = get<HTMLButtonElement>('hist-export');
+  const exportStatus = get<HTMLElement>('hist-export-status');
+  const loading = get<HTMLElement>('hist-loading');
+  const KEY = 'zuotiqu-gaokao-2026-shaanxi-research';
+  const htm = (s: string | number): string => String(s).replace(/[&<>"']/g, c => ({
+    '&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;', "'":'&#39;'
+  }[c] || c));
+  const num = (n: number): string => n.toLocaleString('zh-CN');
+  let data: RecordItem[] = [];
+  let favorites: string[] = [];
+  let displayed = 30;
+  let matches: RecordItem[] = [];
+  try {
+    const x = JSON.parse(localStorage.getItem(KEY) || '[]') as unknown;
+    favorites = Array.isArray(x) ? x.filter((v): v is string => typeof v === 'string').slice(0,300) : [];
+  } catch { favorites = []; }
+
+  function validInput(): number | null | undefined {
+    error.textContent = '';
+    if (!input.value.trim()) return null;
+    const n = Number(input.value);
+    if (!Number.isInteger(n) || (mode.value === 'score' ? n < 0 || n > 750 : n < 1 || n > 10000000)) {
+      error.textContent = mode.value === 'score' ? '分数须为0～750的整数。' : '位次须为正整数。';
+      return undefined;
+    }
+    return n;
+  }
+  function meetsKnownReq(e: RecordItem): boolean | null {
+    if (!e.requiredSubjects) return null;
+    const selected = new Set<string>([track.value, ...(chemistry.checked ? ['化学'] : [])]);
+    return e.requiredSubjects.every(v => selected.has(v));
+  }
+  function comparison(e: RecordItem, value: number | null): 'above' | 'below' | 'tie' | 'unknown' {
+    if (value === null) return 'unknown';
+    if (mode.value === 'score') return value >= e.minimumScore ? 'above' : 'below';
+    if (value < e.rankFrom) return 'above';
+    if (value > e.rankThrough) return 'below';
+    return 'tie';
+  }
+  function difference(e: RecordItem, value: number | null): number {
+    if (value === null) return 0;
+    return mode.value === 'score' ? Math.abs(value - e.minimumScore) :
+      Math.min(Math.abs(value - e.rankFrom), Math.abs(value - e.rankThrough));
+  }
+  function filtering() {
+    const value = validInput();
+    if (value === undefined) { list.replaceChildren(); count.textContent = ''; more.hidden=true; return; }
+    const q = keyword.value.trim().toLocaleLowerCase();
+    const selectedTrack = track.value as Track;
+    matches = data.filter(e => {
+      if (e.track !== selectedTrack) return false;
+      if (unitFilter.value && e.unit !== unitFilter.value) return false;
+      if (q && !(e.school + ' ' + e.label + ' ' + (e.code || '')).toLocaleLowerCase().includes(q)) return false;
+      if (above.checked) {
+        if (value === null) return false;
+        if (meetsKnownReq(e) === false) return false;
+        if (comparison(e, value) !== 'above') return false;
+      }
+      return true;
+    });
+    if (order.value === 'high') matches.sort((a,b)=>b.minimumScore-a.minimumScore || a.school.localeCompare(b.school,'zh-CN'));
+    else if (order.value === 'low') matches.sort((a,b)=>a.minimumScore-b.minimumScore || a.school.localeCompare(b.school,'zh-CN'));
+    else if (order.value === 'school') matches.sort((a,b)=>a.school.localeCompare(b.school,'zh-CN') || b.minimumScore-a.minimumScore);
+    else if (value !== null) matches.sort((a,b)=>difference(a,value)-difference(b,value) || b.minimumScore-a.minimumScore);
+    else matches.sort((a,b)=>a.school.localeCompare(b.school,'zh-CN') || b.minimumScore-a.minimumScore);
+    const groups=matches.filter(e=>e.unit==='group').length;
+    count.textContent = `匹配 ${matches.length} 条（专业组 ${groups}、专业录取 ${matches.length-groups}）；已收录 ${data.length} 条、${new Set(data.map(e=>e.school)).size} 所高校。所有数据均为2026陕西样本。`;
+    const rendered=matches.slice(0,displayed);
+    list.innerHTML = rendered.length ? rendered.map(e=>itemHtml(e,value)).join('') :
+      '<p class="muted">没有匹配的记录。请更换关键词或筛选条件；这不代表全省不存在符合条件的学校。</p>';
+    more.hidden = displayed >= matches.length;
+  }
+  function itemHtml(e: RecordItem, value: number | null): string {
+    const req = meetsKnownReq(e);
+    const comparisonValue = comparison(e,value);
+    const compText = value===null ? '' :
+      req===false ? '选科要求不符（仅据公布的已知条件）' :
+      comparisonValue==='tie' ? '同分位次范围内，不可判定先后' :
+      comparisonValue==='above' ? '达到2026年该条历史最低分门槛' : '未达到2026年该条历史最低分门槛';
+    const warning = e.unit==='group' ?
+      (req===null ? '这条专业组未核实正式选科要求。' : req ? '已核对本条公告公布的选科条件；仍须核对正式招生目录。' : '本条已公布的选科要求不符，请勿作为可报志愿。') :
+      '专业录取数据不是专业组投档线；该专业归属组别、具体选科要求尚未核实。';
+    const typeClass=e.unit==='group'?'group':'major';
+    return `<article class="entry" data-entry-id="${htm(e.id)}">
+      <div class="entry-top"><h3>${htm(e.school)}</h3><span class="tag">${e.unit==='group'?'院校专业组':'具体专业'}</span></div>
+      <p class="entry-label">${htm(e.label)}</p>
+      <div class="entry-stats">
+        <div><span>2026年${htm(e.minimumType)}</span><strong>${num(e.minimumScore)} 分</strong></div>
+        <div><span>对应同分位次范围</span><strong>${num(e.rankFrom)}–${num(e.rankThrough)}</strong></div>
+        <div><span>2026计划／录取数</span><strong>${e.plan===null?'未记录':num(e.plan)+' 人'}</strong></div>
+      </div>
+      ${compText?`<p class="result-note">${htm(compText)}；仅作历史对照，不保证录取。</p>`:''}
+      <p class="muted small">${htm(e.track)} · 2026本科批 · ${e.requiredSubjects?'来源给出要求：'+htm(e.requiredSubjects.join('、')):'选科条件未单独核实'}${e.code?' · 专业组代码 '+htm(e.code):''}</p>
+      <p class="muted small"><strong>口径提醒：</strong>${htm(warning)}</p>
+      <div class="entry-actions">
+        <a href="${htm(e.sourceUrl)}" target="_blank" rel="noopener noreferrer">查高校原始公告 ↗</a>
+        <button class="btn small-btn" type="button" data-favorite="${htm(e.id)}">${favorites.includes(e.id)?'取消收藏':'加入研究清单'}</button>
+      </div>
+    </article>`;
+  }
+  function store() {
+    try { localStorage.setItem(KEY, JSON.stringify(favorites)); }
+    catch { exportStatus.textContent = '本机存储不可用；当前页面仍可导出已选条目。'; }
+  }
+  function renderSaved() {
+    const byId=new Map(data.map(e=>[e.id,e]));
+    favorites=favorites.filter(id=>byId.has(id));
+    savedEmpty.hidden=favorites.length>0;
+    exportButton.disabled=favorites.length===0;
+    savedList.innerHTML=favorites.map((id,index)=>{
+      const e=byId.get(id)!;
+      return `<li class="saved-item">
+        <span class="saved-name">${index+1}. ${htm(e.school)} · ${htm(e.label)}（${htm(e.track)}，${e.minimumScore}分）</span>
+        <button type="button" data-saved-move="up" data-id="${htm(id)}" aria-label="上移">↑</button>
+        <button type="button" data-saved-move="down" data-id="${htm(id)}" aria-label="下移">↓</button>
+        <button type="button" data-saved-remove="${htm(id)}">移除</button>
+      </li>`;
+    }).join('');
+  }
+  function render() { filtering(); renderSaved(); }
+  for(const control of [track,mode,keyword,unitFilter,order,chemistry,above]){
+    control.addEventListener('change',()=>{displayed=30; if(control===mode) {valueLabel.textContent=mode.value==='score'?'2026高考分数（可不填）':'2026全省位次（可不填）';input.placeholder=mode.value==='score'?'例如 550':'例如 34000';}render();});
+  }
+  input.addEventListener('input',()=>{displayed=30;filtering();});
+  keyword.addEventListener('input',()=>{displayed=30;filtering();});
+  more.addEventListener('click',()=>{displayed+=30;filtering();});
+  list.addEventListener('click',event=>{
+    const btn=(event.target as HTMLElement).closest<HTMLButtonElement>('[data-favorite]');
+    const id=btn?.dataset.favorite;
+    if(!id) return;
+    favorites=favorites.includes(id)?favorites.filter(x=>x!==id):[...favorites,id];
+    store();render();
+  });
+  savedList.addEventListener('click',event=>{
+    const el=(event.target as HTMLElement).closest<HTMLButtonElement>('[data-saved-remove],[data-saved-move]');
+    if(!el) return;
+    if(el.dataset.savedRemove) favorites=favorites.filter(x=>x!==el.dataset.savedRemove);
+    else if(el.dataset.savedMove&&el.dataset.id) {
+      const index=favorites.indexOf(el.dataset.id);
+      const to=index+(el.dataset.savedMove==='up'?-1:1);
+      if(index<0||to<0||to>=favorites.length)return;
+      [favorites[index],favorites[to]]=[favorites[to],favorites[index]];
+    }
+    store();render();
+  });
+  function cell(v: unknown): string { return '"'+String(v??'').replace(/"/g,'""')+'"'; }
+  exportButton.addEventListener('click',()=>{
+    const byId=new Map(data.map(e=>[e.id,e]));
+    const headers=['顺序','年份','生源省','科目','批次','学校','口径','专业组或专业','最低分','同分位次首位','同分位次末位','计划数','已核实选科','原始公告'];
+    const body=favorites.map((id,i)=>{
+      const e=byId.get(id);
+      return e?[i+1,e.year,'陕西',e.track,e.batch,e.school,e.minimumType,e.label,e.minimumScore,e.rankFrom,e.rankThrough,e.plan??'',e.requiredSubjects?.join('、')??'待核查',e.sourceUrl].map(cell).join(','):'';
+    }).filter(Boolean);
+    const csv='\ufeff'+[headers.map(cell).join(','),...body].join('\r\n');
+    const url=URL.createObjectURL(new Blob([csv],{type:'text/csv;charset=utf-8'}));
+    const a=document.createElement('a');a.href=url;a.download='zuotiqu-shaanxi-2026-research.csv';a.click();
+    URL.revokeObjectURL(url);
+    exportStatus.textContent='已导出2026历史研究清单；请勿当作2027正式志愿表直接提交。';
+  });
+  async function load(){
+    try {
+      const response=await fetch('/data/gaokao/shaanxi/2026-samples.json');
+      if(!response.ok) throw Error('官方样本数据暂未上线');
+      const parsed=await response.json() as RecordData;
+      if(parsed.meta.year!==2026||parsed.meta.province!=='陕西'||parsed.meta.records!==parsed.entries.length)
+        throw Error('数据版本或条数不一致');
+      if(parsed.entries.some(e=>!e.sourceUrl.startsWith('https://')||!Number.isInteger(e.minimumScore)||e.rankFrom>e.rankThrough))
+        throw Error('数据完整性校验未通过');
+      data=parsed.entries;
+      loading.textContent='2026年高校官方样本已加载，支持筛选与本地收藏。';
+      render();
+    } catch(e) {loading.textContent=e instanceof Error?e.message:'加载失败'; error.textContent='没有可靠数据，暂不显示任何录取判断。';}
+  }
+  void load();
+</script>
+
+<style>
+  .page-head { margin-bottom: var(--space-4); }
+  .form-panel, .saved-panel, .explainer { margin-top: var(--space-6); }
+  .form-panel h2,.saved-panel h2,.explainer h2 { margin-top:0; }
+  .filters { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,205px),1fr)); gap:var(--space-3); }
+  .filters label { display:grid; gap:var(--space-1); font-weight:600; }
+  .filters input,.filters select { min-height:44px;width:100%;min-width:0;font:inherit;padding:var(--space-2) var(--space-3); border:1.5px solid var(--ink); background:var(--card); color:var(--ink);border-radius:var(--radius-sm); }
+  .checks { display:flex;flex-wrap:wrap;gap:var(--space-2) var(--space-4);margin-top:var(--space-4); }
+  .inline-check { display:inline-flex; align-items:center;gap:var(--space-2); }
+  .inline-check input { width:18px;height:18px; }
+  .small { font-size:0.9rem; }
+  .error { color:var(--red); }
+  .results { margin-top:var(--space-6); }
+  .entry-list { display:grid; grid-template-columns: repeat(auto-fit,minmax(min(100%,325px),1fr));gap:var(--space-3); }
+  .entry { min-width:0; border:1.5px solid var(--ink);border-radius:var(--radius);background:var(--card);padding:var(--space-3) var(--space-4);overflow-wrap:anywhere; }
+  .entry-top { display:flex;align-items:flex-start; justify-content:space-between; gap:var(--space-2); }
+  .entry-top h3 { margin:0; font-size:1.08rem; }
+  .entry-label { font-weight:600; margin:var(--space-2) 0; }
+  .entry-stats { display:grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap:var(--space-2); padding:var(--space-2) 0; border-top:1px dashed var(--line-strong);border-bottom:1px dashed var(--line-strong); }
+  .entry-stats div { display:grid;gap:2px; min-width:0; }
+  .entry-stats span { font-size:0.78rem;color:var(--ink-soft); }
+  .entry-stats strong { font-variant-numeric:tabular-nums; }
+  .entry-actions {display:flex;align-items:center;flex-wrap:wrap;gap:var(--space-3);margin-top:var(--space-3);}
+  .small-btn {min-height:38px;padding:var(--space-1) var(--space-3);font-size:.9rem;}
+  .result-note {font-weight:600;font-size:.9rem;margin:var(--space-2) 0;}
+  .show-more { margin-top:var(--space-3); }
+  .show-more[hidden], .saved-item[hidden] {display:none;}
+  .saved-list { list-style:none;display:grid;gap:var(--space-2);padding:0; }
+  .saved-item {display:flex;align-items:center;flex-wrap:wrap;gap:var(--space-2); padding:var(--space-2);border-bottom:1px solid var(--line-strong);}
+  .saved-name {flex:1 1 230px;}
+  .saved-item button {min-width:36px;min-height:36px; border:1px solid var(--line-strong);background:var(--card);color:var(--ink);border-radius:var(--radius-sm);cursor:pointer;}
+  @media(max-width:520px){.entry-list{grid-template-columns:1fr;}.entry-stats{grid-template-columns:1fr 1fr;}}
+</style>
