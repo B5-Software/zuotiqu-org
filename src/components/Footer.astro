@@ -16,6 +16,11 @@ import { site, disclaimers } from '../config/site';
       代码以 {site.license.code} 许可发布；词条、文案与图像以 {site.license.content} 放弃版权。
       本站为整活作品，与任何学校、考试机构无关。
     </p>
+    <p class="contact">
+      <a class="contact-button" href="mailto:admin@做题区.org" aria-label="联系站长，发送邮件至 admin@做题区.org">
+        联系站长
+      </a>
+    </p>
   </div>
 </footer>
 
@@ -39,5 +44,34 @@ import { site, disclaimers } from '../config/site';
 
   .links a {
     color: var(--ink-soft);
+  }
+
+  .contact {
+    margin-top: var(--space-3);
+  }
+
+  .contact-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+    padding: var(--space-2) var(--space-4);
+    border: 1.5px solid var(--ink);
+    border-radius: var(--radius-sm);
+    color: var(--ink);
+    background: var(--card);
+    font-weight: 600;
+    text-decoration: none;
+    box-shadow: 0 2px 0 var(--ink);
+  }
+
+  .contact-button:hover {
+    color: var(--ink);
+    transform: translateY(-1px);
+  }
+
+  .contact-button:active {
+    transform: translateY(2px);
+    box-shadow: none;
   }
 </style>
