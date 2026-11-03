@@ -1,0 +1,351 @@
+{
+  "meta": {
+    "version": "2026-11-03",
+    "scope": "中国内地31省级行政区",
+    "warning": "仅收集经检索的权威入口，不代表全部表格已完成机读入库；本页不产生录取概率；考试模式按2026常规高考归类，特殊类别单独核查。"
+  },
+  "national": [
+    {
+      "title": "2026全国普通高等学校名单",
+      "url": "https://gaokao.chsi.com.cn/gkxx/zc/moe/202606/20260618/2293826311.html",
+      "kind": "学校名录"
+    },
+    {
+      "title": "2026全国各省一分一段汇总",
+      "url": "https://gaokao.chsi.com.cn/gkxx/ss/202606/20260624/2293845984.html",
+      "kind": "省份与位次"
+    },
+    {
+      "title": "2026教育部高考政策和志愿填报答疑",
+      "url": "https://www.moe.gov.cn/jyb_xwfb/xw_zt/moe_357/2026/2026_zt08/",
+      "kind": "权威政策"
+    },
+    {
+      "title": "2027年选考科目要求汇总",
+      "url": "https://gaokao.chsi.com.cn/gkxx/ss/202502/20250225/2293354644.html",
+      "kind": "未来选科"
+    },
+    {
+      "title": "教育部阳光高考平台",
+      "url": "https://gaokao.chsi.com.cn/",
+      "kind": "高校章程、阳光志愿"
+    },
+    {
+      "title": "2026本科专业目录",
+      "url": "https://www.moe.gov.cn/jyb_xwfb/gzdt_gzdt/s5987/202604/t20260428_1435016.html",
+      "kind": "专业分类"
+    }
+  ],
+  "provinces": [
+    {
+      "code": "BJ",
+      "name": "北京",
+      "examMode": "3+3",
+      "officialUrl": "https://www.bjeea.cn/",
+      "rank2026Url": "https://gaokao.chsi.com.cn/gkxx/ss/202606/20260624/2293845984.html",
+      "rankLinkLevel": "national-index",
+      "admission2026Url": null,
+      "note": "京考院招生公告、分数分布及专业组投档规则"
+    },
+    {
+      "code": "TJ",
+      "name": "天津",
+      "examMode": "3+3",
+      "officialUrl": "https://www.zhaokao.net/",
+      "rank2026Url": "https://gaokao.chsi.com.cn/gkxx/zc/ss/202606/20260624/2293845980.html",
+      "rankLinkLevel": "direct-or-official-section",
+      "admission2026Url": null,
+      "note": "招考资讯网；2026分数段统计"
+    },
+    {
+      "code": "HE",
+      "name": "河北",
+      "examMode": "3+1+2",
+      "officialUrl": "https://www.hebeea.edu.cn/",
+      "rank2026Url": "https://gaokao.chsi.com.cn/gkxx/ss/202606/20260624/2293845984.html",
+      "rankLinkLevel": "national-index",
+      "admission2026Url": null,
+      "note": "专业（类）+学校志愿及批次须逐年核对"
+    },
+    {
+      "code": "SX",
+      "name": "山西",
+      "examMode": "3+1+2",
+      "officialUrl": "https://www.sxkszx.cn/",
+      "rank2026Url": "https://gaokao.chsi.com.cn/gkxx/ss/202606/20260624/2293845984.html",
+      "rankLinkLevel": "national-index",
+      "admission2026Url": null,
+      "note": "高考改革后按2026政策和数据查询"
+    },
+    {
+      "code": "NM",
+      "name": "内蒙古",
+      "examMode": "3+1+2",
+      "officialUrl": "https://www.nm.zsks.cn/",
+      "rank2026Url": "https://gaokao.chsi.com.cn/gkxx/ss/202606/20260624/2293845984.html",
+      "rankLinkLevel": "national-index",
+      "admission2026Url": null,
+      "note": "动态志愿录取规则需核查公告，不可套用其他省"
+    },
+    {
+      "code": "LN",
+      "name": "辽宁",
+      "examMode": "3+1+2",
+      "officialUrl": "https://www.lnzsks.com/",
+      "rank2026Url": "https://gaokao.chsi.com.cn/gkxx/ss/202606/20260624/2293845984.html",
+      "rankLinkLevel": "national-index",
+      "admission2026Url": null,
+      "note": "查阅省级投档线和逐分段统计"
+    },
+    {
+      "code": "JL",
+      "name": "吉林",
+      "examMode": "3+1+2",
+      "officialUrl": "https://www.jleea.com.cn/",
+      "rank2026Url": "https://gaokao.chsi.com.cn/gkxx/ss/202606/20260624/2293845984.html",
+      "rankLinkLevel": "national-index",
+      "admission2026Url": null,
+      "note": "核对院校专业组及志愿设置"
+    },
+    {
+      "code": "HL",
+      "name": "黑龙江",
+      "examMode": "3+1+2",
+      "officialUrl": "https://www.lzk.hl.cn/",
+      "rank2026Url": "https://gaokao.chsi.com.cn/gkxx/ss/202606/20260624/2293845984.html",
+      "rankLinkLevel": "national-index",
+      "admission2026Url": null,
+      "note": "2026分段与投档表"
+    },
+    {
+      "code": "SH",
+      "name": "上海",
+      "examMode": "3+3",
+      "officialUrl": "https://www.shmeea.edu.cn/",
+      "rank2026Url": "https://www.shmeea.edu.cn/page/08000/20260623/20380.html",
+      "rankLinkLevel": "direct-or-official-section",
+      "admission2026Url": "https://www.shmeea.edu.cn/page/02200/20260719/20458.html",
+      "note": "本科成绩分布及专业组投档"
+    },
+    {
+      "code": "JS",
+      "name": "江苏",
+      "examMode": "3+1+2",
+      "officialUrl": "https://www.jseea.cn/webfile/zt-pagk/",
+      "rank2026Url": "https://www.jseea.cn/webfile/zt-pagk/",
+      "rankLinkLevel": "direct-or-official-section",
+      "admission2026Url": "https://www.jseea.cn/webfile/zt-pagk/",
+      "note": "2026本科批物理/历史平行志愿投档线、计划及逐分段表"
+    },
+    {
+      "code": "ZJ",
+      "name": "浙江",
+      "examMode": "3+3",
+      "officialUrl": "https://www.zjzs.net/",
+      "rank2026Url": "https://gaokao.chsi.com.cn/gkxx/ss/202606/20260624/2293845984.html",
+      "rankLinkLevel": "national-index",
+      "admission2026Url": null,
+      "note": "专业+学校；官方辅助系统、专业选考要求"
+    },
+    {
+      "code": "AH",
+      "name": "安徽",
+      "examMode": "3+1+2",
+      "officialUrl": "https://www.ahzsks.cn/",
+      "rank2026Url": "https://gaokao.chsi.com.cn/gkxx/ss/202606/20260624/2293845984.html",
+      "rankLinkLevel": "national-index",
+      "admission2026Url": null,
+      "note": "院校专业组、投档线、一分一段"
+    },
+    {
+      "code": "FJ",
+      "name": "福建",
+      "examMode": "3+1+2",
+      "officialUrl": "https://www.eeafj.cn/",
+      "rank2026Url": "https://gaokao.chsi.com.cn/gkxx/ss/202606/20260624/2293845984.html",
+      "rankLinkLevel": "national-index",
+      "admission2026Url": null,
+      "note": "核对专业组选科及省级投档"
+    },
+    {
+      "code": "JX",
+      "name": "江西",
+      "examMode": "3+1+2",
+      "officialUrl": "https://www.jxeea.cn/",
+      "rank2026Url": "https://gaokao.chsi.com.cn/gkxx/ss/202606/20260624/2293845984.html",
+      "rankLinkLevel": "national-index",
+      "admission2026Url": null,
+      "note": "官方志愿填报与招生计划入口"
+    },
+    {
+      "code": "SD",
+      "name": "山东",
+      "examMode": "3+3",
+      "officialUrl": "https://www.sdzk.cn/",
+      "rank2026Url": "https://gaokao.chsi.com.cn/gkxx/ss/202606/20260624/2293845984.html",
+      "rankLinkLevel": "national-index",
+      "admission2026Url": "https://www.sdzk.cn/NewsInfo.aspx?BCID=20&CID=1204&NewsID=7312",
+      "note": "专业+学校，官方2026专业投档录取表（Excel），须遵守原站使用规定"
+    },
+    {
+      "code": "HA",
+      "name": "河南",
+      "examMode": "3+1+2",
+      "officialUrl": "https://www.haeea.cn/",
+      "rank2026Url": "https://gaokao.chsi.com.cn/gkxx/ss/202606/20260624/2293845984.html",
+      "rankLinkLevel": "national-index",
+      "admission2026Url": "https://www.haeea.cn/a/202607/43724_10fbb066.shtml",
+      "note": "2026招生投档信息及专业组"
+    },
+    {
+      "code": "HB",
+      "name": "湖北",
+      "examMode": "3+1+2",
+      "officialUrl": "https://www.hbea.edu.cn/",
+      "rank2026Url": "https://gaokao.chsi.com.cn/gkxx/ss/202606/20260624/2293845984.html",
+      "rankLinkLevel": "national-index",
+      "admission2026Url": null,
+      "note": "院校专业组选科、投档线"
+    },
+    {
+      "code": "HN",
+      "name": "湖南",
+      "examMode": "3+1+2",
+      "officialUrl": "https://jyt.hunan.gov.cn/jyt/sjyt/hnsjyksy/",
+      "rank2026Url": "https://gaokao.chsi.com.cn/gkxx/ss/202606/20260624/2293845984.html",
+      "rankLinkLevel": "national-index",
+      "admission2026Url": "https://jyt.hunan.gov.cn/jyt/sjyt/hnsjyksy/web/ksyzkzx/202607/t20260719_34029635.html",
+      "note": "2026专业组投档线"
+    },
+    {
+      "code": "GD",
+      "name": "广东",
+      "examMode": "3+1+2",
+      "officialUrl": "https://eea.gd.gov.cn/",
+      "rank2026Url": "https://gaokao.chsi.com.cn/gkxx/ss/202606/20260624/2293845984.html",
+      "rankLinkLevel": "national-index",
+      "admission2026Url": null,
+      "note": "核对官方普通类投档情况；招生章程"
+    },
+    {
+      "code": "GX",
+      "name": "广西",
+      "examMode": "3+1+2",
+      "officialUrl": "https://www.gxeea.cn/2026ywyd/index.html",
+      "rank2026Url": "https://www.gxeea.cn/2026ywyd/index.html",
+      "rankLinkLevel": "direct-or-official-section",
+      "admission2026Url": null,
+      "note": "2026官方逐分段与免费志愿辅助系统"
+    },
+    {
+      "code": "HI",
+      "name": "海南",
+      "examMode": "3+3",
+      "officialUrl": "https://ea.hainan.gov.cn/",
+      "rank2026Url": "https://gaokao.chsi.com.cn/gkxx/zc/ss/202607/20260701/2293870259.html",
+      "rankLinkLevel": "direct-or-official-section",
+      "admission2026Url": null,
+      "note": "标准分制，不能套用750分省份的分数计算"
+    },
+    {
+      "code": "CQ",
+      "name": "重庆",
+      "examMode": "3+1+2",
+      "officialUrl": "https://www.cqksy.cn/",
+      "rank2026Url": "https://gaokao.chsi.com.cn/gkxx/ss/202606/20260624/2293845984.html",
+      "rankLinkLevel": "national-index",
+      "admission2026Url": null,
+      "note": "按2026重庆投档/选科规则"
+    },
+    {
+      "code": "SC",
+      "name": "四川",
+      "examMode": "3+1+2",
+      "officialUrl": "https://www.sceea.cn/",
+      "rank2026Url": "https://www.sceea.cn/Html/202606/Newsdetail_4857.html",
+      "rankLinkLevel": "direct-or-official-section",
+      "admission2026Url": null,
+      "note": "2026逐分段及官方志愿辅助系统"
+    },
+    {
+      "code": "GZ",
+      "name": "贵州",
+      "examMode": "3+1+2",
+      "officialUrl": "https://zsksy.guizhou.gov.cn/",
+      "rank2026Url": "https://gaokao.chsi.com.cn/gkxx/ss/202606/20260624/2293845984.html",
+      "rankLinkLevel": "national-index",
+      "admission2026Url": null,
+      "note": "官方招生专业目录与历年数据"
+    },
+    {
+      "code": "YN",
+      "name": "云南",
+      "examMode": "3+1+2",
+      "officialUrl": "https://www.ynzs.cn/",
+      "rank2026Url": "https://gaokao.chsi.com.cn/gkxx/ss/202606/20260624/2293845984.html",
+      "rankLinkLevel": "national-index",
+      "admission2026Url": null,
+      "note": "查看2026招生政策、云南招考频道"
+    },
+    {
+      "code": "XZ",
+      "name": "西藏",
+      "examMode": "传统高考",
+      "officialUrl": "https://zsks.edu.xizang.gov.cn/",
+      "rank2026Url": "https://gaokao.chsi.com.cn/gkxx/ss/202606/20260624/2293845984.html",
+      "rankLinkLevel": "national-index",
+      "admission2026Url": null,
+      "note": "文理及相关类别、批次，按当年政策核查"
+    },
+    {
+      "code": "SN",
+      "name": "陕西",
+      "examMode": "3+1+2",
+      "officialUrl": "https://www.sneea.cn/",
+      "rank2026Url": "https://www.sneea.cn/info/1027/17658.htm",
+      "rankLinkLevel": "direct-or-official-section",
+      "admission2026Url": null,
+      "note": "2026陕西物理一分段（另含历史）；官网投档与招生计划待逐批接入"
+    },
+    {
+      "code": "GS",
+      "name": "甘肃",
+      "examMode": "3+1+2",
+      "officialUrl": "https://www.ganseea.cn/",
+      "rank2026Url": "https://gaokao.chsi.com.cn/gkxx/ss/202606/20260624/2293845984.html",
+      "rankLinkLevel": "national-index",
+      "admission2026Url": null,
+      "note": "2026免费官方志愿辅助服务"
+    },
+    {
+      "code": "QH",
+      "name": "青海",
+      "examMode": "3+1+2",
+      "officialUrl": "https://www.qhjyks.com/",
+      "rank2026Url": "https://gaokao.chsi.com.cn/gkxx/ss/202606/20260624/2293845984.html",
+      "rankLinkLevel": "national-index",
+      "admission2026Url": null,
+      "note": "2026有官方历年录取数据查询功能"
+    },
+    {
+      "code": "NX",
+      "name": "宁夏",
+      "examMode": "3+1+2",
+      "officialUrl": "https://www.nxjyks.cn/",
+      "rank2026Url": "https://gaokao.chsi.com.cn/gkxx/ss/202606/20260624/2293845984.html",
+      "rankLinkLevel": "national-index",
+      "admission2026Url": null,
+      "note": "2026免费志愿辅助平台"
+    },
+    {
+      "code": "XJ",
+      "name": "新疆",
+      "examMode": "传统高考",
+      "officialUrl": "https://www.xjzk.gov.cn/",
+      "rank2026Url": "https://gaokao.chsi.com.cn/gkxx/ss/202606/20260624/2293845984.html",
+      "rankLinkLevel": "national-index",
+      "admission2026Url": null,
+      "note": "文理及不同批次、计划类别"
+    }
+  ]
+}
