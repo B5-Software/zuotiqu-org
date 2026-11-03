@@ -126,9 +126,10 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
   const exportStatus = get<HTMLElement>('hist-export-status');
   const loading = get<HTMLElement>('hist-loading');
   const KEY = 'zuotiqu-gaokao-2026-shaanxi-research';
-  const htm = (s: string | number): string => String(s).replace(/[&<>"']/g, c => ({
-    '&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;', "'":'&#39;'
-  }[c] || c));
+  const htmlEntities: Record<string, string> = {
+    '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
+  };
+  const htm = (s: string | number): string => String(s).replace(/[&<>"']/g, c => htmlEntities[c] ?? c);
   const num = (n: number): string => n.toLocaleString('zh-CN');
   let data: RecordItem[] = [];
   let favorites: string[] = [];
