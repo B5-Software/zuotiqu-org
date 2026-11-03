@@ -1,0 +1,299 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import DisclaimerBar from '../../components/DisclaimerBar.astro';
+import { disclaimers } from '../../config/site';
+---
+
+<BaseLayout title="演示版模拟志愿（虚构数据）" description="按省份、分数或位次，参考冲、稳、保。计算全部在本机完成，不上传成绩。">
+  <header class="page-head">
+    <h1>演示版模拟志愿（虚构数据）</h1>
+    <p class="lead">
+      输入省份、分数或位次，以及选科，按近几年的位次给出冲、稳、保参考。计算全部在你的浏览器里完成。
+      要查院校，可以去<a href="/gaokao/schools">院校查询</a>。
+    </p>
+  </header>
+
+  <div class="warn demo-banner" role="note">
+    <strong>重要：当前原版模拟志愿仍是演示功能，学校及投档数据为虚构，不能指导真实高考填报。</strong>
+    我们已整理可检索的 <a href="/gaokao/sources">全国31省官方志愿资料库</a>，以及已接入原始表的 <a href="/gaokao/ranks">陕西2026真实位次查询</a>、<a href="/gaokao/records">陕西2026高校官方录取实录（180条）</a>，包括省级考试院、一分一段表和部分2026真实投档表；
+    请先使用原始数据核查。不同省份的投档单位和选科要求不同，不会把不同模式硬套同一个冲稳保算法。
+  </div>
+
+  <DisclaimerBar text={disclaimers.gaokao} />
+
+  <section class="panel" aria-labelledby="form-title">
+    <h2 id="form-title">你的条件</h2>
+    <form id="g-form" class="form" novalidate>
+      <div class="field">
+        <label for="g-province">省份</label>
+        <select id="g-province" name="province"></select>
+        <p class="muted small" id="g-year-note"></p>
+      </div>
+
+      <fieldset class="field">
+        <legend>输入方式</legend>
+        <label class="check"><input type="radio" name="mode" value="score" checked /> 分数</label>
+        <label class="check"><input type="radio" name="mode" value="rank" /> 位次</label>
+      </fieldset>
+
+      <div class="field">
+        <label for="g-value" id="g-value-label">高考分数（0–750）</label>
+        <input id="g-value" type="number" inputmode="numeric" min="0" max="750" step="1" />
+      </div>
+
+      <div class="field" id="g-track-wrap" hidden>
+        <label for="g-track">科类</label>
+        <select id="g-track" name="track">
+          <option value="理科">理科</option>
+          <option value="文科">文科</option>
+        </select>
+      </div>
+
+      <div class="field" id="g-first-wrap">
+        <label for="g-first">首选科目</label>
+        <select id="g-first" name="first">
+          <option value="物理">物理</option>
+          <option value="历史">历史</option>
+        </select>
+      </div>
+
+      <fieldset class="field" id="g-subjects"></fieldset>
+
+      <div class="field">
+        <label for="g-batch">批次</label>
+        <select id="g-batch">
+          <option value="">全部批次</option>
+        </select>
+      </div>
+
+      <p class="error" id="g-error" role="alert"></p>
+      <button id="g-submit" class="btn btn-primary" type="submit">计算参考</button>
+    </form>
+  </section>
+
+  <section id="g-results" class="results" aria-live="polite"></section>
+
+  <section id="g-volunteers" class="panel volunteers" aria-live="polite"></section>
+
+  <section class="panel method" aria-labelledby="method-title">
+    <h2 id="method-title">算法说明</h2>
+    <ol>
+      <li>
+        <strong>换算位次。</strong>分数通过该省一分一段表换算为位次。同分取最前位次；分数不在表中时取较低一档，结果偏保守。
+      </li>
+      <li>
+        <strong>计算比值。</strong>比值 = 你的位次 ÷ 专业组最低位次。比值越小，越靠前。
+      </li>
+      <li>
+        <strong>分档。</strong>取最近 3 年比值的中位数：≤ 0.95 为「保」，≤ 1.05 为「稳」，≤ 1.25 为「冲」，超过的不列入。
+      </li>
+      <li>
+        <strong>过滤。</strong>选科不符、科类不符、批次不符的专业组直接排除，不会出现在结果里。
+      </li>
+      <li>
+        <strong>不给概率。</strong>样本年份少，影响录取的变量很多，精确的录取概率没有意义，所以只给档位和依据。
+      </li>
+    </ol>
+    <p class="muted small">
+      当前的演示数据为虚构。收录真实省份的数据需要逐省核对官方发布，目前尚未完成。
+    </p>
+  </section>
+</BaseLayout>
+
+<script>
+  import { mountGaokao } from '../../lib/gaokao/ui';
+  mountGaokao();
+</script>
+
+<style is:global>
+  .page-head {
+    margin-bottom: var(--space-4);
+  }
+
+  .form {
+    display: grid;
+    gap: var(--space-4);
+    max-width: 560px;
+  }
+
+  .form .field {
+    display: grid;
+    gap: var(--space-2);
+    border: 0;
+    padding: 0;
+    margin: 0;
+  }
+
+  .form .field[hidden],
+  .form fieldset[hidden] {
+    display: none;
+  }
+
+  .form label,
+  .form legend {
+    font-weight: 600;
+  }
+
+  .form select,
+  .form input[type='number'] {
+    min-height: 44px;
+    padding: var(--space-2) var(--space-3);
+    border: 1.5px solid var(--ink);
+    border-radius: var(--radius-sm);
+    background: var(--card);
+    color: var(--ink);
+    font: inherit;
+    font-size: 1.05rem;
+    max-width: 100%;
+  }
+
+  .check {
+    display: inline-flex !important;
+    align-items: center;
+    gap: var(--space-2);
+    font-weight: 400 !important;
+    margin-right: var(--space-4);
+    min-height: 36px;
+  }
+
+  .small {
+    font-size: 0.88rem;
+  }
+
+  .error {
+    color: var(--red);
+    margin: 0;
+    min-height: 1.4em;
+  }
+
+  .results {
+    margin-top: var(--space-6);
+  }
+
+  .tiers {
+    display: grid;
+    gap: var(--space-4);
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    margin-top: var(--space-4);
+  }
+
+  .tier {
+    background: var(--card);
+    border: 1.5px solid var(--ink);
+    border-radius: var(--radius);
+    padding: var(--space-3) var(--space-4);
+    box-shadow: var(--shadow);
+  }
+
+  .tier h3 {
+    margin: 0 0 var(--space-1);
+  }
+
+  .tier-reach h3 {
+    color: var(--red);
+  }
+
+  .tier-stable h3 {
+    color: var(--blue);
+  }
+
+  .tier-safe h3 {
+    color: var(--green);
+  }
+
+  .tier .items {
+    list-style: none;
+    padding: 0;
+    margin: var(--space-3) 0 0;
+    display: grid;
+    gap: var(--space-3);
+  }
+
+  .item {
+    border-top: 1px dashed var(--line-strong);
+    padding-top: var(--space-3);
+  }
+
+  .item-head {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2);
+    align-items: center;
+  }
+
+  .item details {
+    margin: var(--space-2) 0;
+  }
+
+  .item summary {
+    cursor: pointer;
+    color: var(--blue);
+  }
+
+  .notes {
+    padding-left: 1.2rem;
+    margin: var(--space-1) 0;
+  }
+
+  .small-btn {
+    min-height: 36px;
+    padding: var(--space-1) var(--space-3);
+    font-size: 0.9rem;
+  }
+
+  .uncertainty {
+    margin-top: var(--space-6);
+  }
+
+  .volunteers {
+    margin-top: var(--space-6);
+  }
+
+  .vol-list {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    gap: var(--space-2);
+  }
+
+  .vol-item {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--space-2);
+    padding: var(--space-2) var(--space-3);
+    background: var(--paper);
+    border: 1.5px solid var(--ink);
+    border-radius: var(--radius-sm);
+    cursor: grab;
+  }
+
+  .vol-item .rank-no {
+    font-family: var(--font-hand);
+    font-weight: 700;
+    color: var(--red);
+    min-width: 1.5em;
+  }
+
+  .vol-item .vol-name {
+    flex: 1 1 200px;
+  }
+
+  .vol-item.dragging {
+    opacity: 0.5;
+  }
+
+  .method {
+    margin-top: var(--space-8);
+  }
+
+  .demo-banner {
+    margin-bottom: var(--space-4);
+  }
+
+  @media (max-width: 760px) {
+    .tiers {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
