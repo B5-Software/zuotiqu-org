@@ -295,6 +295,16 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
       render();
     } catch(e) {loading.textContent=e instanceof Error?e.message:'加载失败'; error.textContent='没有可靠数据，暂不显示任何录取判断。';}
   }
+  const params = new URLSearchParams(window.location.search);
+  const requestedTrack = params.get('track');
+  if (requestedTrack === '物理' || requestedTrack === '历史') track.value = requestedTrack;
+  const requestedScore = params.get('score');
+  if (requestedScore !== null && requestedScore !== '' && /^\\d{1,3}$/.test(requestedScore)) {
+    const scoreNumber = Number(requestedScore);
+    if (scoreNumber >= 0 && scoreNumber <= 750) input.value = requestedScore;
+  }
+  const requestedKeyword = params.get('q');
+  if (requestedKeyword) keyword.value = requestedKeyword.slice(0, 100);
   void load();
 </script>
 
