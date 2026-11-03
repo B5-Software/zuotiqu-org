@@ -40,7 +40,7 @@ class RowsParser(HTMLParser):
 
     def handle_endtag(self, tag: str) -> None:
         if tag in ("td", "th") and self.current_cell is not None and self.current_row is not None:
-            self.current_row.append(re.sub(r"\\s+", "", "".join(self.current_cell)))
+            self.current_row.append(re.sub(r"\s+", "", "".join(self.current_cell)))
             self.current_cell = None
         elif tag == "tr" and self.current_row is not None:
             if self.current_row:
@@ -81,7 +81,7 @@ def load_track(subject: str, url: str) -> dict:
         score_string, count_string, cumulative_string = parts
         if not count_string.isdigit() or not cumulative_string.isdigit():
             continue
-        match = re.match(r"^(\\d{1,3})(.*)$", score_string)
+        match = re.match(r"^(\d{1,3})(.*)$", score_string)
         if not match:
             continue
         score, suffix = int(match.group(1)), match.group(2)
